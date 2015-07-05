@@ -58,6 +58,11 @@ button#showRightPush img {
 	border-bottom : 2px solid #b8950a;
 }
 
+#marginSet {
+    margin: 8%;
+	
+}
+
 #navigateMe a:hover{
 	color : #fff;
 }
@@ -459,33 +464,57 @@ border-bottom: 2px solid #c3c3c3;
 margin-top:50px;
 }
 .ser-imagea{
-background: url(../images/icons.png) no-repeat -1px -339px;
+background-image: url(../images/SampleImage/java-ubuntu-logo.jpg);
+background-repeat: no-repeat;
+background-size: 100% 100%;
 width:190px;
 height:190px;
 display:block;
 margin:0 auto;
+margin-bottom : 8%;
 }
 .ser-imageb{
-background: url(../images/icons.png) no-repeat -390px -150px;
+background-image: url(../images/SampleImage/blog.png);
+background-repeat: no-repeat;
+background-size: 100% 100%;
 width:190px;
 height:190px;
 display:block;
 margin:0 auto;
+margin-bottom : 8%;
 }
 .ser-imagec{
-background: url(../images/icons.png) no-repeat -195px -149px;
+background-image: url(../images/SampleImage/js-logo.png);
+background-repeat: no-repeat;
+background-size: 100% 100%;
 width:190px;
 height:190px;
 display:block;
 margin:0 auto;
+margin-bottom : 8%;
 }
 .ser-imaged{
-background: url(../images/icons.png) no-repeat -1px -143px;
+background-image: url(../images/SampleImage/mysql-logo.png);
+background-repeat: no-repeat;
+background-size: 100% 100%;
 width:190px;
 height:190px;
 display:block;
 margin:0 auto;
+margin-bottom : 8%;
 }
+
+.java-sub-sections{
+background-image : url(../images/SampleImage/core-java.jpg);
+background-repeat: no-repeat;
+background-size: 100% 100%;
+width:190px;
+height:190px;
+display:block;
+margin:0 auto;
+margin-bottom : 8%;
+}
+
 .ser-grid h3{
 margin:25px 0;
 color:#2b2b2b;
@@ -2438,6 +2467,7 @@ border:none;
 	  display: block;
 	  margin: 0 auto;
 	  background-size: 319% !important;
+	  margin-bottom :8%;
 	}
 	.ser-imageb {
 	  background: url(../images/icons.png) no-repeat -266px -103px;
