@@ -689,6 +689,16 @@ span.delivery a{
 	margin:0 0 0 3.6%; 
 }
 
+.float-left{
+    float : left;
+	margin-left : 40%;
+}
+
+.float-right{
+    float : right;
+	margin-right : 50%; 
+}
+
 .margin-left{
     color : #fff;
 	margin-left : 8%;
