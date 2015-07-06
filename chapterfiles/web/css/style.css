@@ -678,10 +678,21 @@ span.delivery{
 	color:#fff;
 	font-size:0.8125em;
 }
+span.delivery a{
+	color:#fff;
+	font-size:1em;
+	margin-left :2%;
+}
 .col_1_of_footer-top {
 	display: block;
 	float: left;
 	margin:0 0 0 3.6%; 
+}
+
+.margin-left{
+    color : #fff;
+	margin-left : 8%;
+	float : left;
 }
 span.orange{
 	color:#FFAF02;
@@ -1385,6 +1396,7 @@ h3.m_3 {
 	text-transform: uppercase;
 	margin-bottom: 10px;
 	text-decoration : underline;
+	letter-spacing	: 8px;
 }
 ul.options li{
 	float:left;
@@ -1474,7 +1486,16 @@ p.m_desc{
 	font-size:0.8125em;
 	line-height:1.8em;
 	margin-bottom:10px;
-	font-weight: 600;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	line-height: 1.8em;
+}
+
+.m_desc span {
+	color : #555;
+	font-weight : 600;
+	text-decoration : underline;
+	letter-spacing : 2px;
 }
 .view {
    overflow: hidden;
@@ -1689,9 +1710,13 @@ li.rss a span:hover {
 	margin-top: 4%;
 }
 p.m_text {
-	color: #999;
+	color: #0B0B0B;
 	font-size: 0.8125em;
-	line-height:1.8em;
+    line-height: 1.8em;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.8em;
 }
 .single{
 	padding:3% 0 0 0;
