@@ -1,0 +1,712 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Java-Homes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+<link href="fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+<!-- start menu -->     
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<!-- end menu -->
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>
+<!----details-product-slider--->
+				<!-- Include the Etalage files -->
+					
+					<script src="js/jquery.etalage.min.js"></script>
+				<!-- Include the Etalage files -->
+				<script>
+						jQuery(document).ready(function($){
+			
+							$('#etalage').etalage({
+								
+								
+								
+								click_callback: function(image_anchor, instance_id){
+									alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+								}
+							});
+							
+
+					});
+				</script>
+				<!----//details-product-slider--->	
+<!-- top scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+   <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>					
+</head>
+<body>
+  <div class="header-top">
+	 <div class="wrap"> 
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.png" alt=""/></a>
+	    </div>
+	    <div class="cssmenu">
+		   <ul>
+			 <li class="active"><a href="register.html">Sign up & Save</a></li> 
+			 <li><a href="shop.html">Store Locator</a></li> 
+			 <li><a href="login.html">My Account</a></li> 
+			 <li><a href="checkout.html">CheckOut</a></li> 
+		   </ul>
+		</div>
+		<div class="clear"></div>
+ 	</div>
+   </div>
+   <div class="header-bottom">
+   	<div class="wrap">
+   		<!-- start header menu -->
+		<ul class="megamenu skyblue">
+		    <li><a class="color1" href="#">Home</a></li>
+			<li class="grid"><a class="color2" href="#">Java-Homes</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java Homes</h4>
+								<ul>
+									<li><a href="shop.html">Introduction To Java</a></li>
+									<li><a href="shop.html">Who created Java?</a></li>
+									<li><a href="shop.html">Features of Java</a></li>
+									<li><a href="shop.html">Uses of Java</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java Virtual Machine</h4>
+								<ul>
+									<li><a href="shop.html">Difference between JVM,JDK and JrE</a></li>
+									<li><a href="shop.html">Internal details of JVM</a></li>
+									<li><a href="shop.html">How JVM works internally?</a></li>
+									<li><a href="shop.html">Concept of Stack and Heap</a></li>
+									<li><a href="shop.html">Concept of Java Garabage Collection</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java Basis Syntax</h4>
+								<ul>
+									<li><a>Variable and datatype in Java</a></li>
+									<li><a>Unicode System</a></li>
+									<li><a>First Java Program</a></li>
+									<li><a>Basis Syntax</a></li>
+									<li><a>Naming convention</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4 class="top">Java Overview</h4>
+								<ul>
+									<li><a href="shop.html">What is Java?</a></li>
+									<li><a href="shop.html">History of Java</a></li>
+									<li><a href="shop.html">Features of Java</a></li>
+									<li><a href="shop.html">Getting Hand Dirty</a></li>
+									<li><a href="shop.html">How Java Works?</a></li>
+									<li><a href="shop.html">Local env setup</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1"></div>
+						<img src="images/nav_img_mod1.png" alt=""/>
+					</div>
+				</div>
+				</li>
+  			   <li class="active grid"><a class="color4" href="#">Java OOPs</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java OOPs 1</h4>
+								<ul>
+									<li><a href="shop.html">Why OOPs  concept is so popular?</a></li>
+									<li><a href="shop.html">Java Object and Classes</a></li>
+									<li><a href="shop.html">Method OverLoading</a></li>
+									<li><a href="shop.html">Constructor</a></li>
+									<li><a href="shop.html">Static Keyword</a></li>
+									<li><a href="shop.html">"This" is OOPs</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java OOPs 2</h4>
+								<ul>
+									<li><a href="shop.html">Inheritance</a></li>
+									<li><a href="shop.html">Aggregation</a></li>
+									<li><a href="shop.html">Method OverLoading</a></li>
+									<li><a href="shop.html">Convarient return type</a></li>
+									<li><a href="shop.html">Super Keyword</a></li>
+									<li><a href="shop.html">Instance Initializer Block</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java OOPs 3</h4>
+								<ul>
+									<li><a href="shop.html">Abstract vs Interface</a></li>
+									<li><a href="shop.html">Package</a></li>
+									<li><a href="shop.html">Access Modifier</a></li>
+									<li><a href="shop.html">Encapsulation</a></li>
+									<li><a href="shop.html">Object Classes</a></li>
+									<li><a href="shop.html">Java Array</a></li>
+									<li><a href="shop.html">Array Interview Questions</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java OOPs 4</h4>
+								<ul>
+									<li><a href="shop.html">Wrapper Classes</a></li>
+									<li><a href="shop.html">Call By Value</a></li>
+									<li><a href="shop.html">Call By reference</a></li>
+									<li><a href="shop.html">API documentation</a></li>
+									<li><a href="shop.html">Command line Args</a></li>
+									<li><a href="shop.html">Object Vs Classes</a></li>
+									<li><a href="">Overloading Vs Overriding</a></li>
+									<li><a href="">OOPs interview question</a></li>
+								</ul>	
+							</div>						
+						</div>
+						<div class="col1">
+						 <div class="h_nav">
+						   <img src="images/nav_img_oops.png" alt=""/>
+						 </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+					</div>
+    			</li>				
+				<li><a class="color5" href="#">Java String</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java String Introduction</h4>
+								<ul>
+									<li><a href="shop.html">What is String?</a></li>
+									<li><a href="shop.html">Immutable String</a></li>
+									<li><a href="shop.html">String Buffer</a></li>
+									<li><a href="shop.html">String Builder</a></li>
+									<li><a href="shop.html">String Buffer vs String Builder</a></li>
+									<li><a href="shop.html">Creating immutable Class</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>String Method and Misallenous</h4>
+								<ul>
+									<li><a href="shop.html">StringTokiner Class</a></li>
+									<li><a href="shop.html">Creating String</a></li>
+									<li><a href="shop.html">TO be added</a></li>
+									<li><a href="shop.html">To be added</a></li>
+									<li><a href="shop.html">To be added</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<img src="images/String.jpg" alt=""/>
+					</div>
+				</div>
+				</li>
+				<li><a class="color6" href="#">Java Regular Expression</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>RegEx Introduction</h4>
+								<ul>
+									<li><a href="shop.html">What is regular expression?</a></li>
+									<li><a href="shop.html">Why regular expression is used for?</a></li>
+									<li><a href="shop.html">Java Regex Introduction</a></li>
+									<li><a href="shop.html">Pattern Classes</a></li>
+									<li><a href="shop.html">Example of Regular Expression</a></li>
+									<li><a href="shop.html">Regular Character Classes</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Miscellaneous</h4>
+								<ul>
+									<li><a href="shop.html">Regex Quantifier</a></li>
+									<li><a href="shop.html">Regex Metacharacter</a></li>
+									<li><a href="shop.html">Example of MetaCharacter</a></li>
+									<li><a href="shop.html">Interview Questions</a></li>
+								</ul>	
+							</div>
+						</div>
+						<img src="images/regular_expressions.png" alt=""/>
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+				</div>
+				</li>
+				<li><a class="color7" href="#">Exceptional Handling</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>What is Exceptional Handling?</h4>
+								<ul>
+									<li><a href="shop.html">Exceptional Handling used for?</a></li>
+									<li><a href="shop.html">Categories of exception</a></li>
+									<li><a href="shop.html">How exception come?</a></li>
+									<li><a href="shop.html">How Java Handles Exception?</a></li>
+									<li><a href="shop.html">Advantages of Exceptional Handling</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Block in Exception</h4>
+								<ul>
+									<li><a href="shop.html">Different types of Exception Block</a></li>
+									<li><a href="shop.html">Try and catch block</a></li>
+									<li><a href="shop.html">Internal handling of try catch block</a></li>
+									<li><a href="shop.html">Catching Multiple Exceptions</a></li>
+									<li><a href="shop.html">Exception Hierarchies</a></li>
+									<li><a href="shop.html">Checked or Unchecked Exceptions?</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Advanced</h4>
+								<ul>
+									<li><a href="shop.html">Exception Wrapping</a></li>
+									<li><a href="shop.html">Fail Safe Exception Handling</a></li>
+									<li><a href="shop.html">Plugable Exception handlers</a></li>
+									<li><a href="shop.html">Logging Exception: Where to log Exception?</a></li>
+									<li><a href="shop.html">Validation- Throw Exception Early</a></li>
+									<li><a href="shop.html">Exception Handling Templates in Java</a></li>
+									<li><a href="shop.html">Exception Interview Question</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<img src="images/exception_example.png" alt=""/>
+					</div>
+					
+    				</div>
+				</li>
+				<li><a class="color8" href="#">Inner Classes in Java</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Inner Classes</h4>
+								<ul>
+									<li><a href="shop.html">What is inner class?</a></li>
+									<li><a href="shop.html">Member inner class</a></li>
+									<li><a href="shop.html">Anonymous Inner class</a></li>
+									<li><a href="shop.html">Local Inner class</a></li>
+									<li><a href="shop.html">static nested class</a></li>
+									<li><a href="shop.html">Nested Interface</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<img src="images/nested_classes.png" alt=""/>
+				</div>
+				</li>
+				<li><a class="color9" href="#">Java MultiThreading</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Basis</h4>
+								<ul>
+									<li><a href="shop.html">What is multi-threading?</a></li>
+									<li><a href="shop.html">Life Cycle of Thread</a></li>
+									<li><a href="shop.html">Thread Priorities</a></li>
+									<li><a href="shop.html">Creating thread by implementing Runnable interface</a></li>
+									<li><a href="shop.html">Creating thread by extending Thread Class</a></li>
+									<li><a href="shop.html">Thread Methods</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Advanced Topic</h4>
+								<ul>
+									<li><a href="shop.html">What is thread synchronization?</a></li>
+									<li><a href="shop.html">Handling threads inter communication</a></li>
+									<li><a href="shop.html">Handling thread deadlock</a></li>
+									<li><a href="shop.html">Major thread operations</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<img src="images/Multithread.png" alt=""/>
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+    				</div>
+				</li>
+				<li><a class="color10" href="#">Collections in Java</a></li>
+				<li><a class="color11" href="#">Java I/O</a></li>
+				<li><a class="color12" href="#">Java JDBC</a></li>
+		   </ul>
+		   <div class="clear"></div>
+     	</div>
+       </div>
+       <div class="single">
+         <div class="wrap">
+     	    <div class="rsidebar span_1_of_left">
+				   <section  class="sky-form">
+                   	  <h4>Java Virtual Machine</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+								<span>
+									<p>
+										<i class="fa fa-pagelines">
+										<i></i><a href="#">Introduction</a>
+										</i>
+									</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines">
+											<i></i><a href="#">Difference between JVM,JDK and JrE</a>
+										</i>
+									</p>
+								<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i></i>
+											<a href="#features">Internal Details of JVM</a>
+										</i>
+									</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#">How JVM internally works?</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#">Concept of Stack And Heap</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#">Concept of Java Garbage Collection</a></i>
+										</p>
+									<br/>
+								</span>
+							</div>
+						 </div>
+                   	</section>
+				</div>
+		<div class="cont span_2_of_3">
+				<!-- labout span_1_of_a1 div starts here -->
+			  <div class="labout span_1_of_a1" style="height: 300px;">
+				<!-- start product_slider -->
+				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
+							<li>
+								<img class="etalage_thumb_image" src="images/jvm.png" />
+							</li>
+					</ul>
+				</div>
+				<!-- labout span_1_of_a1 div  ends here -->
+				<!-- cont1 span_2_of_a1 starts here-->
+				<div class="cont1 span_2_of_a1">
+					<h3 class="m_3">JVM Introduction</h3>
+					<p class="m_desc">A Java Virtual Machine(JVM), an implementation of the Java Virtual Machine Specification, intercept compiled Java binary code(byte code) for a particular machine, processor(or "hardware Platform") so that is can perform Java program's instruction</p>
+					<p class="m_desc">As show is the diagram, the java compiler takes the Java instruction, convert them into byte code(.class). This byte code is "platform independent". Now this byte code can run easily on the various machine and operating system</p>
+					<p class="m_desc">To know more about virtual Machine. <a href="virtualMachine.html">Click Here</a></p>
+					<p class="m_desc">There are two types of virtual machines</p>
+					<p class="m_desc">1). Hardware Based Virtual Machine</p>
+					<p class="m_desc">2). Software Based Virtual Machine</p>
+				</div>
+				<hr/>
+				<!-- cont1 span_2_of_a1 ends here-->
+			<div class="clear"></div>
+				
+			<div id="features" class="">
+				<h3 class="m_3">Hardware Based Virtual Machine</h3>
+				<p class="m_desc">Hardware Based Virtual Machine is also System Based Virtual Machine.Hardware virtualization is when the virtual manager is embedded in the circuits of the Hardware component instead of being called up from a third party software application. The virtual manager is called "Hypervisor". 
+				<p class="m_desc">In simple words,<span class="italic">"It Provides Several Logical System on the Same Computer  with Strong Isolation from Each Other."</span></p>
+				<p class="m_desc">Example:</p>
+				<p class="m_desc">1). KVM(Kernel Based Virtual Machine) for Linux System</p>
+				<p class="m_desc">2). VMWare(Virtual Machine Ware)</p>
+				<p class="m_desc">3). Xen</p>
+				<p class="m_desc">4). Cloud Computing</p>
+				<p class="m_desc">"The main advantage of Hard-ware based Virtual Machines is for effective utilization of hard-ware resources".</p>
+				
+				<h3 class="m_3">Software Based Virtual Machine</h3>
+				<p class="m_desc">It is also known as Application Based or Process Based Virtual Machines. These Virtual Machines Acts as Runtime Engines to run a Particular Programming Language Applications.</p>
+				<p class="m_desc">Examples:</p>
+				<p class="m_desc">1). JVM acts as runtime engine to run Java Applications.</p>
+				<p class="m_desc">2). PVM(Parrot Virtual Machine) acts as runtime engine to run scripting language "PERL"</p>
+				<p class="m_desc">3). CLR(Common Language Runtime) acts as runtime engine to run .NET based Applications</p>
+			</div>
+			<div class="clear"></div>
+			<hr/>
+			
+			<div id="" class="">
+				<h3 class="m_3">Basic Architecture Diagram of JVM</h3>
+				<p class="m_desc">To be added soon</p>
+			</div>
+			<div class="clear"></div>
+			<hr/>
+			
+			<div id="" class="">
+				<h3 class="m_3">Class Loader SubSystem</h3>
+				<p class="m_desc">Step followed by Class Loader:</p>
+				<p class="m_desc">1).Loading</p>
+				<p class="m_desc">1).Linking</p>
+				<p class="m_desc">1).Initialization</p>
+			</div>
+			<div class="clear"></div>
+			<hr/>
+			
+			<div id="" class="">
+				<h3 class="m_3">Type of Class Loaders:</h3>
+				<p class="m_desc">1). BootStrap Class Loader</p>
+				<p class="m_desc">2). Extension Class Loader</p>
+				<p class="m_desc">3). Application Class Loader</p>
+			</div>
+			<div class="clear"></div>
+			<hr/>
+			
+			<div id="" class="">
+				<h3 class="m_3">How Java Class Loader Works?</h3>
+				<p class="m_desc">To be added soon</p>
+			</div>
+			<div class="clear"></div>
+			<hr/>
+			
+			<div id="" class="">
+				<h3 class="m_3">Need of customized Class Loader?</h3>
+				<p class="m_desc">To be added soon</p>
+			</div>
+			<div class="clear"></div>
+			<hr/>
+			
+			<div id="" class=""> 
+				<h3 class="m_3">Pseudo Code to define customized Class Loader</h3>
+				<p class="m_desc">TO be added Soon</p>
+			</div>
+			<div class="clear"></div>
+			<br/><br/>
+			
+			<div class="float-left-example">
+				<i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i>
+				<i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i>
+				<i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i>
+				<p class="m_desc" style="display:inline;">Module 2</p>
+				<i class="fa fa-pagelines"></i>
+				<i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i>
+				<i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i>
+			</div>
+			<br/><br/>
+			<div class="clear"></div>
+			
+			<div id="" class="">
+				<h3 class="m_3">Various Memory Areas of JVM</h3>
+				<p class="m_desc">1). Method Area</p>
+				<p class="m_desc">2). Heap Area</p>
+				<p class="m_desc">3). Stack Area</p>
+				<p class="m_desc">4). PC Register</p>
+				<p class="m_desc">5). Native Method Stacks</p>
+			</div>
+			<div class="clear"></div>
+			<hr/>
+			
+			<div id="" class="">
+				<h3 class="m_3">Program to Display Heap Memory Statistic</h3>
+				<p class="m_desc">To be added soon</p>
+			</div>
+			
+			<div id="" class=""> 
+				<h3 class="m_3">How to Set Maximum Heap Size?</h3>
+				<p class="m_desc">To be added Soon</p>
+			</div>
+			<div class="clear"></div>
+			<hr/>
+			
+			<div id="" class="">
+				<h3 class="m_3">Execution Engine</h3>
+				<p class="m_desc">Execution Engine consist of the two components:</p>
+				<p class="m_desc">1).Interpreter</p>
+				<p class="m_desc">2). JIT compiler</p>
+			</div>
+			<div class="clear"></div>
+			<hr/>
+			
+			<div id="" class="">
+				<h3 class="m_3">Java Native Interface(JNI)</h3>
+				<p class="m_desc">Sometimes the Execution engine requires Java Native Interface(JNI) library information</p>
+			</div>
+			<div class="clear"></div>
+			<hr/>
+			
+			<div id="" class="">
+				<h3 class="m_3">Complete Architecture Diagram of JVM</h3>
+				<p class="m_desc">To be added Soon</p>
+			</div>
+			<div class="clear"></div>
+			
+			<div id="" class="">
+				<h3 class="m_3">Class File Structure</h3>
+				<p class="m_desc">The class file generated by Java Compiler is not human readable form but if open the class file and interpret it. It will follow a particular pattern. It has the following components in it:</p>
+				<p class="m_desc">1).Magic Number</p>
+				<p class="m_desc">2).Minor Version</p>
+				<p class="m_desc">3).Major Version</p>
+			</div>
+			<div class="clear"></div>
+			
+	 <div class="toogle">
+     	<div class="float-left">
+		<i class="fa fa-fast-backward fa-2x"></i>
+		</div>
+		<div class="float-right">
+		<i class="fa fa-fast-forward fa-2x"></i>
+		</div>
+     </div>					
+	 </div>
+     <div class="clear"></div>
+	 </div>
+     </div>
+	  <div class="footer">
+       	 <div class="footer-top">
+       		<div class="wrap">
+       			   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	 <ul class="f_list">
+				  	 	<li>
+							<div class="margin-left">
+								<i class="fa fa-google-plus fa-inverse"></i>
+							</div>
+							<span class="delivery"><a href="https://plus.google.com/+RahulSahs/posts">Follow me</a></span></li>
+				  	 </ul>
+				   </div>
+				   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	<ul class="f_list">
+				  	 	<li>
+						<img src="images/f_icon1.png" alt=""/>
+							<span class="delivery">Ready to Help At:
+								<span class="orange"> (+91) 9035211426</span>
+							</span>
+						</li>
+				  	 </ul>
+				   </div>
+				   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	<ul class="f_list">
+				  	 	<li><i class="fa fa-thumbs-o-up fa-inverse"></i><span class="delivery">Like Us on <i class="fa fa-facebook-square fa-inverse"></i></span></li>
+				  	 </ul>
+				   </div>
+				  <div class="clear"></div>
+			 </div>
+       	    </div>
+       	    
+       	 
+       	 
+       </div>
+       <script type="text/javascript">
+			$(document).ready(function() {
+			
+				var defaults = {
+		  			containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+		 		};
+				
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+        <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+</body>
+</html>

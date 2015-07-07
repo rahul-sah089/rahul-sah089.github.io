@@ -689,6 +689,19 @@ span.delivery a{
 	margin:0 0 0 3.6%; 
 }
 
+.text-center{
+	text-align : center;
+}
+
+.italic{
+    font-style : italic;
+}
+
+.float-left-example{
+	float :left;
+	text-align : center;
+	margin-left: 10%;
+}
 .float-left{
     float : left;
 	margin-left : 40%;
@@ -697,6 +710,7 @@ span.delivery a{
 .float-right{
     float : right;
 	margin-right : 50%; 
+	
 }
 
 .margin-left{
