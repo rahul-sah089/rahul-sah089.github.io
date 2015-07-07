@@ -504,6 +504,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h3 class="m_3">JVM Introduction</h3>
 					<p class="m_desc">A Java Virtual Machine(JVM), an implementation of the Java Virtual Machine Specification, intercept compiled Java binary code(byte code) for a particular machine, processor(or "hardware Platform") so that is can perform Java program's instruction</p>
 					<p class="m_desc">As show is the diagram, the java compiler takes the Java instruction, convert them into byte code(.class). This byte code is "platform independent". Now this byte code can run easily on the various machine and operating system</p>
+					<p class="m_desc">In simple words,<span class="italic">'JVM is a Software Based Virtual Machine which acts as Runtime Engine to run the Java Applications.'</span></p>
+					<p class="m_desc">JVM is responsible for two activities <span class"italic">i.e;</span>Load and Run Java Application line by Line.</p>
+					
 					<p class="m_desc">To know more about virtual Machine. <a href="virtualMachine.html">Click Here</a></p>
 					<p class="m_desc">There are two types of virtual machines</p>
 					<p class="m_desc">1). Hardware Based Virtual Machine</p>
@@ -516,13 +519,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div id="features" class="">
 				<h3 class="m_3">Hardware Based Virtual Machine</h3>
 				<p class="m_desc">Hardware Based Virtual Machine is also System Based Virtual Machine.Hardware virtualization is when the virtual manager is embedded in the circuits of the Hardware component instead of being called up from a third party software application. The virtual manager is called "Hypervisor". 
-				<p class="m_desc">In simple words,<span class="italic">"It Provides Several Logical System on the Same Computer  with Strong Isolation from Each Other."</span></p>
+				<p class="m_desc">In simple words,<span class="italic">"It Provides Several Logical System on the Same Computer  with Strong Isolation from Each Other"</span></p>
 				<p class="m_desc">Example:</p>
 				<p class="m_desc">1). KVM(Kernel Based Virtual Machine) for Linux System</p>
 				<p class="m_desc">2). VMWare(Virtual Machine Ware)</p>
 				<p class="m_desc">3). Xen</p>
 				<p class="m_desc">4). Cloud Computing</p>
 				<p class="m_desc">"The main advantage of Hard-ware based Virtual Machines is for effective utilization of hard-ware resources".</p>
+				<p class="m_desc">It is the System Admin related terminologies but not for programmer.</p>
 				
 				<h3 class="m_3">Software Based Virtual Machine</h3>
 				<p class="m_desc">It is also known as Application Based or Process Based Virtual Machines. These Virtual Machines Acts as Runtime Engines to run a Particular Programming Language Applications.</p>
@@ -536,7 +540,36 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			
 			<div id="" class="">
 				<h3 class="m_3">Basic Architecture Diagram of JVM</h3>
-				<p class="m_desc">To be added soon</p>
+				<div class="labout span_1_of_a1" style="height: 300px;">
+				<!-- start product_slider -->
+				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
+							<li>
+								<img class="etalage_thumb_image" src="images/architecture-of-jvm.jpg" />
+							</li>
+					</ul>
+				</div>
+				<!-- labout span_1_of_a1 div  ends here -->
+				<!-- cont1 span_2_of_a1 starts here-->
+				<div class="cont1 span_2_of_a1">
+					<p class="m_desc">The diagram shows the basic architecture of the JVM. There are three main components of the Java Virtual Machine. They are as follows:</p>
+					<p class="m_desc">1). Class Loader SubSystem</p>
+					<p class="m_desc">2). JVM memory area</p>
+					<p class="m_desc">3). Execution engine</p>
+					<p class="m_desc">As we had already discuss that JVM is used for two basis operation i.e, load and run. So for loading the Java class some component is required, this component is class loader sub system. The class loader subSystem will load the Java classes in the JVM memory area. So when the ".class" file gets loaded in the memory area.Then who is responsible for running this loaded class?. It is "execution engine".</p>
+				</div>	
+					<p class="m_desc">Class Loader SubSystem is responsible to load classes into JVM memory.</p>
+					<p class="m_desc">Class loader SubSystem will load the ".class" file in method area.</p>
+					<p class="m_desc">There are total of 5 memory subsection present in the memory area.The brief information is been given below:</p>
+					<p class="m_desc">1). Method Area - ".class" file is been loaded here.</p>
+					<p class="m_desc">2). Heap Area - The objects will be saved here.</p>
+					<p class="m_desc">3). Stack Area - The local variable and the method calls is been stored here.</p>
+					<p class="m_desc">4). PC register Area - Current executing instruction address is stored here.</p>
+					<p class="m_desc">Execution engine is responsible to run ".class" file line by line.</p>
+					<p class="m_desc">Something when the execution engine executes some native libraries are required. The native libraries consist of the native method, it is the method which are not been implemented in the  Java. It may be implemented in some other languages like C++,C etc. Ex: "HashCode" or "HashClone" method is not been implemented in Java so this method implementation is taken from "native method libraries". Since this method is been written is some other language and it follows different set of instruction the interface is required in between the "execution engine" and the "native libraries method". This interface is "Java Native Interface".</p>
+				
+				
+				<!-- cont1 span_2_of_a1 ends here-->
+			<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
 			<hr/>
