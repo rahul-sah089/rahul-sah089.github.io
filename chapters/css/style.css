@@ -1521,6 +1521,11 @@ p.m_desc{
 	text-decoration : underline;
 	letter-spacing : 2px;
 }
+
+#font-awesome-inline{
+    float :left;
+	margin-right : 1%;
+}
 .view {
    overflow: hidden;
    position: relative;

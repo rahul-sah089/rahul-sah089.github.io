@@ -576,10 +576,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			
 			<div id="" class="">
 				<h3 class="m_3">Class Loader SubSystem</h3>
-				<p class="m_desc">Step followed by Class Loader:</p>
+				<p class="m_desc">Class Loader SubSystem is the 1st component of the JVM to react while loading and running the Java based application.</p>
+				<p class="m_desc">It is responsible for 3 activites:</p>
 				<p class="m_desc">1).Loading</p>
-				<p class="m_desc">1).Linking</p>
-				<p class="m_desc">1).Initialization</p>
+				<p class="m_desc">2).Linking</p>
+				<ul>
+					<i style="float:left;margin-right:1%;" class="fa fa-caret-square-o-right"></i><li>Verification</li>
+					<i style="float:left;margin-right:1%;" class="fa fa-caret-square-o-right"></i><li>Preparation</li>
+					<i style="float:left;margin-right:1%;" class="fa fa-caret-square-o-right"></i><li>Resolution</li>
+				</ul>	
+				<p class="m_desc">3).Initialization</p>
+				<br/>
+				<h3 class="m_3">Loading</h3>
+				<p class="m_desc">Loading Means reading the Class Files and Store Corresponding Binary Data in the Method Area.</p>
+				<br/>
+				<p class="m_desc">For Each Class File JVM will store the following Information in the Method Area</p>
+				<p class="m_desc">1).Fully Qualified Name of the Loaded Class OR Interface OR ENUM.</p>
+				<p class="m_desc">2).Fully Qualified Name  of its Immediate Parent Class</p>
+				<p class="m_desc">3).Whether .class File is related to a Class Or Interface or ENUM.</p>
+				<p class="m_desc">4).The Modifier Information.</p>
+				<p class="m_desc">5).Variable or Field Information.</p>
+				<p class="m_desc">6).Methods Information.</p>
+				<p class="m_desc">7).Constant Pool Information and so on.</p>
+				<br/>
+				<p class="m_desc">After loading .class File JVM will Immediately Create an Object of the Type Class to represent the Class Level Binary Information in the Method Area</p>
 			</div>
 			<div class="clear"></div>
 			<hr/>
