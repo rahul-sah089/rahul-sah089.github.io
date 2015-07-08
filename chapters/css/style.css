@@ -83,6 +83,19 @@ body{
 	margin: 0px 10px;
 	font-size: 0.8125em;
 }
+
+.table_global{
+	margin : 0;
+	padding : 4px;
+	font : 11 px, Arial, Helvetica, sans-serif;
+	color : black;
+	border : 5px solid blue;
+}
+
+.table-header{
+		
+}
+
 .h_nav h4{
 	border-bottom:1px solid rgb(236, 236, 236);
 	font-size: 1.1em;
@@ -701,6 +714,7 @@ span.delivery a{
     font-style : italic;
 	text-decoration : none;
 }
+p.
 
 div.example{
 	width : auto;
@@ -714,7 +728,8 @@ div.example{
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-div.example_code{
+
+div.example_code_1{
     width : auto;
 	background-color : #ffffff;
 	font-family : Consolas,"courier new";
@@ -723,12 +738,58 @@ div.example_code{
 	word-wrap : break-word;
 }
 
+div.example_code_2{
+    width : auto;
+	background-color : black;
+	color : #ffffff;
+	font-family : Consolas,"courier new";
+	padding : 1.1%;
+	border-left : 4px solid #0B80E2;
+	word-wrap : break-word;
+}
+
+.highlighter{
+	color : #A33;
+	font-family : Consolas,"courier new";
+	background-color : #EFEFEF;
+	font-size : 0.9em;
+	padding : 0 3px;
+	text-decoration : none;
+}
+
+
 .highELE{
     color : brown;
 }
 
 .highVAL{
     color : mediumblue;
+}
+
+.highVAL1{
+	color:rgb(242, 118, 142);
+}
+
+.highVAL2{
+	color:rgb(154, 137, 232);
+}
+
+.highVAL3{
+    color : green;
+	font-weight : bold;
+}
+
+.highVAL4{
+    color : orange;
+	font-weight : bold;
+}
+
+.intend1{
+	margin-left : 5%;
+}
+
+.intend2{
+    margin-left : 10%;
 }
 
 .float-left-example{
@@ -1547,6 +1608,16 @@ p.m_desc{
 	font-size: 18px;
 	font-family: 'Lato', sans-serif;
 	line-height: 1.8em;
+}
+
+p.para{
+	color : #0B0B0B;
+	font-size:0.8125em;
+	line-height : 1.8em;
+	margin-bottom : 10px;
+	font-size : 18px;
+	font-family : 'Lato', sans-serif;
+	line-height : 1.8em;
 }
 
 .m_desc span {

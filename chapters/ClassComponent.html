@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Java Introduction</title>
+<title>Class File Components</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="The fundamental of the Java came from a programming language called "C++".Java programming language is the enchanced version of C++. It tried to eliminate the loop holes of C++  like explicit pointers, operator overloading etc. There was no need to explicitly remove the object once it is been used. The memory deallocation is done automatically by 'Java Garbage collector'.Java built on, and improved the ideas of c++, to provide a programming language that was powerful and simple to use. "/>
+<meta name="description" content="Magic number is used to uniquely identify the format and to distinguish it from other formats. The first four bytes of the Class file are 0xCAFEBABE."/>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
@@ -47,6 +47,7 @@
      </script>
 <!-- start menu -->     
 <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/table.css" rel="stylesheet" type="text/css" media="all"/>
 <script type="text/javascript" src="js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 <!-- end menu -->
@@ -88,7 +89,20 @@
 				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
 			});
 		});
-	</script>					
+	</script>
+<style>
+.example{
+	width : auto;
+	color : #000000;
+	background-color : #f1f1f1;
+	padding : 15px;
+	line-height : 1.15em;
+	word-wrap : break-word;
+	margin-bottom : 12px;
+	margin-top : 12px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+</style>	
 </head>
 <body>
   <div class="header-top">
@@ -430,13 +444,13 @@
          <div class="wrap">
      	    <div class="rsidebar span_1_of_left">
 				   <section  class="sky-form">
-                   	  <h4>JAVA-HOMES</h4>
+                   	  <h4>Class File Components</h4>
 						<div class="row row1 scroll-pane">
 							<div class="col col-4">
 								<span>
 									<p>
 										<i class="fa fa-pagelines">
-										<i></i><a href="#javaIntro">Introduction</a>
+										<i></i><a href="#magicNumber">Magic Number</a>
 										</i>
 									</p>
 									<br/>
@@ -444,7 +458,7 @@
 								<span>
 									<p>
 										<i class="fa fa-pagelines">
-											<i></i><a href="#whoCreatedIt">Who created Java?</a>
+											<i></i><a href="#constantPool">Constant Pool</a>
 										</i>
 									</p>
 								<br/>
@@ -452,7 +466,7 @@
 								<span>
 									<p>
 										<i class="fa fa-pagelines"><i></i>
-											<a href="#features">Features of Java</a>
+											<a href="#accessFlags">Access Flags</a>
 										</i>
 									</p>
 									<br/>
@@ -460,7 +474,42 @@
 								<span>
 									<p>
 										<i class="fa fa-pagelines"><i>
-										</i><a href="#usesOfJava">Uses of Java</a></i>
+										</i><a href="#thisClass">This Class</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#superClass">Super Class</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#interface">Interfaces</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#fields">Fields</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#methods">Methods</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#attributes">Attributes</a></i>
 										</p>
 									<br/>
 								</span>
@@ -469,9 +518,8 @@
                    	</section>
 				</div>
 		<div class="cont span_2_of_3">
-				<div id="">
-					
-						<h3 class="m_3">Magic Number</h3>
+				<div id="magicNumber">
+					<h3 class="m_3">Magic Number</h3>
 						<p class="m_desc">Magic number is used to uniquely identify the format and to distinguish it from other formats. The first four bytes of the Class file are 0xCAFEBABE.</p>
 						<div class="labout span_1_of_a1" style="height: 300px;">
 							<ul id="etalage" style="display: block; width: 314px; height: 414px;">
@@ -486,90 +534,218 @@
 				</div>
 				<!-- cont1 span_2_of_a1 ends here-->
 			<div class="clear"></div>
-			
+			<hr/>
 			<!-- 2nd cont1 span_2_of_a1 ends here-->
-			<div id="">
+			<div id="versionOfClass">
 				<h3 class="m_3">Version of Class File</h3>
-				<p class="m_desc">The next four byte of the class file contains major and minor version numbers. This number allows the JVM to verify and identify the class file. If the number is greater than what JVM can load, the class file will be rejected with error java.lang.<code>UnsupportedClassVersionError.</code></p>
+				<p class="m_desc">The next four byte of the class file contains major and minor "version numbers". This number allows the JVM to verify and identify the class file. If the number is greater than what JVM can load, the class file will be rejected with error <span class="highlighter">java.lang.UnsupportedClassVersionError</span></p>
 				<div class="example">
 					<h2 class="example">Computer Code</h2>
-					<div class="example_code">
-						<span class="highELE">var</span>
-							person = {
+					<div class="example_code_1">
+						<span class="highELE">public class</span>
+							Main{
 							<br/>
-							&nsbsp;&nsbsp;&nsbsp;&nsbsp;
-							firstName:
-							<span class="highVAL">"rahul"</span>,
-							
+							<span class="intend1">
+								<span class="highELE">public static void</span> main(String[] args){
+							</span>
+							<br/><br/>
+							<span class="intend2">int intVal = <span class="highVAL">0xFEEDED</span>;</span>
+							<br/>
+							}
+							<br/>
+							}
 					</div>
 				</div>
+				<p class="para">When we compile this class using <span class="highlighter">javac Main.java</span> command and create class file. Now execute the following command to see the major and minor version of the class file.</p>
+				<div class="example">
+					<div class="example">Computer Code</div>
+					<div class="example_code_2">
+						C:\>javap -verbose Main<br/><br/>
+						Compiled from <span class="highVAL1">"Main.java"</span><br/><br/>
+						<span class="highVAL2">public class </span>  Main <span class="highVAL2">extends</span> java.lang.Object<br/><br/>
+						Source : "Main.java" <br/><br/>
+						minor version :<span class="highVAL1">0</span><br/><br/>
+						major version : <span class="highVAL1">50</span><br/><br/>
+					</div>		
+				</div>
+				
+				<p class="m_desc">Below is shown the list of the Major versions and corresponding JDK version of class file</p>
+				<table>
+					<tr>
+						<th>Major Version</th>
+						<th>Hex</th>
+						<th>JDK Version</th>
+					</tr>
+					<tr>
+						<td>51</td>
+						<td>0x33</td>
+						<td>I2SE7</td>
+					</tr>
+					<tr>
+						<td>50</td>
+						<td>0x32</td>
+						<td>I2SE 6.0</td>
+					</tr>
+					<tr>
+						<td>49</td>
+						<td>0x31</td>
+						<td>I2SE 5.0</td>
+					</tr>
+					<tr>
+						<td>48</td>
+						<td>0x30</td>
+						<td>JDK 1.4</td>
+					</tr>
+					<tr>
+						<td>47</td>
+						<td>0x2F</td>
+						<td>JDK 1.3</td>
+					</tr>
+					<tr>
+						<td>46</td>
+						<td>0x2E</td>
+						<td>JDK 1.2</td>
+					</tr>
+					<tr>
+						<td>45</td>
+						<td>0x2D</td>
+						<td>JDK 1.1</td>
+					</tr>
+				</table>		
+				
 			</div>
 			<!-- 2nd cont1 span_2_of_a1 ends here-->
 			<div class="clear"></div>
-			
+			<br/>
+			<hr/>
 			<!-- 3rd labout span_1_of_a1 starts here-->
 			 <div class="labout span_1_of_a1" style="height: 300px;">
 				<!-- start product_slider -->
 				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
 							<li>
-								<img class="etalage_thumb_image" src="images/feature-of-java.png">
+								<img class="etalage_thumb_image" src="images/java-class-file-constant-pool-structure.png">
 							</li>
 						</ul>
 			</div>
 			<!-- 3rd labout span_1_of_a1 ends here-->
 			
 			<!-- 4th cont1 span_2_of_a1 ends here-->
-			<div id="features" class="cont1 span_2_of_a1">
-				<h3 class="m_3">Features of Java</h3>
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Easy To Use</span></h3>
-				<p class="m_desc">The fundamental of the Java came from a programming language called "C++".Java programming language is the enchanced version of C++. It tried to eliminate the loop holes of C++  like explicit pointers, operator overloading etc. There was no need to explicitly remove the object once it is been used. The memory deallocation is done automatically by "Java Garbage collector".Java built on, and improved the ideas of c++, to provide a programming language that was powerful and simple to use. </p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Reliability</span></h3>
-				<p class="m_desc">Java needed to reduce the likelihood of fatal errors from programmer mistakes. With this in mind, object-oriented programming was introduced. Once data and its manipulation were packaged together in one place, it increased Java’s robustness.</p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Secure</span></h3>
-				<p class="m_desc">As Java was originally targeting mobile devices that would be exchanging data over networks, it was built to include a high level of security. Java is probably the most secure programming language to date.</p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Platform Dependent</span></h3>
-				<p class="m_desc">This is one of the most important feature of Java. Before understanding this feature we need to know about:<br/>
-					<strong>Javac - compiler that converts the source code into byte code.<br/></strong>
-					<strong>JVM - interpreter that converts the byte code into machine language code.<br/></strong>
-					As we know java is both compiler & interpreter based language. Once the java code also known as source code is compiled, it gets converted to native code known as BYTE CODE which is portable & can be easily executed on all operating systems. Byte code generated is basically represented in hexa decimal format. This format is same on every platform be it Solaris work station or Macintosh, windows or Linux. After compilation, the interpreter reads the generated byte code & translates it according to the host machine. Byte code is interpreted by Java Virtual Machine which is available with all the operating systems we install. so to port Java programs to a new platform all that is required is to port the interpreter and some of the library routines.<br/>
-					Source code -> javac ->Universal byte code<br/>
-					Universal byte ->jvm/java -> execute them on a particular machine.<br/>
+			<div id="constantPool"  class="cont1 span_2_of_a1">
+				<h3 class="m_3">Constant Pool</h3>
+				<p class="m_desc">
+					All the constants related to the Class or an Interface will get stored in the Constant Pool.The constants includes class names, variable names, interface names, method names and signature, final variable values, string literals etc.
 				</p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Robust</span></h3>
-				<p class="m_desc">Since Java is an open source project it lead to the robust development of it. There are many features of the Java which surpasses the other programming language. It lacks the concept of the pointer due to which it cuts down the security issues. There is an automatic garbage collection in Java which implicitly removes the unused object. There is exception handling and type checking mechanism in java. All these points makes java robust.</p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Architecture-neutral</span></h3>
-				<p class="m_desc">Since java is an open source project it lead to the robust development of it. There are many features of the Java which surpasses the other programming language. It lacks the concept of the pointer due to which it cuts down the security issues. There is an automatic garbage collection in Java which implicitly removes the unused object. There is exception handling and type checking mechanism in java. All these points makes java robust.</p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Architecture-neutral</span></h3>
-				<p class="m_desc">There is no implementation dependent features e.g. size of primitive types is set.</p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Portable</span></h3>
-				<p class="m_desc">The byte code generated by Java Compiler can be easily carried to any platform</p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Distributed</span></h3>
-				<p class="m_desc">The application generated by the Java can be easily disturbed across various platform.RMI and EJB are used for creating distributed applications. We may access files by calling the methods from any machine on the internet.</p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Multi-threaded</span></h3>
-				<p class="m_desc">A thread is like a separate program, executing concurrently. We can write Java programs that deal with many tasks at once by defining multiple threads. The main advantage of multi-threading is that it shares the same memory. Threads are important for multi-media, Web applications etc.</p>
-				
-    		</div>
-			<!-- 4th cont1 span_2_of_a1 ends here-->
+				<p class="para">The constants are stored as a variable length array element in the Constant pool. The arrays of constants are preceded by its array size, hence JVM knows how many constants it will expect while loading the class file. In above diagram, the portion represented in <span class="highVAL3">green</span> contains the size of the array.</p>
+				<p class="para">Within each array elements first byte represents a tag specifying the type of constant at that position in the array. In above diagram the portion in <span class="highVAL4">orange</span> represent the one-byte tag. JVM identifies the type of the constant by reading one-byte tag. Hence if one-byte tag represents a String literal then JVM knows that next 2 bytes represents length of the String literal and rest of the entry is string literal itself.</p>
+				<p class="para">You can analyse the Constant Pool of any class file using javap command. Executing javap on above Main class, we get following symbol table.</p>
+			</div>
+			<div class="">
+				<div class="">Computer Code</div>
+				<div class="example_code_2">
+					C:\>javap -verbose Main<br/><br/>
+					Compiled from <span class="highVAL1">"Main.java"</span><br/><br/>
+					<span class="highVAL2">public class </span>  Main <span class="highVAL2">extends</span> java.lang.Object<br/><br/>
+					Source : "Main.java" <br/><br/>
+					minor version :<span class="highVAL1">0</span><br/><br/>
+					major version : <span class="highVAL1">50</span><br/><br/>
+					Constant Pool :<br/><br/>
+					<span class="highVAL2">const</span> #<span class="highVAL2">1</span> = Method  <span class="highVAL2">#4.#13;</span>  <span class="highVAL3">//  java/lang/Object."<init>":()V</span><br/>
+					<span class="highVAL2">const</span> #<span class="highVAL2">2</span> = int  <span class="highVAL2">16707053</span>;<br/>
+					<span class="highVAL2">const</span> #<span class="highVAL2">3</span> = class        #<span class="highVAL2">14</span>;    <span class="highVAL3">//  Main</span><br/>
+					<span class="highVAL2">const</span> #<span class="highVAL2">4</span> = class        #<span class="highVAL2">15</span>;    <span class="highVAL3">//  java/lang/Object</span><br/>
+					<span class="highVAL2">const</span> #<span class="highVAL2">5</span> = Asciz        <span class="highVAL3"><init>;</span><br/>
+					<span class="highVAL2">const</span> #<span class="highVAL2">6</span> = Asciz        <span class="highVAL3">()V;</span><br/>
+					<span class="highVAL2">const</span> #<span class="highVAL2">7</span> = Asciz        <span class="highVAL3">Code;</span><br/>
+					<span class="highVAL2">const</span> #<span class="highVAL2">8</span> = Asciz        <span class="highVAL3">LineNumberTable</span>;<br/>
+					<span class="highVAL2">const</span> #<span class="highVAL2">9</span> = Asciz       <span class="highVAL3">main;</span><br/>
+					<span class="highVAL2">const</span> #<span class="highVAL2">10</span> = Asciz       <span class="highVAL3">([Ljava/lang/String;)V;</span><br/>
+					<span class="highVAL2">const</span> #<span class="highVAL2">11</span> = Asciz       <span class="highVAL3">SourceFile;</span><br/>
+					<span class="highVAL2">const</span> #<span class="highVAL2">12</span> = Asciz       <span class="highVAL3">Main.java;</span><br/>
+					<span class="highVAL2">const</span> #<span class="highVAL2">13</span> = NameAndType #<span class="highVAL2">5</span>:#<span class="highVAL2">6</span>;<span class="highVAL3">//  "<init>":()V</span><br/>
+					<span class="highVAL2">const</span> #<span class="highVAL2">14</span> = Asciz       <span class="highVAL3">Main;</span><br/>
+					<span class="highVAL2">const</span> #<span class="highVAL2">15</span> = Asciz       <span class="highVAL3">java/lang/Object;</span><br/>
+				</div>		
+				<p class="para">The constant pool has 15 entries in total. Entry #1 is Method public static void main; #2 is for integer value 0xFEEDED (decimal 16707053). Also we have two entries #3 and #4 which corresponds to this class and super class. Rest is the symbol table storing string literals.</p>
+			</div>
 			<div class="clear"></div>
+			<hr/>
 			
-	 <div id="usesOfJava" class="toogle">
-     	<h3 class="m_3">Uses of Java</h3>
-     	<p class="m_text">1).Since Java has inbuilt networking features it is widely used for developing network rotocols and it's software. Socket programming is much easier and efficient do to be implemented in Java as compared to "C"</p>
-		<p class="m_text">2).Java is widely used in developing Java Enterprise application. J2EE technologies are implement in java and had provide excellent support for developing J2EE Applications. We can implement web application following "MVC" patternn using J2ee frameworks like Servlet, Springs, EJB, Hibernate etc</p>
-		<p class="m_text">3).Java is widely used in creating Desktop or Standalone applications because it is a fully Object Oriented Programming language and can depict the real world scenario more easily.</p>
-		<p class="m_text">4).Since Java has inbuilt networking features it is widely used for developing network rotocols and it's software. Socket programming is much easier and efficient do to be implemented in Java as compared to "C"</p>
-		<p class="m_text">5).Creating Graphical User Interface(GUI) in Java is very simple and efficient as compared to c and c++.So it is also used in creating GUI for applications.</p>
-		<p class="m_text">6).Creating Graphical User Interface(GUI) in Java is very simple and efficient as compared to c and c++.So it is also used in creating GUI for applications.</p>
+			<h3 id="accessFlags" class="m_3">Access flags</h3>
+			<p class="para">Access flags follows the Constant Pool. It is a two byte entry that indicates whether the file defines a class or an interface, whether it is public or abstract or final in case it is a class. Below is a list of some of the access flags and their interpretation.</p>
+			
+			<table>
+					<tr>
+						<th>Flag Name</th>
+						<th>Value</th>
+						<th>interpretation</th>
+					</tr>
+					<tr>
+						<td><span class="highVAL1">ACC_PUBLIC</span></td>
+						<td>0x0001</td>
+						<td>Declared public; may be accessed from outside its package.</td>
+					</tr>
+					<tr>
+						<td><span class="highVAL1">ACC_FINAL</span></td>
+						<td>0x0010</td>
+						<td>Declared final; no subclasses allowed.</td>
+					</tr>
+					<tr>
+						<td><span class="highVAL1">ACC_SUPER</span></td>
+						<td>0x0020</td>
+						<td>Treat superclass methods specially when invoked by the invokespecial instruction.</td>
+					</tr>
+					<tr>
+						<td><span class="highVAL1">ACC_INTERFACE</span></td>
+						<td>0x0200</td>
+						<td>Is an interface, not a class.</td>
+					</tr>
+					<tr>
+						<td><span class="highVAL1">ACC_ABSTRACT</span></td>
+						<td>0x0400</td>
+						<td>Declared abstract; may not be instantiated.</td>
+					</tr>
+				</table>		
+			<br/>
+			<hr/>
+			<div class="labout span_1_of_a1" style="height: 300px;">
+				<!-- start product_slider -->
+				<ul id="etalage" style="display: block; width: 314px; height: 414px;">
+					<li>
+						<img class="etalage_thumb_image" src="images/java-class-this-class-constant-pool-mapping.png">
+					</li>
+				</ul>
+			</div>
+	 <div  id="thisClass"class="toogle">
+     	<h3 class="m_3">this Class</h3>
+     	<p class="m_text">This Class is a two byte entry that points to an index in Constant Pool. In above diagram, this class has a value 0x0007 which is an index in Constant Pool. The corresponding entry that is pointed by this class Constant_pool[this_class] in Constant pool has two parts, first part is the one-byte tag that represents the type of entry in constant pool, in this case it is Class or Interface. In above diagram this is shown in <span class="highVAL4">orange</span> color. And second entry is two-byte having index again in Constant pool. This above diagram, two byte contain value 0x0004. Thus it points to Constant_poo [0x0004] which is the String literal having name of the interface or class.</p>
 		
+		<div id="superClass">
+			<h3 class="m_3">super Class</h3>
+			<p class="m_text">Next 2 bytes after This Class is of Super Class. Similar to this class, value of two bytes is a pointer that points to Constant pool which has entry for super class of the class.</p>
+		</div>
+		
+		<div id="interface">
+			<h3 class="m_3">Interfaces</h3>
+			<p class="m_text">All the interfaces that are implemented by the class (or interface) defined in the file goes in Interface section of a class file. Starting two byte of the Interface section is the count that provides information about total number of interfaces being implemented. Immediately following is an array that contains one index into the constant pool for each interface implemented by class.</p>
+		</div>
+		
+		<div id="fields">
+			<h3 class="m_3">Fields</h3>
+			<p class="m_text">A field is an instance or a class level variable (property) of the class or interface. Fields section contains only those fields that are defined by the class or an interface of the file and not those fields which are inherited from the super class or super interface.
+			First two bytes in Fields section represents count: that is the total number of fields in Fields Section. Following the count is an array of variable length structure one for each field. Each element in this array represent one field. Some information is stored in this structure where as some information like name of the fields are stored in Constant pool.</p>
+		</div>
+		
+		<div id="methods">
+		<h3 class="m_3">Methods</h3>
+		<p class="m_text">The Methods component host the methods that are explicitly defined by this class, not any other methods that may be inherited from super class.</p>
+     	<p class="m_text">First two byte is the count of the number of methods in the class or interface. The rest is again a variable length array which holds each method structure. Method structure contains several pieces of information about the method like method argument list, its return type, the number of stack words required for the method’s local variables, stack words required for method’s operand stack, a table for exceptions, byte code sequence etc.</p>
+		</div>
+		
+		<div id="attributes">
+		<h3 class="m_3">Attributes</h3>
+		<p class="m_text">Attribute section contains several attribute about the class file, e.g. one of the attribute is the source code attribute which reveals the name of the source file from which this class file was compiled.</p>
+     	<p class="m_text">First two bytes in Attribute section is count of the number of attributes, followed by the attributes themselves. The JVMs will ignore any attributes they don’t understand.</p>
+		</div>
 		
 		<div class="float-left">
 			<i class="fa fa-fast-backward fa-2x"></i>
