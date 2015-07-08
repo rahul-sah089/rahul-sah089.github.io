@@ -757,7 +757,10 @@ div.example_code_2{
 	text-decoration : none;
 }
 
-
+.figure-notification{
+    font-weight : bold;
+	text-align : center;
+}
 .highELE{
     color : brown;
 }
@@ -779,6 +782,21 @@ div.example_code_2{
 	font-weight : bold;
 }
 
+.commentHighLight{
+	color : gray !important ;
+	font-weight : bold;
+}
+
+.keywordHightLight{
+	color : #006699 !important;
+	font-weight : bold;
+}
+
+.quotationHighLight{
+	color : blue !important;
+	font-weight : bold;	
+}
+
 .highVAL4{
     color : orange;
 	font-weight : bold;
@@ -790,6 +808,10 @@ div.example_code_2{
 
 .intend2{
     margin-left : 10%;
+}
+
+.intend3{
+	margin-left : 15%;
 }
 
 .float-left-example{

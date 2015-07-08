@@ -87,14 +87,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- top scrolling -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
-   <script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-			});
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
 		});
-	</script>					
+	});
+</script>					
+<style>
+.example{
+	width : auto;
+	color : #000000;
+	background-color : #f1f1f1;
+	padding : 15px;
+	line-height : 1.15em;
+	word-wrap : break-word;
+	margin-bottom : 12px;
+	margin-top : 12px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+</style>	
 </head>
 <body>
   <div class="header-top">
@@ -506,6 +519,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<p class="m_desc">As show is the diagram, the java compiler takes the Java instruction, convert them into byte code(.class). This byte code is "platform independent". Now this byte code can run easily on the various machine and operating system</p>
 					<p class="m_desc">In simple words,<span class="italic">'JVM is a Software Based Virtual Machine which acts as Runtime Engine to run the Java Applications.'</span></p>
 					<p class="m_desc">JVM is responsible for two activities <span class"italic">i.e;</span>Load and Run Java Application line by Line.</p>
+					<p class="m_desc">The Class Loader loads the Compiled Java ByteCode to the runtime Data Areas, and the execution engine executes the Byte Code.</p>
 					
 					<p class="m_desc">To know more about virtual Machine. <a href="virtualMachine.html">Click Here</a></p>
 					<p class="m_desc">There are two types of virtual machines</p>
@@ -573,6 +587,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<div class="clear"></div>
 			<hr/>
+			<div class="labout span_1_of_a1" style="height: 350px;">
+				<!-- start product_slider -->
+				 <ul id="etalage" style="display: block; width: 314px; height: 500px;">
+					<li>
+						<img class="etalage_thumb_image" src="images/class-load-stage.png"/>
+					</li>
+				</ul>
+			</div>
 			
 			<div id="" class="">
 				<h3 class="m_3">Class Loader SubSystem</h3>
@@ -584,7 +606,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<i style="float:left;margin-right:1%;" class="fa fa-caret-square-o-right"></i><li>Verification</li>
 					<i style="float:left;margin-right:1%;" class="fa fa-caret-square-o-right"></i><li>Preparation</li>
 					<i style="float:left;margin-right:1%;" class="fa fa-caret-square-o-right"></i><li>Resolution</li>
-				</ul>	
+				</ul>
 				<p class="m_desc">3).Initialization</p>
 				<br/>
 				<h3 class="m_3">Loading</h3>
@@ -600,39 +622,51 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<p class="m_desc">7).Constant Pool Information and so on.</p>
 				<br/>
 				<p class="m_desc">After loading .class File JVM will Immediately Create an Object of the Type Class to represent the Class Level Binary Information in the Method Area</p>
+				<h3 class="m_3">Verifying</h3>
+				<p class="m_desc">Check whether or not the read class is configured as described in the Java Language Specification and JVM specifications. This is the most complicated test process of the class load processes, and takes the longest time. Most cases of the JVM TCK test cases are to test whether or not a verification error occurs by loading wrong classes.
+				
+				<h3 class="m_3">Preparing</h3>
+				<p class="m_desc">Prepare a data structure that assigns the memory required by classes and indicates the fields, methods, and interfaces defined in the class.</p>
+				
+				<h3 class="m_3">Resolving</h3>
+				<p class="m_desc">Change all symbolic references in the constant pool of the class to direct references.</p>
+				
+				<h3 class="m_3">Initializing</h3>
+				<p class="m_desc">Initialize the class variables to proper values. Execute the static initializers and initialize the static fields to the configured values.</p>
+				<p class="m_desc">The JVM specification defines the tasks. However, it allows flexible application of the execution time.</p>
 			</div>
 			<div class="clear"></div>
 			<hr/>
 			
+			<div class="labout span_1_of_a1" style="height: 350px;">
+				<!-- start product_slider -->
+				 <ul id="etalage" style="display: block; width: 314px; height: 500px;">
+					<li>
+						<img class="etalage_thumb_image" src="images/class-loader-delegation-model.png"/>
+					</li>
+				</ul>
+			</div>
 			<div id="" class="">
 				<h3 class="m_3">Type of Class Loaders:</h3>
 				<p class="m_desc">1). BootStrap Class Loader</p>
 				<p class="m_desc">2). Extension Class Loader</p>
 				<p class="m_desc">3). Application Class Loader</p>
 			</div>
-			<div class="clear"></div>
-			<hr/>
-			
-			<div id="" class="">
-				<h3 class="m_3">How Java Class Loader Works?</h3>
-				<p class="m_desc">To be added soon</p>
-			</div>
-			<div class="clear"></div>
-			<hr/>
-			
-			<div id="" class="">
-				<h3 class="m_3">Need of customized Class Loader?</h3>
-				<p class="m_desc">To be added soon</p>
-			</div>
-			<div class="clear"></div>
-			<hr/>
-			
-			<div id="" class=""> 
-				<h3 class="m_3">Pseudo Code to define customized Class Loader</h3>
-				<p class="m_desc">TO be added Soon</p>
-			</div>
-			<div class="clear"></div>
+			<h3 class="m_3">How Java Class Loader Works?</h3>
+			<p class="m_desc">When a class loader is requested for class load, it checks whether or not the class exists in the class loader cache, the parent class loader, and itself, in the order listed. In short, it checks whether or not the class has been loaded in the class loader cache. If not, it checks the parent class loader. If the class is not found in the bootstrap class loader, the requested class loader searches for the class in the file system.</p>
 			<br/><br/>
+			<h3 class="m_3">Bootstrap class loader</h3>
+			<p class="m_desc">This is created when running the JVM. It loads Java APIs, including object classes. Unlike other class loaders, it is implemented in native code instead of Java.</p>
+			<h3 class="m_3">Extension class loader</h3>
+			<p class="m_desc">It loads the extension classes excluding the basic Java APIs. It also loads various security extension functions.</p>
+			<h3 class="m_3">System class loader</h3>
+			<p class="m_desc">If the bootstrap class loader and the extension class loader load the JVM components, the system class loader loads the application classes. It loads the class in the $CLASSPATH specified by the user.</p>
+			<h3 class="m_3">User-defined class loader</h3>
+			<p class="m_desc">This is a class loader that an application user directly creates on the code.</p>
+			<div class="clear"></div>
+			<hr/>
+			
+			
 			
 			<div class="float-left-example">
 				<i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i>
@@ -694,7 +728,44 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			
 			<div id="" class="">
 				<h3 class="m_3">Program to Display Heap Memory Statistic</h3>
-				<p class="m_desc">To be added soon</p>
+				<p class="m_desc">Memory is the most important resource in any application. System memories is one of tha main resource that an application developer has to consider while managing the application.</p>
+				<p class="m_desc">This is highly useful for the Application developer to get the information about the Total Heap Size, total memory been used by the application and the total free heap space.</p>
+				<p class="m_desc">Java's Runtime class gives lots of information about the resource details of the Java Virtual Machine(JVM).  The memory consumed by the JVM can be read by different methods in Runtime class. </p>
+				<p class="m_desc">Below is show a simple program for getting the Total Heap Size, total Heap Memory Used and total free Heap Memory area.</p>
+				<div class="example">
+					<h2 class="example">Computer Code</h2>
+					<div class="example_code_1">
+						<span class="commentHighLight">/** <br/>
+							* Class: TestMemory<br/>
+							* @author: Rahul Sah<br/>
+							* @description: Prints JVM memory utilization statistics<br/>
+						*/<br/></span>
+						<span>public class </span> TestMemory {<br/>
+							<span class="intend1"><span class="keywordHightLight">public static void</span> main(String [] args)</span> {<br/></br>
+         
+							<span class="intend2"><span class="keywordHightLight">int</span> mb = <span class="highVAL3">1024*1024</span></span>;<br/></br/>
+         
+							<span class="intend2"><span class="highVAL3">//Getting the runtime reference from system</span></span><br/>
+							<span class="intend2">Runtime runtime = Runtime.getRuntime();</span><br/><br/>
+         
+							<span class="intend2">System.out.println(<span class="quotationHighLight">"##### Heap utilization statistics [MB] #####"</span>)</span>;<br/><br/>
+         
+							<span class="intend2"><span class="highVAL3">//Print used memory</span><br/></span>
+							<span class="intend2">System.out.println(<span class="quotationHighLight">"Used Memory:"</span>
+								+ (runtime.totalMemory() - runtime.freeMemory()) / mb);<br/><br/></span>
+ 
+							<span class="intend2"><span class="highVAL3">//Print free memory</span><br/>
+							System.out.println(<span class="quotationHighLight">"Free Memory:"</span>+runtime.freeMemory() / mb);<br/><br/></span>
+							 
+							<span class="intend2"><span class="highVAL3">//Print total available memory</span><br/>
+							System.out.println(<span class="quotationHighLight">"Total Memory:"</span> + runtime.totalMemory() / mb);<br/><br/></span>
+					 
+							<span class="intend2"><span class="highVAL3">//Print Maximum available memory</span><br/>
+							System.out.println(<span class="quotationHighLight">"Max Memory:"</span> + runtime.maxMemory() / mb);<br/><br/></span>
+							<span class="intend1">}</span><br/>
+							}
+					</div>
+				</div>
 			</div>
 			
 			<div id="" class=""> 
@@ -706,25 +777,42 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			
 			<div id="" class="">
 				<h3 class="m_3">Execution Engine</h3>
-				<p class="m_desc">Execution Engine consist of the two components:</p>
-				<p class="m_desc">1).Interpreter</p>
-				<p class="m_desc">2). JIT compiler</p>
+				<p class="m_desc">The bytecode that is assigned to the runtime data areas in the JVM via class loader is executed by the execution engine. The execution engine reads the Java Bytecode in the unit of instruction. It is like a CPU executing the machine command one by one. Each command of the bytecode consists of a 1-byte OpCode and additional Operand. The execution engine gets one OpCode and execute task with the Operand, and then executes the next OpCode.</p>
+				<p class="m_desc">But the Java Bytecode is written in a language that a human can understand, rather than in the language that the machine directly executes. Therefore, the execution engine must change the bytecode to the language that can be executed by the machine in the JVM. The bytecode can be changed to the suitable language in one of two ways.</p>
+				<p class="m_desc">
+					1).<span style="text-decoration:underline;">
+						Interpreter
+					</span> - Reads, interprets and executes the bytecode instructions one by one. As it interprets and executes instructions one by one, it can quickly interpret one bytecode, but slowly executes the interpreted result. This is the disadvantage of the interpret language. The 'language' called Bytecode basically runs like an interpreter.
+				</p>
+				<p class="m_desc">
+					2). <span style="text-decoration:underline;">
+					JIT(Just-In-Time)
+					</span> - The JIT compiler has been introduced to compensate for the disadvantages of the interpreter. The execution engine runs as an interpreter first, and at the appropriate time, the JIT compiler compiles the entire bytecode to change it to native code. After that, the execution engine no longer interprets the method, but directly executes using native code. Execution in native code is much faster than interpreting instructions one by one. The compiled code can be executed quickly since the native code is stored in the cache.
+				</p>
+				<p class="m_desc">
+					However, it takes more time for JIT compiler to compile the code than for the interpreter to interpret the code one by one. Therefore, if the code is to be executed just once, it is better to interpret it instead of compiling. Therefore, the JVMs that use the JIT compiler internally check how frequently the method is executed and compile the method only when the frequency is higher than a certain level.
+				</p>
+				<div class="labout span_1_of_a1" style="height: 200px;">
+				    <ul id="etalage" style="display: block; width: 314px; height: 414px;">
+						<li>
+							<img class="etalage_thumb_image" src="images/java-compiler-and-jit-compiler.png"/>
+						</li>
+					</ul>
+				</div>
+				<p class="figure-notification">Figure: Java Compiler and JIT compiler</p>
+				<p class="m_desc">
+					However, it takes more time for JIT compiler to compile the code than for the interpreter to interpret the code one by one. Therefore, if the code is to be executed just once, it is better to interpret it instead of compiling. Therefore, the JVMs that use the JIT compiler internally check how frequently the method is executed and compile the method only when the frequency is higher than a certain level.
+				</p>
 			</div>
 			<div class="clear"></div>
 			<hr/>
 			
 			<div id="" class="">
 				<h3 class="m_3">Java Native Interface(JNI)</h3>
-				<p class="m_desc">Sometimes the Execution engine requires Java Native Interface(JNI) library information</p>
+				<p class="m_desc">Sometimes the Execution engine requires Java Native Interface(JNI) library information. It is an interface that allows Java to interact with code written in another language. It help in code reusability and Performance.</p>
 			</div>
 			<div class="clear"></div>
 			<hr/>
-			
-			<div id="" class="">
-				<h3 class="m_3">Complete Architecture Diagram of JVM</h3>
-				<p class="m_desc">To be added Soon</p>
-			</div>
-			<div class="clear"></div>
 			
 			<div id="" class="">
 				<h3 class="m_3">Class File Structure</h3>
