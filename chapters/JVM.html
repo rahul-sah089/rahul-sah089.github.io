@@ -648,11 +648,46 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			
 			<div id="" class="">
 				<h3 class="m_3">Various Memory Areas of JVM</h3>
-				<p class="m_desc">1). Method Area</p>
-				<p class="m_desc">2). Heap Area</p>
-				<p class="m_desc">3). Stack Area</p>
-				<p class="m_desc">4). PC Register</p>
-				<p class="m_desc">5). Native Method Stacks</p>
+				
+				<div class="labout span_1_of_a1" style="height: 300px;">
+				<!-- start product_slider -->
+				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
+							<li>
+								<img class="etalage_thumb_image" src="images/runtime-data-access-configuration.png"/>
+							</li>
+					</ul>
+				</div>
+				<p class="m_desc">The memory area allocated by JVM is also known as "Runtime Data Area". It is the memory assigned when the JVm program runs on the OS.  The runtime data area can be divided into 6 areas. Of the Six, one PC register, JVM Stack and Native Method Stack for each thread . Heap, Method Area and the runtime Constant Pool are shared by all threads.</p>
+				<p class="m_desc">1). PC Register - It is the register existing for each thread. It stores the address of the current instruction unless it is native. If the current method is native then the PC is undefined. All the CPU has PC, typically PC is incremented after each instruction and therefore it hold the address of the next instruction to be executed. The JVM uses the PC to keep track of where it is executing instructions, the PC will be infact pointing to the memory address in the method area.</p>
+				<br/><br/>
+				<div class="labout span_1_of_a1" style="height: 300px;">
+				<!-- start product_slider -->
+				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
+							<li>
+								<img class="etalage_thumb_image" src="images/jvm-stack-configuration.png"/>
+							</li>
+					</ul>
+				</div>
+				
+				<p class="m_desc">2). JVM Stack Area - One JVM stack exist for one thread, and is created when the thread starts. The stack is based on the concept of "LIFO(Last In First Out)". The stack is made up of the stack frame. The JVM uses or pop the stack frame onto the JVM Stack. If any exception occurs while executing in the stack it is stored in the "printStackTrace()" method.</p>
+				
+				<p class="m_desc"> Whenever the method is been executed in the JVM, one Java Frame is been created for the thread. When the method call finishes the Java Stack is removed or deallocated. Each stack frame has the reference for the Local Variable, Operand Stack and runTime constant pool of a class where the method being executed belongs. The size of the local variable and the operand stack is fixed according to the method.</p>
+				
+				<p class="m_desc">3). Native Method Stack - A stack of the native written language other than Java. In other word, it is the Stack used to execute C/C++ code invokde through JNI(Java Native Interface). According to the language, a "C" native stack or "C++" native stack can be created.</p>
+				
+				<p class="m_desc">4). Method Area -  The method area is shared by all threads, created when the JVM starts. The class loader initially loads the Class Files as corresponding Binary Data in the Method Area. The following information is been stored in the Method Area</p>
+				<p class="m_desc">i).Fully Qualified Name of the Loaded Class OR Interface OR ENUM.</p>
+				<p class="m_desc">ii).Fully Qualified Name of the Parent Class</p>
+				<p class="m_desc">iii).Whether .class File is related to a Class Or Interface or ENUM.</p>
+				<p class="m_desc">iv).The Modifier Information.</p>
+				<p class="m_desc">v).Variable or Field Information.</p>
+				<p class="m_desc">vi).Methods Information</p>
+				<p class="m_desc">vii).Constant Pool Information and so on.</p>
+				
+				<p class="m_desc">5).Runtime constant pool: An area that corresponds to the constant_pool table in the class file format. This area is included in the method area; however, it plays the most core role in JVM operation. Therefore, the JVM specification separately describes its importance. As well as the constant of each class and interface, it contains all references for methods and fields. In short, when a method or field is referred to, the JVM searches the actual address of the method or field on the memory by using the runtime constant pool.</p>
+				
+				<p class="m_desc"> It is the space where the instances or the object is been stored and is the target of the garbage collection. It is the space provided for the dynamic allocation of the object at the runtime. This space is most frequently discussed when discussing issues such as JVM Performance. JVM vendors can determine how to configure the heap or not to collect garbage.</p>
+				
 			</div>
 			<div class="clear"></div>
 			<hr/>
@@ -694,10 +729,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div id="" class="">
 				<h3 class="m_3">Class File Structure</h3>
 				<p class="m_desc">The class file generated by Java Compiler is not human readable form but if open the class file and interpret it. It will follow a particular pattern. It has the following components in it:</p>
-				<p class="m_desc">1).Magic Number</p>
-				<p class="m_desc">2).Minor Version</p>
-				<p class="m_desc">3).Major Version</p>
+				<div class="labout span_1_of_a1" style="height: 600px;">
+				    <ul id="etalage" style="display: block; width: 314px; height: 414px;">
+						<li>
+							<img class="etalage_thumb_image" src="images/java-class-file-internal-structure.png"/>
+						</li>
+					</ul>
+				</div>
+				<p class="m_desc">The Diagrammatic representation of a Java Class file is been shown.</p>
+				<p class="m_desc">A Java Class file consist of 10 different components</p>
+				<p class="m_desc">1). Magic Number 0xCAFEBABE</p>
+				<p class="m_desc">2). Version of the Class File Format: the minor and major version of the Class File</p>
+				<p class="m_desc">3). Constant Pool  : Pool of Constant for the Class</p>
+				<p class="m_desc">4). Access Flag  : For example the access modifier of the class like static, public,private, abstract etc</p>
+				<p class="m_desc">5). This Class  : The name of the current class</p>
+				<p class="m_desc">6). Super Class  : The name of the super class</p>
+				<p class="m_desc">7). Interface Class  : Any iterface in the class</p>
+				<p class="m_desc">8). Fields  : Any fields in the class</p>
+				<p class="m_desc">9). Methods  : Any methods in the class</p>
+				<p class="m_desc">10). Attributes: Any attributes of the class (for example the name of the sourcefile, etc.)</p>
+				<p class="m_desc">You can remember the 10 sections with some funny mnemonic: <span class="bold">My</span> Very Cute Animal Turns Savage In Full Moon Areas.</p>
 			</div>
+			
+			<p class="m_desc">Above diagram depicts that Java Class file is divided into different components such as Magic, Version, Constant Pool, Access Flaf, This Class, Super Class, Interfaces, Fields, Methods and Attributes.</p>
+			
+			<p class="m_desc">The length of the Java class is not known before it gets loaded. There are variable length sections such as constant pool, methods, attributes etc. These sections are organized in such a way that they are prefaced by their size or length. This way JVM knows the size of variable length sections before actually loading them.</p>
+			
+			<p class="m_desc">The data written in a Class file is kept at one byte aligned and is tightly packed. This helps in making class file compact.</p>
+			
+			<p class="m_desc">The order of different sections in a Java Class file is strictly defined so that the JVM knows what to expect in a Class file and in which order it is loading different components.</p>
+			
+			<p class="m_desc">Let us check each and every component of a Class file in detail.<a href="#">Click Here</a></p>
+			
+			
+			
 			<div class="clear"></div>
 			
 	 <div class="toogle">

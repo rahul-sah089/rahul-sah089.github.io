@@ -469,42 +469,39 @@
                    	</section>
 				</div>
 		<div class="cont span_2_of_3">
-				<!-- labout span_1_of_a1 div starts here -->
-			  <div class="labout span_1_of_a1" style="height: 300px;">
-				<!-- start product_slider -->
-				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
-							<li>
-								<img class="etalage_thumb_image" src="images/java_tech.jpg" />
-							</li>
-					</ul>
-				</div>
-				<!-- labout span_1_of_a1 div  ends here -->
-				<!-- cont1 span_2_of_a1 starts here-->
-				<div id="javaIntro">
-					<div class="cont1 span_2_of_a1">
-						<h3 class="m_3">Java Introduction</h3>
-						<p class="m_desc">Java is an open source,high level computer programming language. It enables the programmer to write computer instruction in normal english based commands, instead of writing it in the machine based. It is known as "high level programming language" because it easily understanable to the human. The programmer can write the code following the particular set of rule knows as "Syntax". Once the program(set of instructions) is been written, the high level instruction is been converted to the low-level instruction(machine level) and executed.</p>
-					</div>
+				<div id="">
+					
+						<h3 class="m_3">Magic Number</h3>
+						<p class="m_desc">Magic number is used to uniquely identify the format and to distinguish it from other formats. The first four bytes of the Class file are 0xCAFEBABE.</p>
+						<div class="labout span_1_of_a1" style="height: 300px;">
+							<ul id="etalage" style="display: block; width: 314px; height: 414px;">
+								<li>
+									<img class="etalage_thumb_image" src="images/java-class-file-magic-word-cafebabe.png">
+								</li>
+							</ul>
+						</div>
+						<p class="m_desc">The History of this magic number explained by "James Gosling"</p>
+						<p class="italic_wu">“We used to go to lunch at a place called St Michael’s Alley. According to local legend, in the deep dark past, the Grateful Dead used to perform there before they made it big. It was a pretty funky place that was definitely a Grateful Dead Kinda Place. When Jerry died, they even put up a little Buddhist-esque shrine. When we used to go there, we referred to the place as Cafe Dead. Somewhere along the line it was noticed that this was a HEX number. I was re-vamping some file format code and needed a couple of magic numbers: one for the persistent object file, and one for classes. I used CAFEDEAD for the object file format, and in grepping for 4 character hex words that fit after “CAFE” (it seemed to be a good theme) I hit on BABE and decided to use it. At that time, it didn’t seem terribly important or destined to go anywhere but the trash-can of history. So CAFEBABE became the class file format, and CAFEDEAD was the persistent object format. But the persistent object facility went away, and along with it went the use of CAFEDEAD – it was eventually replaced by RMI.”</p>
+						<br/><br/><br/>
 				</div>
 				<!-- cont1 span_2_of_a1 ends here-->
 			<div class="clear"></div>
 			
-			<!-- 2nd labout span_1_of_a1 starts here-->
-			 <div class="labout span_1_of_a1" style="height: 300px;">
-				<!-- start product_slider -->
-				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
-							<li>
-								<img class="etalage_thumb_image" src="images/gosling.jpg" />
-							</li>
-						</ul>
-			</div>
-			<!-- 2nd labout span_1_of_a1 ends here-->
-			
 			<!-- 2nd cont1 span_2_of_a1 ends here-->
-			<div id="whoCreatedIt">
-				<div class="cont1 span_2_of_a1">
-					<h3 class="m_3">Who created Java?</h3>
-					<p class="m_desc">Java  was develop in the early nineties by a team led by Mr. James Gosling(shown on left side) in Sun MicroSystem. It was originally designed to be used as the part of the mobile devices and embedded Systems. However when Java1.0 was released to the public it main focus shifted towards Internet technologies. It provided more interactivity with users by giving developers a way to produce animated webpages. It has evolved as a succesful programming language both for hardware and software purposes. A more than decade later, Java is still an extremely popular language with over 6.5million developers worldwide. </p>
+			<div id="">
+				<h3 class="m_3">Version of Class File</h3>
+				<p class="m_desc">The next four byte of the class file contains major and minor version numbers. This number allows the JVM to verify and identify the class file. If the number is greater than what JVM can load, the class file will be rejected with error java.lang.<code>UnsupportedClassVersionError.</code></p>
+				<div class="example">
+					<h2 class="example">Computer Code</h2>
+					<div class="example_code">
+						<span class="highELE">var</span>
+							person = {
+							<br/>
+							&nsbsp;&nsbsp;&nsbsp;&nsbsp;
+							firstName:
+							<span class="highVAL">"rahul"</span>,
+							
+					</div>
 				</div>
 			</div>
 			<!-- 2nd cont1 span_2_of_a1 ends here-->

@@ -697,6 +697,40 @@ span.delivery a{
     font-style : italic;
 }
 
+.italic_wu{
+    font-style : italic;
+	text-decoration : none;
+}
+
+div.example{
+	width : auto;
+	color : #000000;
+	background-color : #f1f1f1;
+	padding : 15px;
+	line-height : 1.15em;
+	word-wrap : break-word;
+	margin-bottom : 12px;
+	margin-top : 12px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+div.example_code{
+    width : auto;
+	background-color : #ffffff;
+	font-family : Consolas,"courier new";
+	padding : 1.1%;
+	border-left : 4px solid #0B80E2;
+	word-wrap : break-word;
+}
+
+.highELE{
+    color : brown;
+}
+
+.highVAL{
+    color : mediumblue;
+}
+
 .float-left-example{
 	float :left;
 	text-align : center;
@@ -1522,6 +1556,10 @@ p.m_desc{
 	letter-spacing : 2px;
 }
 
+.m_desc bold{
+	font-size : 1 em;
+	font-weight : 700;
+}
 #font-awesome-inline{
     float :left;
 	margin-right : 1%;
