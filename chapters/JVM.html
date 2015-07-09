@@ -455,7 +455,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<span>
 									<p>
 										<i class="fa fa-pagelines">
-										<i></i><a href="#">Introduction</a>
+										<i></i><a href="#jvmIntro">JVM Introduction</a>
 										</i>
 									</p>
 									<br/>
@@ -471,7 +471,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<span>
 									<p>
 										<i class="fa fa-pagelines"><i></i>
-											<a href="#features">Internal Details of JVM</a>
+											<a href="#hbvm">Hardware Based Virtual Machine</a>
 										</i>
 									</p>
 									<br/>
@@ -479,21 +479,49 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<span>
 									<p>
 										<i class="fa fa-pagelines"><i>
-										</i><a href="#">How JVM internally works?</a></i>
+										</i><a href="#sbvm">Software Based Virtual Machine</a></i>
 										</p>
 									<br/>
 								</span>
 								<span>
 									<p>
 										<i class="fa fa-pagelines"><i>
-										</i><a href="#">Concept of Stack And Heap</a></i>
+										</i><a href="#bad">Basic Architecture of JVM</a></i>
 										</p>
 									<br/>
 								</span>
 								<span>
 									<p>
 										<i class="fa fa-pagelines"><i>
-										</i><a href="#">Concept of Java Garbage Collection</a></i>
+										</i><a href="#classloader">Class Loader SubSystem</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#tcl">Type of Class Loader</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#memArea">Various Memory Area of JVM</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#executionEngine">Execution Engine</a></a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#cfs">Class File Structure</a></a></i>
 										</p>
 									<br/>
 								</span>
@@ -513,7 +541,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<!-- labout span_1_of_a1 div  ends here -->
 				<!-- cont1 span_2_of_a1 starts here-->
-				<div class="cont1 span_2_of_a1">
+				<div id="jvmIntro" class="cont1 span_2_of_a1">
 					<h3 class="m_3">JVM Introduction</h3>
 					<p class="m_desc">A Java Virtual Machine(JVM), an implementation of the Java Virtual Machine Specification, intercept compiled Java binary code(byte code) for a particular machine, processor(or "hardware Platform") so that is can perform Java program's instruction</p>
 					<p class="m_desc">As show is the diagram, the java compiler takes the Java instruction, convert them into byte code(.class). This byte code is "platform independent". Now this byte code can run easily on the various machine and operating system</p>
@@ -530,7 +558,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- cont1 span_2_of_a1 ends here-->
 			<div class="clear"></div>
 				
-			<div id="features" class="">
+			<div id="hbvm" class="">
 				<h3 class="m_3">Hardware Based Virtual Machine</h3>
 				<p class="m_desc">Hardware Based Virtual Machine is also System Based Virtual Machine.Hardware virtualization is when the virtual manager is embedded in the circuits of the Hardware component instead of being called up from a third party software application. The virtual manager is called "Hypervisor". 
 				<p class="m_desc">In simple words,<span class="italic">"It Provides Several Logical System on the Same Computer  with Strong Isolation from Each Other"</span></p>
@@ -542,6 +570,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<p class="m_desc">"The main advantage of Hard-ware based Virtual Machines is for effective utilization of hard-ware resources".</p>
 				<p class="m_desc">It is the System Admin related terminologies but not for programmer.</p>
 				
+				<div id="sbvm"></div>
 				<h3 class="m_3">Software Based Virtual Machine</h3>
 				<p class="m_desc">It is also known as Application Based or Process Based Virtual Machines. These Virtual Machines Acts as Runtime Engines to run a Particular Programming Language Applications.</p>
 				<p class="m_desc">Examples:</p>
@@ -552,7 +581,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="clear"></div>
 			<hr/>
 			
-			<div id="" class="">
+			<div id="bad" class="">
 				<h3 class="m_3">Basic Architecture Diagram of JVM</h3>
 				<div class="labout span_1_of_a1" style="height: 300px;">
 				<!-- start product_slider -->
@@ -596,7 +625,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</ul>
 			</div>
 			
-			<div id="" class="">
+			<div id="classLoader" class="">
 				<h3 class="m_3">Class Loader SubSystem</h3>
 				<p class="m_desc">Class Loader SubSystem is the 1st component of the JVM to react while loading and running the Java based application.</p>
 				<p class="m_desc">It is responsible for 3 activites:</p>
@@ -646,7 +675,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</li>
 				</ul>
 			</div>
-			<div id="" class="">
+			<div id="tcl" class="">
 				<h3 class="m_3">Type of Class Loaders:</h3>
 				<p class="m_desc">1). BootStrap Class Loader</p>
 				<p class="m_desc">2). Extension Class Loader</p>
@@ -680,7 +709,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<br/><br/>
 			<div class="clear"></div>
 			
-			<div id="" class="">
+			<div id="memArea" class="">
 				<h3 class="m_3">Various Memory Areas of JVM</h3>
 				
 				<div class="labout span_1_of_a1" style="height: 300px;">
@@ -770,12 +799,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			
 			<div id="" class=""> 
 				<h3 class="m_3">How to Set Maximum Heap Size?</h3>
-				<p class="m_desc">To be added Soon</p>
+				<p class="m_desc">JVM used heap size to manage the Java application and for storing the object dynamically. If the Java Program requires a large amount of memory, it is possible that the virtual machine will <span class="keywordHightLight">throw OutOfMemoryError</span></p> exception. 
+				<h3 class="m_3">Setting up the JVM heap Size</h3>
+				<p class="m_desc">The JVM Heap Size can be increased at the runtime using command line options.</p>
+				<div class="example">
+					<h2 class="example">Computer Code</h2>
+					<div class="example_code_1">
+						-Xms<span class="keywordHightLight"><size></span> <span>set</span> initial Java heap <span class="keywordHightLight">size</span><br/><br/>
+						-Xmx<span class="keywordHightLight"><size></span> <span>set</span> maximum Java heap <span class="keywordHightLight">size</span><br/><br/>
+						-Xss<span class="keywordHightLight"><size></span> <span>set</span> java thread stack <span class="keywordHightLight">size</span><br/><br/>
+					</div>
+				</div>	
+				<div class="m_desc">For Example setting up minimum heap to 64MB and maximum heap to 256MB for a Java Program "HelloWorld" can be done as</div>
+				<div class="example_code_1">
+						java -Xms64m -Xmx256m HelloWorld
+					</div>
+				
 			</div>
 			<div class="clear"></div>
 			<hr/>
 			
-			<div id="" class="">
+			<div id="executionEngine" class="">
 				<h3 class="m_3">Execution Engine</h3>
 				<p class="m_desc">The bytecode that is assigned to the runtime data areas in the JVM via class loader is executed by the execution engine. The execution engine reads the Java Bytecode in the unit of instruction. It is like a CPU executing the machine command one by one. Each command of the bytecode consists of a 1-byte OpCode and additional Operand. The execution engine gets one OpCode and execute task with the Operand, and then executes the next OpCode.</p>
 				<p class="m_desc">But the Java Bytecode is written in a language that a human can understand, rather than in the language that the machine directly executes. Therefore, the execution engine must change the bytecode to the language that can be executed by the machine in the JVM. The bytecode can be changed to the suitable language in one of two ways.</p>
@@ -814,7 +858,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="clear"></div>
 			<hr/>
 			
-			<div id="" class="">
+			<div id="cfs" class="">
 				<h3 class="m_3">Class File Structure</h3>
 				<p class="m_desc">The class file generated by Java Compiler is not human readable form but if open the class file and interpret it. It will follow a particular pattern. It has the following components in it:</p>
 				<div class="labout span_1_of_a1" style="height: 600px;">
