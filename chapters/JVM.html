@@ -677,23 +677,61 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<div id="tcl" class="">
 				<h3 class="m_3">Type of Class Loaders:</h3>
-				<p class="m_desc">1). BootStrap Class Loader</p>
+				<p class="m_desc">Every Class Loader SubSystem will have three class loader components. They are:</p>
+				<p class="m_desc">1). BootStrap Class Loader/Primordial Class Loader</p>
 				<p class="m_desc">2). Extension Class Loader</p>
-				<p class="m_desc">3). Application Class Loader</p>
+				<p class="m_desc">3). Application Class Loader/System CLass Loader</p>
 			</div>
 			<h3 class="m_3">How Java Class Loader Works?</h3>
 			<p class="m_desc">When a class loader is requested for class load, it checks whether or not the class exists in the class loader cache, the parent class loader, and itself, in the order listed. In short, it checks whether or not the class has been loaded in the class loader cache. If not, it checks the parent class loader. If the class is not found in the bootstrap class loader, the requested class loader searches for the class in the file system.</p>
 			<br/><br/>
 			<h3 class="m_3">Bootstrap class loader</h3>
-			<p class="m_desc">This is created when running the JVM. It loads Java APIs, including object classes. Unlike other class loaders, it is implemented in native code instead of Java.</p>
+			<p class="para">This CLass Loader is responsible for loading all the <span class="commentHighLight">"Core Java API"</span> classes.i.e; the classes present in the <span class="keywordHightLight">rt.jar</span> .</p>
+			<p class="para">The location of the rt.jar is <span class="highVAL">jdk/jre/lib/rt.jar</span></p>
+			<p class="para">BootStrap ClassLoader is by default available in JVM. It is been implemented in native languages like <span class="highVAL1">"C"</span> and <span class="highVAL1">"C++"</span>.</p>
 			<h3 class="m_3">Extension class loader</h3>
-			<p class="m_desc">It loads the extension classes excluding the basic Java APIs. It also loads various security extension functions.</p>
-			<h3 class="m_3">System class loader</h3>
-			<p class="m_desc">If the bootstrap class loader and the extension class loader load the JVM components, the system class loader loads the application classes. It loads the class in the $CLASSPATH specified by the user.</p>
+			<p class="para">It is the child of the <span class="highVAL2">"BootStrap ClassLoader"</span>. It is responsible to load all the class present in the extension class path. It loads various security extension functions. Location of the extension class path is <span class="highVAL">jdk/jre/lib/ext</span></p>
+			<p class="para">Extension class loader is implemented in Java and the corresponding <span class="highVAL2">".class"</span> is <span class="highVAL">sun.misc.launcher$extClassLoader.class</span></p>
+			<h3 class="m_3">Application or System class loader</h3>
+			<p class="para">It is the child of the <span class="highVAL2">Extension Class Loader</span>.Application Class Loader is responsible to load all the classes present in the <span class="highVAL">Environment Variable Class Path</span>.It loads the application classes. It loads the class in the $CLASSPATH specified by the user.</p>
+			<p class="para">Extension class loader is implemented in Java and the corresponding <span class="highVAL2">".class"</span> is <span class="highVAL">sun.misc.launcher$AppClassLoader.class</span></p>
 			<h3 class="m_3">User-defined class loader</h3>
 			<p class="m_desc">This is a class loader that an application user directly creates on the code.</p>
 			<div class="clear"></div>
-			<hr/>
+			<div id="" class="">
+				<h3 class="m_3">Program to Display the different Class Loader</h3>
+				<p class="m_desc">Below is shown a Java Program to display the various Class Loader.</p>
+				<div class="example">
+					<h2 class="example">Computer Code</h2>
+					<div class="example_code_1">
+						<span class="commentHighLight">/** <br/>
+							* Class: TestClassLoader<br/>
+							* @author: Rahul Sah<br/>
+							* @description: Prints the various ClassLoader<br/>
+						*/<br/></span>
+						<span>public class </span> Test {<br/>
+							<span class="intend1"><span class="keywordHightLight">public static void</span> main(String [] args)</span> {<br/></br>
+							<span class="intend2">System.out.println(<span class="quotationHighLight">String.class.getClassLoader()</span>)</span>;<br/><br/>
+							<span class="intend2">System.out.println(<span class="quotationHighLight">Student.class.getClassLoader()</span>)</span>;<br/><br/>
+							<span class="intend2">System.out.println(<span class="quotationHighLight">Test.class.getClassLoader()</span>)</span>;<br/><br/>
+							<span class="intend1">}</span><br/>
+							}
+					</div>
+				</div>
+			</div>	
+			<br/>
+			<p class="para">Output of the program is:</p>
+			<div class="example_code_1">
+				<span class="intend1"><span class="keywordHightLight">null</span></span><br/><br/>
+				<span class="intend1"><span class="keywordHightLight">sun.mis.Launcher$ExtClassLoader<span class="quotationHighLight">0123EF</span></span></span><br/><br/>
+				<span class="intend1"><span class="keywordHightLight">sun.mis.Launcher$AppClassLoader<span class="quotationHighLight">2345EF</span></span></span><br/><br/>
+			</div>
+			<h3 class="m_3">Output Explanation</h3>
+			<p class="para"><span class="italic">For String</span>,Class Loader is BootStrap Class Loader. SinceBootStrap Class Loader is not implemented in JAVA the output is <span class="keywordHightLight">NULL</span>.</p>
+			<p class="para"><span class="italic">For Student Class</span>, ClassLoader is Extension Class Loader and it path is Extension Class Path. So the output is <span class="keywordHightLight">sun.mis.Launcher$ExtClassLoader<span class="quotationHighLight">0123EF</span></span><br/>
+			<p class="para"><span class="italic">For Test Class</span>, ClassLoader is Application Class Loader and it path is Application Class Path. So the output is <span class="keywordHightLight">sun.mis.Launcher$ExtClassLoader<span class="quotationHighLight">0123EF</span></span><br/>
+			<div>
+			</div>
 			
 			
 			
