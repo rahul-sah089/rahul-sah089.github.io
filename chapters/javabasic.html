@@ -1,12 +1,19 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Java Introduction</title>
+<title>Java Virtual Machine</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="The fundamental of the Java came from a programming language called "C++".Java programming language is the enchanced version of C++. It tried to eliminate the loop holes of C++  like explicit pointers, operator overloading etc. There was no need to explicitly remove the object once it is been used. The memory deallocation is done automatically by 'Java Garbage collector'.Java built on, and improved the ideas of c++, to provide a programming language that was powerful and simple to use. "/>
+<meta name="description" content="A Java Virtual Machine(JVM), an implementation of the Java Virtual Machine Specification, intercept compiled Java binary code(byte code) for a particular machine, processor(or'hardware Platform') so that is can perform Java program's instruction"/>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/table.css" rel="stylesheet" type="text/css" media="all"/>
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
@@ -81,14 +88,27 @@
 <!-- top scrolling -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
-   <script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-			});
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
 		});
-	</script>					
+	});
+</script>					
+<style>
+.example{
+	width : auto;
+	color : #000000;
+	background-color : #f1f1f1;
+	padding : 15px;
+	line-height : 1.15em;
+	word-wrap : break-word;
+	margin-bottom : 12px;
+	margin-top : 12px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+</style>	
 </head>
 <body>
   <div class="header-top">
@@ -111,332 +131,23 @@
    	<div class="wrap">
    		<!-- start header menu -->
 		<ul class="megamenu skyblue">
-		    <li><a class="color1" href="#">Home</a></li>
-			<li class="grid"><a class="color2" href="#">Java-Homes</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Java Homes</h4>
-								<ul>
-									<li><a href="#javaIntro">Introduction To Java</a></li>
-									<li><a href="#whoCreatedIt">Who created Java?</a></li>
-									<li><a href="#features">Features of Java</a></li>
-									<li><a href="#usesOfJava">Uses of Java</a></li>
-								</ul>	
-							</div>
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Java Virtual Machine</h4>
-								<ul>
-									<li><a href="shop.html">Difference between JVM,JDK and JrE</a></li>
-									<li><a href="shop.html">Internal details of JVM</a></li>
-									<li><a href="shop.html">How JVM works internally?</a></li>
-									<li><a href="shop.html">Concept of Stack and Heap</a></li>
-									<li><a href="shop.html">Concept of Java Garabage Collection</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Java Basis Syntax</h4>
-								<ul>
-									<li><a>Variable and datatype in Java</a></li>
-									<li><a>Unicode System</a></li>
-									<li><a>First Java Program</a></li>
-									<li><a>Basis Syntax</a></li>
-									<li><a>Naming convention</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4 class="top">Java Overview</h4>
-								<ul>
-									<li><a href="shop.html">What is Java?</a></li>
-									<li><a href="shop.html">History of Java</a></li>
-									<li><a href="shop.html">Features of Java</a></li>
-									<li><a href="shop.html">Getting Hand Dirty</a></li>
-									<li><a href="shop.html">How Java Works?</a></li>
-									<li><a href="shop.html">Local env setup</a></li>
-								</ul>	
-							</div>
-						</div>
-						<div class="col1"></div>
-						<img src="images/nav_img_mod1.png" alt=""/>
-					</div>
-				</div>
-				</li>
-  			   <li class="active grid"><a class="color4" href="#">Java OOPs</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Java OOPs 1</h4>
-								<ul>
-									<li><a href="shop.html">Why OOPs  concept is so popular?</a></li>
-									<li><a href="shop.html">Java Object and Classes</a></li>
-									<li><a href="shop.html">Method OverLoading</a></li>
-									<li><a href="shop.html">Constructor</a></li>
-									<li><a href="shop.html">Static Keyword</a></li>
-									<li><a href="shop.html">"This" is OOPs</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Java OOPs 2</h4>
-								<ul>
-									<li><a href="shop.html">Inheritance</a></li>
-									<li><a href="shop.html">Aggregation</a></li>
-									<li><a href="shop.html">Method OverLoading</a></li>
-									<li><a href="shop.html">Convarient return type</a></li>
-									<li><a href="shop.html">Super Keyword</a></li>
-									<li><a href="shop.html">Instance Initializer Block</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Java OOPs 3</h4>
-								<ul>
-									<li><a href="shop.html">Abstract vs Interface</a></li>
-									<li><a href="shop.html">Package</a></li>
-									<li><a href="shop.html">Access Modifier</a></li>
-									<li><a href="shop.html">Encapsulation</a></li>
-									<li><a href="shop.html">Object Classes</a></li>
-									<li><a href="shop.html">Java Array</a></li>
-									<li><a href="shop.html">Array Interview Questions</a></li>
-								</ul>	
-							</div>												
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Java OOPs 4</h4>
-								<ul>
-									<li><a href="shop.html">Wrapper Classes</a></li>
-									<li><a href="shop.html">Call By Value</a></li>
-									<li><a href="shop.html">Call By reference</a></li>
-									<li><a href="shop.html">API documentation</a></li>
-									<li><a href="shop.html">Command line Args</a></li>
-									<li><a href="shop.html">Object Vs Classes</a></li>
-									<li><a href="">Overloading Vs Overriding</a></li>
-									<li><a href="">OOPs interview question</a></li>
-								</ul>	
-							</div>						
-						</div>
-						<div class="col1">
-						 <div class="h_nav">
-						   <img src="images/nav_img_oops.png" alt=""/>
-						 </div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col2"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-					</div>
-					</div>
-    			</li>				
-				<li><a class="color5" href="#">Java String</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Java String Introduction</h4>
-								<ul>
-									<li><a href="shop.html">What is String?</a></li>
-									<li><a href="shop.html">Immutable String</a></li>
-									<li><a href="shop.html">String Buffer</a></li>
-									<li><a href="shop.html">String Builder</a></li>
-									<li><a href="shop.html">String Buffer vs String Builder</a></li>
-									<li><a href="shop.html">Creating immutable Class</a></li>
-								</ul>	
-							</div>
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>String Method and Misallenous</h4>
-								<ul>
-									<li><a href="shop.html">StringTokiner Class</a></li>
-									<li><a href="shop.html">Creating String</a></li>
-									<li><a href="shop.html">TO be added</a></li>
-									<li><a href="shop.html">To be added</a></li>
-									<li><a href="shop.html">To be added</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<img src="images/String.jpg" alt=""/>
-					</div>
-				</div>
-				</li>
-				<li><a class="color6" href="#">Java Regular Expression</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>RegEx Introduction</h4>
-								<ul>
-									<li><a href="shop.html">What is regular expression?</a></li>
-									<li><a href="shop.html">Why regular expression is used for?</a></li>
-									<li><a href="shop.html">Java Regex Introduction</a></li>
-									<li><a href="shop.html">Pattern Classes</a></li>
-									<li><a href="shop.html">Example of Regular Expression</a></li>
-									<li><a href="shop.html">Regular Character Classes</a></li>
-								</ul>	
-							</div>
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Miscellaneous</h4>
-								<ul>
-									<li><a href="shop.html">Regex Quantifier</a></li>
-									<li><a href="shop.html">Regex Metacharacter</a></li>
-									<li><a href="shop.html">Example of MetaCharacter</a></li>
-									<li><a href="shop.html">Interview Questions</a></li>
-								</ul>	
-							</div>
-						</div>
-						<img src="images/regular_expressions.png" alt=""/>
-					</div>
-					<div class="row">
-						<div class="col2"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-					</div>
-				</div>
-				</li>
-				<li><a class="color7" href="#">Exceptional Handling</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>What is Exceptional Handling?</h4>
-								<ul>
-									<li><a href="shop.html">Exceptional Handling used for?</a></li>
-									<li><a href="shop.html">Categories of exception</a></li>
-									<li><a href="shop.html">How exception come?</a></li>
-									<li><a href="shop.html">How Java Handles Exception?</a></li>
-									<li><a href="shop.html">Advantages of Exceptional Handling</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Block in Exception</h4>
-								<ul>
-									<li><a href="shop.html">Different types of Exception Block</a></li>
-									<li><a href="shop.html">Try and catch block</a></li>
-									<li><a href="shop.html">Internal handling of try catch block</a></li>
-									<li><a href="shop.html">Catching Multiple Exceptions</a></li>
-									<li><a href="shop.html">Exception Hierarchies</a></li>
-									<li><a href="shop.html">Checked or Unchecked Exceptions?</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Advanced</h4>
-								<ul>
-									<li><a href="shop.html">Exception Wrapping</a></li>
-									<li><a href="shop.html">Fail Safe Exception Handling</a></li>
-									<li><a href="shop.html">Plugable Exception handlers</a></li>
-									<li><a href="shop.html">Logging Exception: Where to log Exception?</a></li>
-									<li><a href="shop.html">Validation- Throw Exception Early</a></li>
-									<li><a href="shop.html">Exception Handling Templates in Java</a></li>
-									<li><a href="shop.html">Exception Interview Question</a></li>
-								</ul>	
-							</div>												
-						</div>
-						<img src="images/exception_example.png" alt=""/>
-					</div>
-					
-    				</div>
-				</li>
-				<li><a class="color8" href="#">Inner Classes in Java</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Inner Classes</h4>
-								<ul>
-									<li><a href="shop.html">What is inner class?</a></li>
-									<li><a href="shop.html">Member inner class</a></li>
-									<li><a href="shop.html">Anonymous Inner class</a></li>
-									<li><a href="shop.html">Local Inner class</a></li>
-									<li><a href="shop.html">static nested class</a></li>
-									<li><a href="shop.html">Nested Interface</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<img src="images/nested_classes.png" alt=""/>
-				</div>
-				</li>
-				<li><a class="color9" href="#">Java MultiThreading</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Basis</h4>
-								<ul>
-									<li><a href="shop.html">What is multi-threading?</a></li>
-									<li><a href="shop.html">Life Cycle of Thread</a></li>
-									<li><a href="shop.html">Thread Priorities</a></li>
-									<li><a href="shop.html">Creating thread by implementing Runnable interface</a></li>
-									<li><a href="shop.html">Creating thread by extending Thread Class</a></li>
-									<li><a href="shop.html">Thread Methods</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Advanced Topic</h4>
-								<ul>
-									<li><a href="shop.html">What is thread synchronization?</a></li>
-									<li><a href="shop.html">Handling threads inter communication</a></li>
-									<li><a href="shop.html">Handling thread deadlock</a></li>
-									<li><a href="shop.html">Major thread operations</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<img src="images/Multithread.png" alt=""/>
-					</div>
-					<div class="row">
-						<div class="col2"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-					</div>
-    				</div>
-				</li>
-				<li><a class="color10" href="#">Collections in Java</a></li>
-				<li><a class="color11" href="#">Java I/O</a></li>
-				<li><a class="color12" href="#">Java JDBC</a></li>
-		   </ul>
-		   <div class="clear"></div>
+		    
+				
+		</ul>
+		<div class="clear"></div>
      	</div>
        </div>
        <div class="single">
          <div class="wrap">
      	    <div class="rsidebar span_1_of_left">
 				   <section  class="sky-form">
-                   	  <h4>JAVA-HOMES</h4>
+                   	  <h4>Java Virtual Machine</h4>
 						<div class="row row1 scroll-pane">
 							<div class="col col-4">
 								<span>
 									<p>
 										<i class="fa fa-pagelines">
-										<i></i><a href="#javaIntro">Introduction</a>
+										<i></i><a href="#jvmIntro">JVM Introduction</a>
 										</i>
 									</p>
 									<br/>
@@ -444,7 +155,7 @@
 								<span>
 									<p>
 										<i class="fa fa-pagelines">
-											<i></i><a href="#whoCreatedIt">Who created Java?</a>
+											<i></i><a href="#">Difference between JVM,JDK and JrE</a>
 										</i>
 									</p>
 								<br/>
@@ -452,7 +163,7 @@
 								<span>
 									<p>
 										<i class="fa fa-pagelines"><i></i>
-											<a href="#features">Features of Java</a>
+											<a href="#hbvm">Hardware Based Virtual Machine</a>
 										</i>
 									</p>
 									<br/>
@@ -460,7 +171,49 @@
 								<span>
 									<p>
 										<i class="fa fa-pagelines"><i>
-										</i><a href="#usesOfJava">Uses of Java</a></i>
+										</i><a href="#sbvm">Software Based Virtual Machine</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#bad">Basic Architecture of JVM</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#classloader">Class Loader SubSystem</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#tcl">Type of Class Loader</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#memArea">Various Memory Area of JVM</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#executionEngine">Execution Engine</a></a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#cfs">Class File Structure</a></a></i>
 										</p>
 									<br/>
 								</span>
@@ -470,121 +223,466 @@
 				</div>
 		<div class="cont span_2_of_3">
 				<!-- labout span_1_of_a1 div starts here -->
-			  <div class="labout span_1_of_a1" style="height: 300px;">
+			<div id="hbvm" class="">
+				<h3 class="m_3">Java Basis</h3>
+				<p class="subCat">Variables</p> 
+				<p class="m_desc">In simple words ,<span class="italic">Variables are the name of the memory location where we can store data.</span></p>
+				<p class="m_desc">In the Java Programming Language defines the following type of variables:</p>
+				<p class="para_bold">1). Instance Variables (Non-Static Fields)</p>
+				<p class="m_desc">This are fields declared without the keyword "Static" in it. Non-static fields are also known as "Instance variable" because there value are unique to each instance of the class.</p>
+				<p class="para_bold">2). Class Variables (Static Fields)</p>
+				<p class="para">This are the fields declared with the "Static" modifier in it. This tell the compiler that there are exactly one copy of this variable and it is been shared among all the instance of the class.A field defining the number of gears for a particular kind of bicycle could be marked as static since conceptually the same number of gears will apply to all instances. The code <span class="keywordHightLight">static int numGears = 6;</span> would create such a static field. Additionally, the keyword <span class="highlighter">final</span> could be added to indicate that the number of gears will never change.</p>
+				<p class="para_bold">3). Local Variables</p>
+				<p class="para">The variable which are declared as the argument to the method or within the opening and the closing bracket of the method is known as <span class="highlighter">local variable</span>. There is no special keyword assigned for the local Variable, the determination comes entirely on the position of the variable with declared. As such, local variables are only visible to the methods in which they are declared; they are not accessible from the rest of the class.</p>
+			</div>
+			<div class="clear"></div>
+			<h3 class="m_3">Naming Convention of Variable</h3>
+			<p class="para">Variable name should not start with "$".  Additionally, the dollar sign character, by convention, is never used at all. A similar convention exists for the underscore character; while it's technically legal to begin your variable's name with "_", this practice is discouraged. White space is not permitted. </p>
+			<p class="para"> The name you choose must not be a <span class="highlighter">keyword</span> or <span class="highlighter">reserved word</span>.</p>
+			<p class="para">If the name you choose consists of only one word, spell that word in all lowercase letters. If it consists of more than one word, capitalize the first letter of each subsequent word. The name <span class="highlighter">rahul</span> and <span class="highlighter">rahulSah</span>are the prime example of this convention.</p>
+			<hr/>
+			
+			<div id="operator">
+				<p class="subCat">Operators</p> 
+				<p class="para">Now  that we had learned how to declared the variable it's time to know how do something with it.Operators are the special symbols that perform special operation on the one,two or three <span class="highlighter">operands</span> and then return the result.</p>
+				<p class="m_desc">The table below shows the different operator in the Java with there ordered of precedence.</p>
+				<table>
+					<tr>
+						<th>Operators</th>
+						<th>Precedence</th>
+					</tr>
+					<tr>
+						<td>postfix</td>
+						<td>expr++ ,  expr--</td>
+					</tr>
+					<tr>
+						<td>unary</td>
+						<td>++expr , --expr , +expr , -expr , ~ , !</td>
+					</tr>
+					<tr>
+						<td>additive</td>
+						<td>+ -</td>
+					</tr>
+					<tr>
+						<td>shift</td>
+						<td><< &nbsp;&nbsp;&nbsp; >> &nbsp;&nbsp;&nbsp;  >>></td>
+					</tr>
+					<tr>
+						<td>relational</td>
+						<td>< &nbsp;&nbsp; > &nbsp;&nbsp; <= &nbsp;&nbsp; >= &nbsp;&nbsp; instanceof</td>
+					</tr>
+					<tr>
+						<td>equality</td>
+						<td>== &nbsp;&nbsp; !=</td>
+					</tr>
+					<tr>
+						<td>bitWise AND</td>
+						<td> & </td>
+					</tr>
+					<tr>
+						<td>bitWise exclusive Or</td>
+						<td>^</td>
+					</tr>
+					<tr>
+						<td>bitWise inclusive Or</td>
+						<td>|</td>
+					</tr>
+					<tr>
+						<td>Logical AND</td>
+						<td>&&</td>
+					</tr>
+					<tr>
+						<td>Logical Or</td>
+						<td>||</td>
+					</tr>
+					<tr>
+						<td>ternary Operator</td>
+						<td>?:</td>
+					</tr>
+					<tr>
+						<td>assignment</td>
+						<td> = &nbsp;&nbsp; += &nbsp;&nbsp;-= &nbsp;&nbsp;*= &nbsp;&nbsp; /= &nbsp;&nbsp; %= &nbsp;&nbsp; &= &nbsp;&nbsp; ^= &nbsp;&nbsp; |= &nbsp;&nbsp; <<= &nbsp;  &nbsp; >>= &nbsp;&nbsp; >>>= </td>
+					</tr>
+				</table>
+			</div>
+			<div class="clear"></div>
+			<hr/>
+			
+			<div class="expression">
+				<h3 class="m_3">Expression,Statement and Blocks</h3>
+				<p class="para">Now we had understand the concept of variable and operators, it learn to know about <span class="italic">expression,statement and blocks</span>. Operators may be used in building expressions, which compute values; expressions are the core components of statements; statements may be grouped into blocks.</p>
+				<p class="subCat">Expressions</p>
+				<p class="para">An expression is a construct made up of variables, operators, and method invocations, which are constructed according to the syntax of the language, that evaluates to a single value. Expressions, illustrated in bold below:</p>
+				<div class="example_code_1">
+					<span>int</span> <span class="keywordHightLight">candence</span> =<span class="keywordHightLight">100;</span><br/><br/>
+					<span class="keywordHightLight">anArr[0]=100;</span><br/>
+					System.out.println(<span class="keywordHightLight">"value1==value2"</span>);<br/><br/>
+				</div>
+			</div>
+			<div id="bad" class="">
+				<h3 class="m_3">Basic Architecture Diagram of JVM</h3>
+				<div class="labout span_1_of_a1" style="height: 300px;">
 				<!-- start product_slider -->
 				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
 							<li>
-								<img class="etalage_thumb_image" src="images/java_tech.jpg" />
+								<img class="etalage_thumb_image" src="images/architecture-of-jvm.jpg" />
 							</li>
 					</ul>
 				</div>
 				<!-- labout span_1_of_a1 div  ends here -->
 				<!-- cont1 span_2_of_a1 starts here-->
-				<div id="javaIntro">
-					<div class="cont1 span_2_of_a1">
-						<h3 class="m_3">Java Introduction</h3>
-						<p class="m_desc">Java is an open source,high level computer programming language. It enables the programmer to write computer instruction in normal english based commands, instead of writing it in the machine based. It is known as "high level programming language" because it easily understanable to the human. The programmer can write the code following the particular set of rule knows as "Syntax". Once the program(set of instructions) is been written, the high level instruction is been converted to the low-level instruction(machine level) and executed.</p>
-					</div>
-				</div>
+				<div class="cont1 span_2_of_a1">
+					<p class="m_desc">The diagram shows the basic architecture of the JVM. There are three main components of the Java Virtual Machine. They are as follows:</p>
+					<p class="m_desc">1). Class Loader SubSystem</p>
+					<p class="m_desc">2). JVM memory area</p>
+					<p class="m_desc">3). Execution engine</p>
+					<p class="m_desc">As we had already discuss that JVM is used for two basis operation i.e, load and run. So for loading the Java class some component is required, this component is class loader sub system. The class loader subSystem will load the Java classes in the JVM memory area. So when the ".class" file gets loaded in the memory area.Then who is responsible for running this loaded class?. It is "execution engine".</p>
+				</div>	
+					<p class="m_desc">Class Loader SubSystem is responsible to load classes into JVM memory.</p>
+					<p class="m_desc">Class loader SubSystem will load the ".class" file in method area.</p>
+					<p class="m_desc">There are total of 5 memory subsection present in the memory area.The brief information is been given below:</p>
+					<p class="m_desc">1). Method Area - ".class" file is been loaded here.</p>
+					<p class="m_desc">2). Heap Area - The objects will be saved here.</p>
+					<p class="m_desc">3). Stack Area - The local variable and the method calls is been stored here.</p>
+					<p class="m_desc">4). PC register Area - Current executing instruction address is stored here.</p>
+					<p class="m_desc">Execution engine is responsible to run ".class" file line by line.</p>
+					<p class="m_desc">Something when the execution engine executes some native libraries are required. The native libraries consist of the native method, it is the method which are not been implemented in the  Java. It may be implemented in some other languages like C++,C etc. Ex: "HashCode" or "HashClone" method is not been implemented in Java so this method implementation is taken from "native method libraries". Since this method is been written is some other language and it follows different set of instruction the interface is required in between the "execution engine" and the "native libraries method". This interface is "Java Native Interface".</p>
+				
+				
 				<!-- cont1 span_2_of_a1 ends here-->
 			<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+			<hr/>
+			<div class="labout span_1_of_a1" style="height: 350px;">
+				<!-- start product_slider -->
+				 <ul id="etalage" style="display: block; width: 314px; height: 500px;">
+					<li>
+						<img class="etalage_thumb_image" src="images/class-load-stage.png"/>
+					</li>
+				</ul>
+			</div>
 			
-			<!-- 2nd labout span_1_of_a1 starts here-->
-			 <div class="labout span_1_of_a1" style="height: 300px;">
+			<div id="classLoader" class="">
+				<h3 class="m_3">Class Loader SubSystem</h3>
+				<p class="m_desc">Class Loader SubSystem is the 1st component of the JVM to react while loading and running the Java based application.</p>
+				<p class="m_desc">It is responsible for 3 activites:</p>
+				<p class="m_desc">1).Loading</p>
+				<p class="m_desc">2).Linking</p>
+				<ul>
+					<i style="float:left;margin-right:1%;" class="fa fa-caret-square-o-right"></i><li>Verification</li>
+					<i style="float:left;margin-right:1%;" class="fa fa-caret-square-o-right"></i><li>Preparation</li>
+					<i style="float:left;margin-right:1%;" class="fa fa-caret-square-o-right"></i><li>Resolution</li>
+				</ul>
+				<p class="m_desc">3).Initialization</p>
+				<br/>
+				<h3 class="m_3">Loading</h3>
+				<p class="m_desc">Loading Means reading the Class Files and Store Corresponding Binary Data in the Method Area.</p>
+				<br/>
+				<p class="m_desc">For Each Class File JVM will store the following Information in the Method Area</p>
+				<p class="m_desc">1).Fully Qualified Name of the Loaded Class OR Interface OR ENUM.</p>
+				<p class="m_desc">2).Fully Qualified Name  of its Immediate Parent Class</p>
+				<p class="m_desc">3).Whether .class File is related to a Class Or Interface or ENUM.</p>
+				<p class="m_desc">4).The Modifier Information.</p>
+				<p class="m_desc">5).Variable or Field Information.</p>
+				<p class="m_desc">6).Methods Information.</p>
+				<p class="m_desc">7).Constant Pool Information and so on.</p>
+				<br/>
+				<p class="m_desc">After loading .class File JVM will Immediately Create an Object of the Type Class to represent the Class Level Binary Information in the Method Area</p>
+				<h3 class="m_3">Verifying</h3>
+				<p class="m_desc">Check whether or not the read class is configured as described in the Java Language Specification and JVM specifications. This is the most complicated test process of the class load processes, and takes the longest time. Most cases of the JVM TCK test cases are to test whether or not a verification error occurs by loading wrong classes.
+				
+				<h3 class="m_3">Preparing</h3>
+				<p class="m_desc">Prepare a data structure that assigns the memory required by classes and indicates the fields, methods, and interfaces defined in the class.</p>
+				
+				<h3 class="m_3">Resolving</h3>
+				<p class="m_desc">Change all symbolic references in the constant pool of the class to direct references.</p>
+				
+				<h3 class="m_3">Initializing</h3>
+				<p class="m_desc">Initialize the class variables to proper values. Execute the static initializers and initialize the static fields to the configured values.</p>
+				<p class="m_desc">The JVM specification defines the tasks. However, it allows flexible application of the execution time.</p>
+			</div>
+			<div class="clear"></div>
+			<hr/>
+			
+			<div class="labout span_1_of_a1" style="height: 350px;">
+				<!-- start product_slider -->
+				 <ul id="etalage" style="display: block; width: 314px; height: 500px;">
+					<li>
+						<img class="etalage_thumb_image" src="images/class-loader-delegation-model.png"/>
+					</li>
+				</ul>
+			</div>
+			<div id="tcl" class="">
+				<h3 class="m_3">Type of Class Loaders:</h3>
+				<p class="m_desc">Every Class Loader SubSystem will have three class loader components. They are:</p>
+				<p class="m_desc">1). BootStrap Class Loader/Primordial Class Loader</p>
+				<p class="m_desc">2). Extension Class Loader</p>
+				<p class="m_desc">3). Application Class Loader/System CLass Loader</p>
+			</div>
+			<h3 class="m_3">How Java Class Loader Works?</h3>
+			<p class="m_desc">When a class loader is requested for class load, it checks whether or not the class exists in the class loader cache, the parent class loader, and itself, in the order listed. In short, it checks whether or not the class has been loaded in the class loader cache. If not, it checks the parent class loader. If the class is not found in the bootstrap class loader, the requested class loader searches for the class in the file system.</p>
+			<br/><br/>
+			<h3 class="m_3">Bootstrap class loader</h3>
+			<p class="para">This CLass Loader is responsible for loading all the <span class="commentHighLight">"Core Java API"</span> classes.i.e; the classes present in the <span class="keywordHightLight">rt.jar</span> .</p>
+			<p class="para">The location of the rt.jar is <span class="highVAL">jdk/jre/lib/rt.jar</span></p>
+			<p class="para">BootStrap ClassLoader is by default available in JVM. It is been implemented in native languages like <span class="highVAL1">"C"</span> and <span class="highVAL1">"C++"</span>.</p>
+			<h3 class="m_3">Extension class loader</h3>
+			<p class="para">It is the child of the <span class="highVAL2">"BootStrap ClassLoader"</span>. It is responsible to load all the class present in the extension class path. It loads various security extension functions. Location of the extension class path is <span class="highVAL">jdk/jre/lib/ext</span></p>
+			<p class="para">Extension class loader is implemented in Java and the corresponding <span class="highVAL2">".class"</span> is <span class="highVAL">sun.misc.launcher$extClassLoader.class</span></p>
+			<h3 class="m_3">Application or System class loader</h3>
+			<p class="para">It is the child of the <span class="highVAL2">Extension Class Loader</span>.Application Class Loader is responsible to load all the classes present in the <span class="highVAL">Environment Variable Class Path</span>.It loads the application classes. It loads the class in the $CLASSPATH specified by the user.</p>
+			<p class="para">Extension class loader is implemented in Java and the corresponding <span class="highVAL2">".class"</span> is <span class="highVAL">sun.misc.launcher$AppClassLoader.class</span></p>
+			<h3 class="m_3">User-defined class loader</h3>
+			<p class="m_desc">This is a class loader that an application user directly creates on the code.</p>
+			<div class="clear"></div>
+			<div id="" class="">
+				<h3 class="m_3">Program to Display the different Class Loader</h3>
+				<p class="m_desc">Below is shown a Java Program to display the various Class Loader.</p>
+				<div class="example">
+					<h2 class="example">Computer Code</h2>
+					<div class="example_code_1">
+						<span class="commentHighLight">/** <br/>
+							* Class: TestClassLoader<br/>
+							* @author: Rahul Sah<br/>
+							* @description: Prints the various ClassLoader<br/>
+						*/<br/></span>
+						<span>public class </span> Test {<br/>
+							<span class="intend1"><span class="keywordHightLight">public static void</span> main(String [] args)</span> {<br/></br>
+							<span class="intend2">System.out.println(<span class="quotationHighLight">String.class.getClassLoader()</span>)</span>;<br/><br/>
+							<span class="intend2">System.out.println(<span class="quotationHighLight">Student.class.getClassLoader()</span>)</span>;<br/><br/>
+							<span class="intend2">System.out.println(<span class="quotationHighLight">Test.class.getClassLoader()</span>)</span>;<br/><br/>
+							<span class="intend1">}</span><br/>
+							}
+					</div>
+				</div>
+			</div>	
+			<br/>
+			<p class="para">Output of the program is:</p>
+			<div class="example_code_1">
+				<span class="intend1"><span class="keywordHightLight">null</span></span><br/><br/>
+				<span class="intend1"><span class="keywordHightLight">sun.mis.Launcher$ExtClassLoader<span class="quotationHighLight">0123EF</span></span></span><br/><br/>
+				<span class="intend1"><span class="keywordHightLight">sun.mis.Launcher$AppClassLoader<span class="quotationHighLight">2345EF</span></span></span><br/><br/>
+			</div>
+			<h3 class="m_3">Output Explanation</h3>
+			<p class="para"><span class="italic">For String</span>,Class Loader is BootStrap Class Loader. SinceBootStrap Class Loader is not implemented in JAVA the output is <span class="keywordHightLight">NULL</span>.</p>
+			<p class="para"><span class="italic">For Student Class</span>, ClassLoader is Extension Class Loader and it path is Extension Class Path. So the output is <span class="keywordHightLight">sun.mis.Launcher$ExtClassLoader<span class="quotationHighLight">0123EF</span></span><br/>
+			<p class="para"><span class="italic">For Test Class</span>, ClassLoader is Application Class Loader and it path is Application Class Path. So the output is <span class="keywordHightLight">sun.mis.Launcher$ExtClassLoader<span class="quotationHighLight">0123EF</span></span><br/>
+			<div>
+			</div>
+			
+			
+			
+			<div class="float-left-example">
+				<i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i>
+				<i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i>
+				<i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i>
+				<p class="m_desc" style="display:inline;">Module 2</p>
+				<i class="fa fa-pagelines"></i>
+				<i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i>
+				<i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i><i class="fa fa-pagelines"></i>
+			</div>
+			<br/><br/>
+			<div class="clear"></div>
+			
+			<div id="memArea" class="">
+				<h3 class="m_3">Various Memory Areas of JVM</h3>
+				
+				<div class="labout span_1_of_a1" style="height: 300px;">
 				<!-- start product_slider -->
 				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
 							<li>
-								<img class="etalage_thumb_image" src="images/gosling.jpg" />
+								<img class="etalage_thumb_image" src="images/runtime-data-access-configuration.png"/>
 							</li>
-						</ul>
+					</ul>
+				</div>
+				<p class="m_desc">The memory area allocated by JVM is also known as "Runtime Data Area". It is the memory assigned when the JVm program runs on the OS.  The runtime data area can be divided into 6 areas. Of the Six, one PC register, JVM Stack and Native Method Stack for each thread . Heap, Method Area and the runtime Constant Pool are shared by all threads.</p>
+				<p class="m_desc">1). PC Register - It is the register existing for each thread. It stores the address of the current instruction unless it is native. If the current method is native then the PC is undefined. All the CPU has PC, typically PC is incremented after each instruction and therefore it hold the address of the next instruction to be executed. The JVM uses the PC to keep track of where it is executing instructions, the PC will be infact pointing to the memory address in the method area.</p>
+				<br/><br/>
+				<div class="labout span_1_of_a1" style="height: 300px;">
+				<!-- start product_slider -->
+				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
+							<li>
+								<img class="etalage_thumb_image" src="images/jvm-stack-configuration.png"/>
+							</li>
+					</ul>
+				</div>
+				
+				<p class="m_desc">2). JVM Stack Area - One JVM stack exist for one thread, and is created when the thread starts. The stack is based on the concept of "LIFO(Last In First Out)". The stack is made up of the stack frame. The JVM uses or pop the stack frame onto the JVM Stack. If any exception occurs while executing in the stack it is stored in the "printStackTrace()" method.</p>
+				
+				<p class="m_desc"> Whenever the method is been executed in the JVM, one Java Frame is been created for the thread. When the method call finishes the Java Stack is removed or deallocated. Each stack frame has the reference for the Local Variable, Operand Stack and runTime constant pool of a class where the method being executed belongs. The size of the local variable and the operand stack is fixed according to the method.</p>
+				
+				<p class="m_desc">3). Native Method Stack - A stack of the native written language other than Java. In other word, it is the Stack used to execute C/C++ code invokde through JNI(Java Native Interface). According to the language, a "C" native stack or "C++" native stack can be created.</p>
+				
+				<p class="m_desc">4). Method Area -  The method area is shared by all threads, created when the JVM starts. The class loader initially loads the Class Files as corresponding Binary Data in the Method Area. The following information is been stored in the Method Area</p>
+				<p class="m_desc">i).Fully Qualified Name of the Loaded Class OR Interface OR ENUM.</p>
+				<p class="m_desc">ii).Fully Qualified Name of the Parent Class</p>
+				<p class="m_desc">iii).Whether .class File is related to a Class Or Interface or ENUM.</p>
+				<p class="m_desc">iv).The Modifier Information.</p>
+				<p class="m_desc">v).Variable or Field Information.</p>
+				<p class="m_desc">vi).Methods Information</p>
+				<p class="m_desc">vii).Constant Pool Information and so on.</p>
+				
+				<p class="m_desc">5).Runtime constant pool: An area that corresponds to the constant_pool table in the class file format. This area is included in the method area; however, it plays the most core role in JVM operation. Therefore, the JVM specification separately describes its importance. As well as the constant of each class and interface, it contains all references for methods and fields. In short, when a method or field is referred to, the JVM searches the actual address of the method or field on the memory by using the runtime constant pool.</p>
+				
+				<p class="m_desc"> It is the space where the instances or the object is been stored and is the target of the garbage collection. It is the space provided for the dynamic allocation of the object at the runtime. This space is most frequently discussed when discussing issues such as JVM Performance. JVM vendors can determine how to configure the heap or not to collect garbage.</p>
+				
 			</div>
-			<!-- 2nd labout span_1_of_a1 ends here-->
+			<div class="clear"></div>
+			<hr/>
 			
-			<!-- 2nd cont1 span_2_of_a1 ends here-->
-			<div id="whoCreatedIt">
-				<div class="cont1 span_2_of_a1">
-					<h3 class="m_3">Who created Java?</h3>
-					<p class="m_desc">Java  was develop in the early nineties by a team led by Mr. James Gosling(shown on left side) in Sun MicroSystem. It was originally designed to be used as the part of the mobile devices and embedded Systems. However when Java1.0 was released to the public it main focus shifted towards Internet technologies. It provided more interactivity with users by giving developers a way to produce animated webpages. It has evolved as a succesful programming language both for hardware and software purposes. A more than decade later, Java is still an extremely popular language with over 6.5million developers worldwide. </p>
+			<div id="" class="">
+				<h3 class="m_3">Program to Display Heap Memory Statistic</h3>
+				<p class="m_desc">Memory is the most important resource in any application. System memories is one of tha main resource that an application developer has to consider while managing the application.</p>
+				<p class="m_desc">This is highly useful for the Application developer to get the information about the Total Heap Size, total memory been used by the application and the total free heap space.</p>
+				<p class="m_desc">Java's Runtime class gives lots of information about the resource details of the Java Virtual Machine(JVM).  The memory consumed by the JVM can be read by different methods in Runtime class. </p>
+				<p class="m_desc">Below is show a simple program for getting the Total Heap Size, total Heap Memory Used and total free Heap Memory area.</p>
+				<div class="example">
+					<h2 class="example">Computer Code</h2>
+					<div class="example_code_1">
+						<span class="commentHighLight">/** <br/>
+							* Class: TestMemory<br/>
+							* @author: Rahul Sah<br/>
+							* @description: Prints JVM memory utilization statistics<br/>
+						*/<br/></span>
+						<span>public class </span> TestMemory {<br/>
+							<span class="intend1"><span class="keywordHightLight">public static void</span> main(String [] args)</span> {<br/></br>
+         
+							<span class="intend2"><span class="keywordHightLight">int</span> mb = <span class="highVAL3">1024*1024</span></span>;<br/></br/>
+         
+							<span class="intend2"><span class="highVAL3">//Getting the runtime reference from system</span></span><br/>
+							<span class="intend2">Runtime runtime = Runtime.getRuntime();</span><br/><br/>
+         
+							<span class="intend2">System.out.println(<span class="quotationHighLight">"##### Heap utilization statistics [MB] #####"</span>)</span>;<br/><br/>
+         
+							<span class="intend2"><span class="highVAL3">//Print used memory</span><br/></span>
+							<span class="intend2">System.out.println(<span class="quotationHighLight">"Used Memory:"</span>
+								+ (runtime.totalMemory() - runtime.freeMemory()) / mb);<br/><br/></span>
+ 
+							<span class="intend2"><span class="highVAL3">//Print free memory</span><br/>
+							System.out.println(<span class="quotationHighLight">"Free Memory:"</span>+runtime.freeMemory() / mb);<br/><br/></span>
+							 
+							<span class="intend2"><span class="highVAL3">//Print total available memory</span><br/>
+							System.out.println(<span class="quotationHighLight">"Total Memory:"</span> + runtime.totalMemory() / mb);<br/><br/></span>
+					 
+							<span class="intend2"><span class="highVAL3">//Print Maximum available memory</span><br/>
+							System.out.println(<span class="quotationHighLight">"Max Memory:"</span> + runtime.maxMemory() / mb);<br/><br/></span>
+							<span class="intend1">}</span><br/>
+							}
+					</div>
 				</div>
 			</div>
-			<!-- 2nd cont1 span_2_of_a1 ends here-->
-			<div class="clear"></div>
 			
-			<!-- 3rd labout span_1_of_a1 starts here-->
-			 <div class="labout span_1_of_a1" style="height: 300px;">
-				<!-- start product_slider -->
-				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
-							<li>
-								<img class="etalage_thumb_image" src="images/feature-of-java.png">
-							</li>
-						</ul>
+			<div id="" class=""> 
+				<h3 class="m_3">How to Set Maximum Heap Size?</h3>
+				<p class="m_desc">JVM used heap size to manage the Java application and for storing the object dynamically. If the Java Program requires a large amount of memory, it is possible that the virtual machine will <span class="keywordHightLight">throw OutOfMemoryError</span></p> exception. 
+				<h3 class="m_3">Setting up the JVM heap Size</h3>
+				<p class="m_desc">The JVM Heap Size can be increased at the runtime using command line options.</p>
+				<div class="example">
+					<h2 class="example">Computer Code</h2>
+					<div class="example_code_1">
+						-Xms<span class="keywordHightLight"><size></span> <span>set</span> initial Java heap <span class="keywordHightLight">size</span><br/><br/>
+						-Xmx<span class="keywordHightLight"><size></span> <span>set</span> maximum Java heap <span class="keywordHightLight">size</span><br/><br/>
+						-Xss<span class="keywordHightLight"><size></span> <span>set</span> java thread stack <span class="keywordHightLight">size</span><br/><br/>
+					</div>
+				</div>	
+				<div class="m_desc">For Example setting up minimum heap to 64MB and maximum heap to 256MB for a Java Program "HelloWorld" can be done as</div>
+				<div class="example_code_1">
+						java -Xms64m -Xmx256m HelloWorld
+					</div>
+				
 			</div>
-			<!-- 3rd labout span_1_of_a1 ends here-->
+			<div class="clear"></div>
+			<hr/>
 			
-			<!-- 4th cont1 span_2_of_a1 ends here-->
-			<div id="features" class="cont1 span_2_of_a1">
-				<h3 class="m_3">Features of Java</h3>
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Easy To Use</span></h3>
-				<p class="m_desc">The fundamental of the Java came from a programming language called "C++".Java programming language is the enchanced version of C++. It tried to eliminate the loop holes of C++  like explicit pointers, operator overloading etc. There was no need to explicitly remove the object once it is been used. The memory deallocation is done automatically by "Java Garbage collector".Java built on, and improved the ideas of c++, to provide a programming language that was powerful and simple to use. </p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Reliability</span></h3>
-				<p class="m_desc">Java needed to reduce the likelihood of fatal errors from programmer mistakes. With this in mind, object-oriented programming was introduced. Once data and its manipulation were packaged together in one place, it increased Java’s robustness.</p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Secure</span></h3>
-				<p class="m_desc">As Java was originally targeting mobile devices that would be exchanging data over networks, it was built to include a high level of security. Java is probably the most secure programming language to date.</p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Platform Dependent</span></h3>
-				<p class="m_desc">This is one of the most important feature of Java. Before understanding this feature we need to know about:<br/>
-					<strong>Javac - compiler that converts the source code into byte code.<br/></strong>
-					<strong>JVM - interpreter that converts the byte code into machine language code.<br/></strong>
-					As we know java is both compiler & interpreter based language. Once the java code also known as source code is compiled, it gets converted to native code known as BYTE CODE which is portable & can be easily executed on all operating systems. Byte code generated is basically represented in hexa decimal format. This format is same on every platform be it Solaris work station or Macintosh, windows or Linux. After compilation, the interpreter reads the generated byte code & translates it according to the host machine. Byte code is interpreted by Java Virtual Machine which is available with all the operating systems we install. so to port Java programs to a new platform all that is required is to port the interpreter and some of the library routines.<br/>
-					Source code -> javac ->Universal byte code<br/>
-					Universal byte ->jvm/java -> execute them on a particular machine.<br/>
+			<div id="executionEngine" class="">
+				<h3 class="m_3">Execution Engine</h3>
+				<p class="m_desc">The bytecode that is assigned to the runtime data areas in the JVM via class loader is executed by the execution engine. The execution engine reads the Java Bytecode in the unit of instruction. It is like a CPU executing the machine command one by one. Each command of the bytecode consists of a 1-byte OpCode and additional Operand. The execution engine gets one OpCode and execute task with the Operand, and then executes the next OpCode.</p>
+				<p class="m_desc">But the Java Bytecode is written in a language that a human can understand, rather than in the language that the machine directly executes. Therefore, the execution engine must change the bytecode to the language that can be executed by the machine in the JVM. The bytecode can be changed to the suitable language in one of two ways.</p>
+				<p class="m_desc">
+					1).<span style="text-decoration:underline;">
+						Interpreter
+					</span> - Reads, interprets and executes the bytecode instructions one by one. As it interprets and executes instructions one by one, it can quickly interpret one bytecode, but slowly executes the interpreted result. This is the disadvantage of the interpret language. The 'language' called Bytecode basically runs like an interpreter.
+				</p>
+				<p class="m_desc">
+					2). <span style="text-decoration:underline;">
+					JIT(Just-In-Time)
+					</span> - The JIT compiler has been introduced to compensate for the disadvantages of the interpreter. The execution engine runs as an interpreter first, and at the appropriate time, the JIT compiler compiles the entire bytecode to change it to native code. After that, the execution engine no longer interprets the method, but directly executes using native code. Execution in native code is much faster than interpreting instructions one by one. The compiled code can be executed quickly since the native code is stored in the cache.
+				</p>
+				<p class="m_desc">
+					However, it takes more time for JIT compiler to compile the code than for the interpreter to interpret the code one by one. Therefore, if the code is to be executed just once, it is better to interpret it instead of compiling. Therefore, the JVMs that use the JIT compiler internally check how frequently the method is executed and compile the method only when the frequency is higher than a certain level.
+				</p>
+				<div class="labout span_1_of_a1" style="height: 200px;">
+				    <ul id="etalage" style="display: block; width: 314px; height: 414px;">
+						<li>
+							<img class="etalage_thumb_image" src="images/java-compiler-and-jit-compiler.png"/>
+						</li>
+					</ul>
+				</div>
+				<p class="figure-notification">Figure: Java Compiler and JIT compiler</p>
+				<p class="m_desc">
+					However, it takes more time for JIT compiler to compile the code than for the interpreter to interpret the code one by one. Therefore, if the code is to be executed just once, it is better to interpret it instead of compiling. Therefore, the JVMs that use the JIT compiler internally check how frequently the method is executed and compile the method only when the frequency is higher than a certain level.
 				</p>
 				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Robust</span></h3>
-				<p class="m_desc">Since Java is an open source project it lead to the robust development of it. There are many features of the Java which surpasses the other programming language. It lacks the concept of the pointer due to which it cuts down the security issues. There is an automatic garbage collection in Java which implicitly removes the unused object. There is exception handling and type checking mechanism in java. All these points makes java robust.</p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Architecture-neutral</span></h3>
-				<p class="m_desc">Since java is an open source project it lead to the robust development of it. There are many features of the Java which surpasses the other programming language. It lacks the concept of the pointer due to which it cuts down the security issues. There is an automatic garbage collection in Java which implicitly removes the unused object. There is exception handling and type checking mechanism in java. All these points makes java robust.</p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Architecture-neutral</span></h3>
-				<p class="m_desc">There is no implementation dependent features e.g. size of primitive types is set.</p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Portable</span></h3>
-				<p class="m_desc">The byte code generated by Java Compiler can be easily carried to any platform</p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Distributed</span></h3>
-				<p class="m_desc">The application generated by the Java can be easily disturbed across various platform.RMI and EJB are used for creating distributed applications. We may access files by calling the methods from any machine on the internet.</p>
-				
-				<h3 class="m_desc"><i class="fa fa-hand-o-right"></i><span style="text-decoration:underline;">Multi-threaded</span></h3>
-				<p class="m_desc">A thread is like a separate program, executing concurrently. We can write Java programs that deal with many tasks at once by defining multiple threads. The main advantage of multi-threading is that it shares the same memory. Threads are important for multi-media, Web applications etc.</p>
-				
-    		</div>
-			<!-- 4th cont1 span_2_of_a1 ends here-->
+			</div>
+			<div class="clear"></div>
+			<hr/>
+			
+			<div id="" class="">
+				<h3 class="m_3">Java Native Interface(JNI)</h3>
+				<p class="m_desc">Sometimes the Execution engine requires Java Native Interface(JNI) library information. It is an interface that allows Java to interact with code written in another language. It help in code reusability and Performance.</p>
+			</div>
+			<div class="clear"></div>
+			<hr/>
+			
+			<div id="cfs" class="">
+				<h3 class="m_3">Class File Structure</h3>
+				<p class="m_desc">The class file generated by Java Compiler is not human readable form but if open the class file and interpret it. It will follow a particular pattern. It has the following components in it:</p>
+				<div class="labout span_1_of_a1" style="height: 600px;">
+				    <ul id="etalage" style="display: block; width: 314px; height: 414px;">
+						<li>
+							<img class="etalage_thumb_image" src="images/java-class-file-internal-structure.png"/>
+						</li>
+					</ul>
+				</div>
+				<p class="m_desc">The Diagrammatic representation of a Java Class file is been shown.</p>
+				<p class="m_desc">A Java Class file consist of 10 different components</p>
+				<p class="m_desc">1). Magic Number 0xCAFEBABE</p>
+				<p class="m_desc">2). Version of the Class File Format: the minor and major version of the Class File</p>
+				<p class="m_desc">3). Constant Pool  : Pool of Constant for the Class</p>
+				<p class="m_desc">4). Access Flag  : For example the access modifier of the class like static, public,private, abstract etc</p>
+				<p class="m_desc">5). This Class  : The name of the current class</p>
+				<p class="m_desc">6). Super Class  : The name of the super class</p>
+				<p class="m_desc">7). Interface Class  : Any interface in the class</p>
+				<p class="m_desc">8). Fields  : Any fields in the class</p>
+				<p class="m_desc">9). Methods  : Any methods in the class</p>
+				<p class="m_desc">10). Attributes: Any attributes of the class (for example the name of the sourcefile, etc.)</p>
+				<p class="m_desc">You can remember the 10 sections with some funny mnemonic:
+				<span class="highELE">M</span>y <span class="highELE">V</span>ery <span class="highELE">C</span>ute <span class="highELE">A</span>nimal <span class="highELE">T</span>urns <span class="highELE">S</span>avage <span class="highELE">I</span>n <span class="highELE">F</span>ull <span class="highELE">M</span>oon <span class="highELE">A</span>reas.
+				</p>
+			</div>
+			
+			<p class="m_desc">Above diagram depicts that Java Class file is divided into different components such as Magic, Version, Constant Pool, Access Flaf, This Class, Super Class, Interfaces, Fields, Methods and Attributes.</p>
+			
+			<p class="m_desc">The length of the Java class is not known before it gets loaded. There are variable length sections such as constant pool, methods, attributes etc. These sections are organized in such a way that they are prefaced by their size or length. This way JVM knows the size of variable length sections before actually loading them.</p>
+			
+			<p class="m_desc">The data written in a Class file is kept at one byte aligned and is tightly packed. This helps in making class file compact.</p>
+			
+			<p class="m_desc">The order of different sections in a Java Class file is strictly defined so that the JVM knows what to expect in a Class file and in which order it is loading different components.</p>
+			
+			<p class="m_desc">Let us check each and every component of a Class file in detail.<a href="ClassComponent.html">Click Here</a></p>
+			
+			
+			
 			<div class="clear"></div>
 			
-	 <div id="usesOfJava" class="toogle">
-     	<h3 class="m_3">Uses of Java</h3>
-     	<p class="m_text">1).Since Java has inbuilt networking features it is widely used for developing network rotocols and it's software. Socket programming is much easier and efficient do to be implemented in Java as compared to "C"</p>
-		<p class="m_text">2).Java is widely used in developing Java Enterprise application. J2EE technologies are implement in java and had provide excellent support for developing J2EE Applications. We can implement web application following "MVC" patternn using J2ee frameworks like Servlet, Springs, EJB, Hibernate etc</p>
-		<p class="m_text">3).Java is widely used in creating Desktop or Standalone applications because it is a fully Object Oriented Programming language and can depict the real world scenario more easily.</p>
-		<p class="m_text">4).Since Java has inbuilt networking features it is widely used for developing network rotocols and it's software. Socket programming is much easier and efficient do to be implemented in Java as compared to "C"</p>
-		<p class="m_text">5).Creating Graphical User Interface(GUI) in Java is very simple and efficient as compared to c and c++.So it is also used in creating GUI for applications.</p>
-		<p class="m_text">6).Creating Graphical User Interface(GUI) in Java is very simple and efficient as compared to c and c++.So it is also used in creating GUI for applications.</p>
-		
-		
-		<div class="float-left">
-			<i class="fa fa-fast-backward fa-2x"></i>
+	 <div class="toogle">
+     	<div class="float-left">
+		<i class="fa fa-fast-backward fa-2x"></i>
 		</div>
-		
-		<a href="jvm.html">
 		<div class="float-right">
-			<i class="fa fa-fast-forward fa-2x"></i>
+		<i class="fa fa-fast-forward fa-2x"></i>
 		</div>
-		</a>
-		
-		
      </div>					
 	 </div>
      <div class="clear"></div>

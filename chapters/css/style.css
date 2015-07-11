@@ -761,8 +761,8 @@ div.example_code_2{
     font-weight : bold;
 	text-align : center;
 }
-.highELE{
-    color : brown;
+.para_bold{
+    font-weight : bold;
 }
 
 .highVAL{
@@ -1539,6 +1539,16 @@ h3.m_3 {
 	text-decoration : underline;
 	letter-spacing	: 8px;
 }
+
+.subCat{
+    color : #3a87cf;
+	font-size : 1.4em;
+	font-weight : 600;
+    text-decoration : underline;
+	margin	: 10px;
+	letter-spacing : 2px;
+}
+
 ul.options li{
 	float:left;
 	margin: 0 3% 0 0;
