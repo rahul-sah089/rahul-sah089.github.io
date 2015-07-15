@@ -1,0 +1,346 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Java Basis</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="the Java programming language also uses the term 'variable' as well. This section discusses this relationship, plus variable naming rules and conventions, basic data types (primitive types, character strings, and arrays), default values, and literals."/>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/table.css" rel="stylesheet" type="text/css" media="all"/>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+<link href="fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+<!-- start menu -->     
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<!-- end menu -->
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>
+<!----details-product-slider--->
+				<!-- Include the Etalage files -->
+					
+					<script src="js/jquery.etalage.min.js"></script>
+				<!-- Include the Etalage files -->
+				<script>
+						jQuery(document).ready(function($){
+			
+							$('#etalage').etalage({
+								
+								
+								
+								click_callback: function(image_anchor, instance_id){
+									alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+								}
+							});
+							
+
+					});
+				</script>
+				<!----//details-product-slider--->	
+<!-- top scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+		});
+	});
+</script>					
+<style>
+.example{
+	width : auto;
+	color : #000000;
+	background-color : #f1f1f1;
+	padding : 15px;
+	line-height : 1.15em;
+	word-wrap : break-word;
+	margin-bottom : 12px;
+	margin-top : 12px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+</style>	
+</head>
+<body>
+  <div class="header-top">
+	 <div class="wrap"> 
+		<div class="logo">
+			<a href="index.html"><img src="../images/javasages.png" style="width: 50px;" alt=""/></a>
+	    </div>
+	    <div class="cssmenu">
+		   <ul>
+			 <li class="active"><a href="register.html">Sign up & Save</a></li> 
+			 <li><a href="shop.html">Store Locator</a></li> 
+			 <li><a href="login.html">My Account</a></li> 
+			 <li><a href="checkout.html">CheckOut</a></li> 
+		   </ul>
+		</div>
+		<div class="clear"></div>
+ 	</div>
+   </div>
+   <div class="header-bottom">
+   	<div class="wrap">
+   		<!-- start header menu -->
+		<ul class="megamenu skyblue">
+		    
+				
+		</ul>
+		<div class="clear"></div>
+     	</div>
+       </div>
+       <div class="single">
+         <div class="wrap">
+     	    <div class="rsidebar span_1_of_left">
+				   <section  class="sky-form">
+                   	  <h4>Java Virtual Machine</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+								<span>
+									<p>
+										<i class="fa fa-pagelines">
+										<i></i><a href="#jvmIntro">JVM Introduction</a>
+										</i>
+									</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines">
+											<i></i><a href="#">Difference between JVM,JDK and JrE</a>
+										</i>
+									</p>
+								<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i></i>
+											<a href="#hbvm">Hardware Based Virtual Machine</a>
+										</i>
+									</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#sbvm">Software Based Virtual Machine</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#bad">Basic Architecture of JVM</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#classloader">Class Loader SubSystem</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#tcl">Type of Class Loader</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#memArea">Various Memory Area of JVM</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#executionEngine">Execution Engine</a></a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#cfs">Class File Structure</a></a></i>
+										</p>
+									<br/>
+								</span>
+							</div>
+						 </div>
+                   	</section>
+				</div>
+		<div class="cont span_2_of_3">
+				<!-- labout span_1_of_a1 div starts here -->
+			<div id="hbvm" class="">
+				<h3 class="m_3">Your 1st Java Program</h3>
+				<p class="para">In this section we will discuss about writing our 1st Java Program. For executing any Java Program we need to follow this steps</p>
+				<p class="para">1). Install the JDK from the oracle website. You will find the setup <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">here</a></p>				
+				<p class="para">2). Once you had installed the Java on the local system, you need to set the path of jdk/bin directory. Know How to Set the <a href="settingVariables.html">Local Environment Variable</a></p>
+				<p class="para">3). Create the Java Program</p>
+				<p class="para">4). Compile and run the created Java Program</p>
+			
+				<p class="subCat">Creating <span class="highVAL2">Hello World</span> Program</p>
+				<p class="para">Let us write the Java Program as shown below</p>
+				<div class="example">
+					<h3 class="example">Hello World Example</h3>
+					<div class="example_code_1">
+						<span class="highVAL2">class</span> Example{<br/>
+						    <span class="intend1"><span class="highVAL2">public static void</span> main(String[] args){<br/></span>
+							    <span class="intend2"><span class="highVAL2">System.out.println</span>(<span class="quotationHighLight">"Hello World"</span>);<br/></span>
+							<span class="intend1">}<br/></span>
+						}<br/>
+					</div>
+				</div>
+				<p class="para">Save this file as Example.java</p>
+				<p class="para"><span class="italic para_bold">To Compile:</span>javac Example.java</p>
+				<p class="para"><span class="italic para_bold">To Execute:</span>java Example</p>
+				
+				<div class="example">
+					<h3 class="example">Output</h3>
+					<div class="example_code_1">
+						Hello World
+					</div>
+				</div>
+			</div>
+			
+			<div class="">
+				<p class="subCat">Understanding the 1st program</p>
+				<p class="para">Let's us understand the meaning of the <span class="highVAL2">class</span>,<span class="highVAL2">public</span>, <span class="highVAL2">static</span>, <span class="highVAL2">void</span>, <span class="highVAL2">String[] args</span>, <span class="highVAL2">System.out.println() method</span></p>
+				<p class="para">1).<span class="highVAL3">class</span>:This is used to declare the class.</p>
+				<p class="para">2).<span class="highVAL3">public</span>:This is the access modifier of the class. Public means that it is accessable to all.</p>
+				<p class="para">3).<span class="highVAL3">static</span>:This static keyword is been used to indicate that the method can be invoked without creating the object of it. It is known as static references. So since the main method is the 1st method to be loaded by the JVM, the JVM need not create the object to access this method. Thus it saves memory.</p>
+				<p class="para">4).<span class="highVAL3">void</span>:This is the return type of the main method. void means that the main method doesn't returns anything from the itself.</p>
+				<p class="para">5).<span class="highVAL3">String[] args</span>: It is used for passing command line arguments.</p>
+				<p class="para">6).<span class="highVAL3">System.out.println()</span>: It is been used to print statement.</p>
+			</div>
+			
+			<p class="subCat">How to write program and execute it?</p>
+			<p class="para">After you had downloaded and installed the JVM and set it's path in the System variable path, you can follow this steps to write and exectute the programs:</p>
+			<p class="para">1). Open Notepad: start menu -> All Programs -> Accessories -> notepad </p>
+			<p class="para">2). Write the sample code in it.</p>
+			<img src="images/simpleprogram.jpg"/>
+			<p class="para">3).When you had written the above code in the notepad, save in as <span class="para_bold">Example.java</span>.</p>
+			<p class="para">4).To compile the code open the <span class="para_bold">command prompt</span>. To open <span>command prompt</span> Click <span class="para_bold">start</span> then  <span class="italic para_bold">"In search program and files"</span> input field enter <span class="para_bold">"cmd"</span> and hit <span class="para_bold">"Enter"</span> </p>
+			<img src="images/cmdp.png"/>
+			<p class="para">4).Once the command prompt opens up, change the path to current working directory.</p>
+			<p class="para">5).Use <span class="para_bold">javac</span> command followed by the name of the Class Name ex: Example.java to compile the Java Code. It creates the <span>Example.class</span> file of it.</p>
+			<p class="para">6).Use <span class="para_bold">java</span> command followed by the class name without the .java extension.</p>
+			<p class="para">7).The output will be displayed in the command prompt. As shown below.</p>
+			<img src="images/running.png"></img>
+			
+			<div class="toogle">
+     	<div class="float-left">
+		<i class="fa fa-fast-backward fa-2x"></i>
+		</div>
+		<div class="float-right">
+		<i class="fa fa-fast-forward fa-2x"></i>
+		</div>
+     </div>					
+	 </div>
+     <div class="clear"></div>
+	 </div>
+     </div>
+	  <div class="footer">
+       	 <div class="footer-top">
+       		<div class="wrap">
+       			   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	 <ul class="f_list">
+				  	 	<li>
+							<div class="margin-left">
+								<i class="fa fa-google-plus fa-inverse"></i>
+							</div>
+							<span class="delivery"><a href="https://plus.google.com/+RahulSahs/posts">Follow me</a></span></li>
+				  	 </ul>
+				   </div>
+				   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	<ul class="f_list">
+				  	 	<li>
+						<img src="images/f_icon1.png" alt=""/>
+							<span class="delivery">Ready to Help At:
+								<span class="orange"> (+91) 9035211426</span>
+							</span>
+						</li>
+				  	 </ul>
+				   </div>
+				   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	<ul class="f_list">
+				  	 	<li><i class="fa fa-thumbs-o-up fa-inverse"></i><span class="delivery">Like Us on <i class="fa fa-facebook-square fa-inverse"></i></span></li>
+				  	 </ul>
+				   </div>
+				  <div class="clear"></div>
+			 </div>
+       	    </div>
+       	    
+       	 
+       	 
+       </div>
+       <script type="text/javascript">
+			$(document).ready(function() {
+			
+				var defaults = {
+		  			containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+		 		};
+				
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+        <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+</body>
+</html>

@@ -767,14 +767,17 @@ div.example_code_2{
 
 .highVAL{
     color : mediumblue;
+	font-weight : bold;
 }
 
 .highVAL1{
 	color:rgb(242, 118, 142);
+	font-weight : bold;
 }
 
 .highVAL2{
 	color:rgb(154, 137, 232);
+	font-weight : bold;
 }
 
 .highVAL3{
@@ -812,6 +815,15 @@ div.example_code_2{
 
 .intend3{
 	margin-left : 15%;
+}
+
+.intend3{
+	margin-left : 20%;
+}
+
+
+.intend4{
+    margin-left : 25%;
 }
 
 .float-left-example{

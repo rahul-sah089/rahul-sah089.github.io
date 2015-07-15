@@ -1,0 +1,634 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Control Statement in Java</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="This section discuss about if-else, if-else-if,switch statement,while,do-while,for and other branching statement"/>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/table.css" rel="stylesheet" type="text/css" media="all"/>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+<link href="fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+<!-- start menu -->     
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<!-- end menu -->
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>
+<!----details-product-slider--->
+				<!-- Include the Etalage files -->
+					
+					<script src="js/jquery.etalage.min.js"></script>
+				<!-- Include the Etalage files -->
+				<script>
+						jQuery(document).ready(function($){
+			
+							$('#etalage').etalage({
+								
+								
+								
+								click_callback: function(image_anchor, instance_id){
+									alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+								}
+							});
+							
+
+					});
+				</script>
+				<!----//details-product-slider--->	
+<!-- top scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+		});
+	});
+</script>					
+<style>
+.example{
+	width : auto;
+	color : #000000;
+	background-color : #f1f1f1;
+	padding : 15px;
+	line-height : 1.15em;
+	word-wrap : break-word;
+	margin-bottom : 12px;
+	margin-top : 12px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+</style>	
+</head>
+<body>
+  <div class="header-top">
+	 <div class="wrap"> 
+		<div class="logo">
+			<a href="index.html"><img src="../images/javasages.png" style="width: 50px;" alt=""/></a>
+	    </div>
+	    <div class="cssmenu">
+		   <ul>
+			 <li class="active"><a href="register.html">Sign up & Save</a></li> 
+			 <li><a href="shop.html">Store Locator</a></li> 
+			 <li><a href="login.html">My Account</a></li> 
+			 <li><a href="checkout.html">CheckOut</a></li> 
+		   </ul>
+		</div>
+		<div class="clear"></div>
+ 	</div>
+   </div>
+   <div class="header-bottom">
+   	<div class="wrap">
+   		<!-- start header menu -->
+		<ul class="megamenu skyblue">
+		    
+				
+		</ul>
+		<div class="clear"></div>
+     	</div>
+       </div>
+       <div class="single">
+         <div class="wrap">
+     	    <div class="rsidebar span_1_of_left">
+				   <section  class="sky-form">
+                   	  <h4>Java Virtual Machine</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+								<span>
+									<p>
+										<i class="fa fa-pagelines">
+										<i></i><a href="#jvmIntro">JVM Introduction</a>
+										</i>
+									</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines">
+											<i></i><a href="#">Difference between JVM,JDK and JrE</a>
+										</i>
+									</p>
+								<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i></i>
+											<a href="#hbvm">Hardware Based Virtual Machine</a>
+										</i>
+									</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#sbvm">Software Based Virtual Machine</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#bad">Basic Architecture of JVM</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#classloader">Class Loader SubSystem</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#tcl">Type of Class Loader</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#memArea">Various Memory Area of JVM</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#executionEngine">Execution Engine</a></a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#cfs">Class File Structure</a></a></i>
+										</p>
+									<br/>
+								</span>
+							</div>
+						 </div>
+                   	</section>
+				</div>
+		<div class="cont span_2_of_3">
+			<!-- Start of if-else div block -->
+			<div id="if-else" class="">
+				<h3 class="m_3">The If-then and If-then-Else Statement</h3>
+				<p class="subCat">The If-Then Statement</p> 
+				<p class="m_desc">It is the most basic of all the control flow statement. It tells the program to execute a certain section of the code if it evaluates to <span class="italic">true</span>.</p>
+				<p class="m_desc">If we want to ring an alarm bell when the status is true then we can implement it as shown below.</p>
+				<!-- Example Div Starts here -->
+				<div class="example">
+					<h2 class="example">Computer Code</h2>
+					<!--Example Code div starts here -->
+					<div class="example_code_1">
+						<span class="keywordHightLight">void</span> ringAlarm(){<br/>
+						    <span class="intend1"><span class="highVAL2">if</span>(status == <span class="highVAL1">true</span>)</span>{<br/>
+							    <span class="intend2"><span class="highVAL2">System.out.println</span>(<span class="quotationHighLight">"Ring the Alarm"</span></span>);<br/>
+							<span class="intend1">}</span><br/>
+						}<br/>
+					</div>
+					<!-- -->
+				</div>
+			</div>
+			<!-- End of if-else div block-->
+			
+			<!-- Start of if-else div block -->
+			<p class="subCat">The If-Then-Else Statement</p> 
+			<p class="para">The <span class="highVAL1">if-Then-Else</span> statement provides  a secondary path of execution when "if" clause evaluates to <span class="highVAL1">false</span>.</p>
+			<p class="para">We can apply <span class="highVAL1">if-Then-Else</span> in the above example as follows:</p>
+			<!-- Example Div Starts here -->
+			<div class="example">
+				<h2 class="example">Computer Code</h2>
+				<!--Example Code div starts here -->
+				<div class="example_code_1">
+					<span class="keywordHightLight">void</span> ringAlarm(){<br/>
+					    <span class="intend1"><span class="highVAL2">if</span>(status == <span class="highVAL1">true</span>)</span>{<br/>
+						<span class="intend2"><span class="highVAL2">System.out.println</span>(<span class="quotationHighLight">"Ring the Alarm"</span></span>);<br/>
+						<span class="intend1">}</span><br/>
+						<span class="intend1">else{</span><br/>
+						<span class="intend2"><span class="highVAL2">System.out.println</span>(<span class="quotationHighLight">"Don't ring the Alarm"</span></span>);<br/>
+						<span class="intend1">}</span><br/>			
+						}<br/>
+				</div>
+				<!-- Example Code Div Ends Here-->
+			</div>
+			<!-- Example Div Ends Here-->
+			<p class="subCat">The If-Else-If Statement</p> 
+			<p class="para">Example of <span class="highVAL1">if-Else-If</span> statement is shown below:
+			<!-- Example Div Starts here -->
+			<div class="example">
+				<h2 class="example">Computer Code</h2>
+				<!--Example Code div starts here -->
+				<div class="example_code_1">
+					<span class="highVAL2">class</span> IfElseDemo {<br/>
+						<span class="highVAL2">public static void</span> main(String[] args)&nbsp;&nbsp; {<br/><br/>
+
+						<span class="intend1"><span class="highVAL2">int</span> testscore = 76;<br/></span>
+						<span class="intend1"><span class="highVAL2">char</span> grade;<br/><br/></span>
+
+						<span class="intend1"><span class="highVAL2">if</span> (testscore >= 90)&nbsp;&nbsp; {<br/></span>
+							<span class="intend2">grade =&nbsp;'A';<br/></span>
+						<span class="intend1">} <span class="highVAL2">else if</span> (testscore >= 80) &nbsp;&nbsp;{<br/></span>
+							<span class="intend2">grade =&nbsp; 'B';<br/></span>
+						<span class="intend1">} <span class="highVAL2">else if</span> (testscore >= 70)&nbsp;&nbsp; {<br/></span>
+							<span class="intend2">grade =&nbsp; 'C';<br/></span>
+						<span class="intend1">} <span class="highVAL2">else if</span> (testscore >= 60)&nbsp;&nbsp; {<br/></span>
+							<span class="intend2">grade =&nbsp; 'D';<br/></span>
+						<span class="intend1">} <span class="highVAL2">else</span> {<br/></span>
+							<span class="intend2">grade =&nbsp; 'F';<br/></span>
+						<span class="intend1">}<br/></span>
+						<span class="intend1"><span class="highVAL2">System.out.println</span>(<span class="quotationHighLight">"Grade = "</span> + grade);<br/></span>
+					}<br/>
+				}<br/>
+				</div>
+				<!-- Example Code Div Ends Here-->
+			</div>
+			<br/>
+			<hr/>			
+			
+			<h3 class="m_3">Switch Statement</h3>
+				<p class="para"><span class="highVAL1">If-then</span> and <span class="highVAL1">If-then-Else</span> statements, had single execution path but the switch statement can have multiple <span class="italic">execution path</span>. A switch statement allows a variable to be tested for equality against a list of values.</p>
+			<div class="example">
+				<h2 class="example">Computer Code</h2>
+				<!--Example Code div starts here -->
+				<div class="example_code_1">
+					<span class="highVAL2">public class</span> SwitchDemo {<br/>
+						<span class="highVAL2">public static void</span> main(String[] args)&nbsp;&nbsp; {<br/><br/>
+						<span class="intend1"><span class="highVAL2">int</span> month = 8;<br/></span>
+						<span class="intend1"><span class="highVAL2">String</span> monthString;<br/><br/></span>
+						<span class="intend1"><span class="highVAL2">switch</span>(month){<br/></span><br/>
+							<span class="intend2"><span><span class="keywordHightLight">case</span> 1</span>: monthString =<span class="quotationHighLight">"Jan"</span>;</span><br/>
+									<span class="intend3">break;<br/></span>
+							<span class="intend2"><span class="keywordHightLight">case 2</span>: monthString =<span class="quotationHighLight">"Feb";</span><br/></span>
+									<span class="intend3"><span class="keywordHightLight">break</span>;<br/></span>
+							<span class="intend2"><span class="keywordHightLight">case 3</span>: monthString =<span class="quotationHighLight">"March"</span>;<br/></span>
+									<span class="intend3"><span class="keywordHightLight">break</span>;<br/></span>
+							<span class="intend2"><span class="keywordHightLight">case</span> 4: monthString =<span class="quotationHighLight">"April"</span>;<br/></span>
+									<span class="intend3"><span class="keywordHightLight">break</span>;<br/></span>
+							<span class="intend2"><span class="keywordHightLight">case 5</span>: monthString =<span class="quotationHighLight">"May"</span>;<br/></span>
+									<span class="intend3"><span class="keywordHightLight">break</span>;<br/></span>
+							<span class="intend2"><span class="keywordHightLight">case</span> 6: monthString =<span class="quotationHighLight">"June"</span>;<br/></span>
+									<span class="intend3"><span class="keywordHightLight">break</span>;<br/></span>
+							<span class="intend2"><span class="keywordHightLight">case 7</span>: monthString =<span class="quotationHighLight">"July"</span>;<br/></span>
+									<span class="intend3"><span class="keywordHightLight">break</span>;<br/></span>
+							<span class="intend2"><span class="keywordHightLight">case 8</span>: monthString =<span class="quotationHighLight">"August"</span>;<br/></span>
+									<span class="intend3"><span class="keywordHightLight">break</span>;<br/></span>
+							<span class="intend2"><span class="keywordHightLight">case 9:</span> monthString =<span class="quotationHighLight">"September"</span>;<br/></span>
+									<span class="intend3"><span class="keywordHightLight">break;</span><br/></span>
+							<span class="intend2"><span class="keywordHightLight">case 10</span>: monthString =<span class="quotationHighLight">"October"</span>;<br/></span>
+									<span class="intend3"><span class="keywordHightLight">break</span>;<br/></span>
+							<span class="intend2"><span class="keywordHightLight">case 11</span>: monthString =<span class="quotationHighLight">"November"</span>;<br/></span>
+									<span class="intend3"><span class="keywordHightLight">break</span>;<br/></span>
+							<span class="intend2"><span class="keywordHightLight">case 11</span>: monthString =<span class="quotationHighLight">"December"</span>;<br/></span>
+									<span class="intend3"><span class="keywordHightLight">break;</span><br/></span>
+							<span class="intend2"><span class="keywordHightLight">default</span> : monthString = <span class="quotationHighLight">"Invalid Month"</span>;<br/></span>
+									<span class="intend3"><span class="keywordHightLight">break</span>;<br/></span>
+						<span class="intend1">}<br/></span>
+						<span class="intend1"><span class="keywordHightLight">System.out.println</span>(monthString);<br/></span>
+					<span class="intend1">}<br/></span>
+				}<br/>
+				<br/>
+				</div>
+				<!-- Example Code Div Ends Here-->
+			</div>
+			
+			<div id="whileDowhile">
+				<h3 class="m_3">The While and Do-While Statement</h3>
+				<p class="para">While statement execute a <span class="italic">particular block of the code</span> until the condition is <span class="italic">true</span>.</p>
+				<div class="example_code_1">
+					<span class="keywordHightLight">while</span>(expression){<br/>
+					    <span class="intend1">statement(s);<br/></span>
+					}<br/>
+				</div>
+				<p class="para">The while statement evaluate expression, which must return a <span class="keywordHightLight">boolean</span> value. Based on the value begin returned by the expression it execute the block of statement in it. If the expression is <span class="keywordHightLight">true</span>, it execute the block of code. If the expression evaluates to <span class="keywordHightLight">false</span> it comes out of the loop.</p>
+				<div class="example">
+					<h2 class="example">Printing the Value from 1 to 10 using <span class="keywordHightLight">while</span> loop</h2>
+					<div class="example_code_1">
+						<span class="keywordHightLight">class</span> WhileDemo {<br/>
+							<span><span class="keywordHightLight">public static void</span> main(String[] args){<br/></span>
+								<span class="intend1"><span class="keywordHightLight">int</span> count = 1;<br/></span>
+								<span class="intend1"><span class="keywordHightLight">while</span> (count < 11) {<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Count is: "</span> + count);<br/></span>
+								<span class="intend2">	count++;<br/></span>
+								<span class="intend1">}<br/></span>
+							<span>}<br/></span>
+						<span>}<br/></span>
+					</div>
+				</div>
+				<p class="para">We can implement infinite loop using the program shown below:</p>
+				<div class="example">
+					<h2 class="example">Program to go to infinite loop</h3>
+					<div class="example_code_1">
+						<span class="keywordHightLight">while</span>(true){<br/>
+						    <span class="intend1"><span class="quotationHighLight">//statement goes here</span></span><br/>
+						}
+					</div>
+				</div>
+				<div class="para">There is another version of the <span class="keywordHightLight">while</span> loop i.e; <span class="keywordHightLight">do-while</span> loop. <span class="keywordHightLight">Do-while</span> loop evaluate the expression at the bottom of the loop instead of top. Therefore it evaluate the expression atleast once as shown in the <span class="keywordHightLight">DoWhileLoop</span> program below:</div>
+				<div class="example">
+					<h3 class="example">The template of <span class="keywordHightLight">do-while</span> loop</h3>
+					<div class="example_code_1">
+						class DoWhileLoop{<br/>
+							<span class="intend1"><span class="keywordHightLight">public static void</span> main(String[] args){<br/></span>
+							    <span class="intend2"><span class="keywordHightLight">int</span> count = 1;<br/></span>
+								<span class="intend2"><span class="keywordHightLight">do</span>{<br/></span>
+								    <span class="intend3"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"The Count Value is "</span>+count);<br/></span>
+									<span class="intend3">count++;<br/></span>
+								<span class="intend2">}<br/></span>
+								<span class="intend2"><span class="keywordHightLight">while(count<11)</span>;<br/></span>
+							<span class="intend1">}<br/></span>
+						}<br/>
+					</div>
+				</div>
+			</div>
+			<hr/>
+			
+			<h3 class="m_3">The For Statement</h3>
+			<p class="m_desc">The <span class="keywordHightLight">for</span> statement provides a compact way to iterate over a particular range of value.  It is a way to repeatedly loops until a particular condition is satisfied.</p>
+			<p class="para">The template of the <span class="keywordHightLight">fo</span> loop is shown below:</p>
+			<div class="example">
+				<h3 class="example">Template of <span class="keywordHightLight">for</span> loop</h3>
+				<div class="example_code_1">
+					for(<span class="italic">initialization</span>; <span class="italic">condition</span>;<span class="italic">increment/decrement</span>){<br/>
+					    <span class="intend1"><span class="italic">statement(s)</span><br/></span>
+					}<br/>
+				</div>
+			</div>
+			<div class="para">1).<span class="italic">Intialization</span>: It is used to initialize the loop. It set the initial value of the variable so that the loop can iterate through it </div>
+			<div class="para">2). <span class="italic">Condition</span>: It is the condition until which the loop will iterate.</div>
+			<div class="para">3). <span class="italic">Increment/Decrement </span>: It is used to increment/decrement the value of the value through which the loop iterates through.</div>
+			<div class="para">The template of the <span class="keywordHightLight">for</span> loop is shown below:</div>
+			<div class="example">
+				<h3 class="example">Template <span>"for"</span> Loop</h3>
+				<div class="example_code_1">
+					class ForDemo {<br/>
+						<span class="intend1"><span class="keywordHightLight>public static void</span> main(String[] args){<br/></span>
+							<span class="intend2"><span class="keywordHightLight">for</span>(int i=1; i<11; i++){<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>("Count is: " + i+";");<br/></span>
+							<span class="intend1">}</span><br/>
+						<span class="intend1">}</span><br/>
+					}
+				</div>
+			</div>
+			<div class="example">
+				<h3 class="example">The output Is:</h3>
+				<div class="example_code_1">
+					count is : 1;<br/>
+					count is : 2;<br/>
+					count is : 3;<br/>
+					count is : 4;<br/>
+					count is : 5;<br/>
+					count is : 6;<br/>
+					count is : 7;<br/>
+					count is : 8;<br/>
+					count is : 9;<br/>
+					count is : 10;<br/>
+				</div>
+			</div>
+			<br/><br/>
+			<hr/>
+			
+			<p div="para">The infinite loop using for loop can be created as follows:</p>
+			<div class="example">
+				<div class="example_code_1">
+					<span class="commentHighLight">//infinite loop<br/></span>
+					<span class="keywordHightLight">for</span>(;;){<br/>
+					    <span class="commentHighLight">//statement goes in here<br/></span>
+					}<br/>
+				</div>
+			</div>
+			
+			<p class="para">The <span class="keywordHightLight">for</span> statement also can be used to iterate through a <span class="italic">collection</span> or <span class="italic">array.</span> It is also know as <span class="keywordHightLight">forEach</span> loop.</p>
+			<p>  To demonstrate, consider the following array, which holds the numbers 1 through 10:</p>
+			<div class="example_code_1">int[] numbers = {1,2,3,4,5,6,7,8,9,10};</div>
+			<div class="example">
+				<h3 class="example">The example below shows how to iterate through it using <span class="keywordHightLight">forEach</span> loop</h3>
+				<div class="example_code_1">
+				<span>class</span> EnhancedForDemo {<br/>
+					<span class="intend1"><span class="keywordHightLight">public static void main</span>(String[] args){<br/></span>
+						<span class="intend2"><span class="keywordHightLight">int</span>[] numbers = {1,2,3,4,5,6,7,8,9,10};<br/></span>
+						<span class="intend2"><span class="keywordHightLight">for</span> (<span>int</span> item : numbers) {<br/></span>
+							<span class="intend3"><span class="keywordHightLight">System.out.println</span>("Count is: " + item);<br/></span>
+						<span class="intend2">}<br/></span>
+					<span class="intend1">}<br/></span>
+				}<br/>
+				</div>
+			</div>
+			<div class="example">
+				<h3 class="example">The output Is:</h3>
+				<div class="example_code_1">
+					count is : 1;<br/>
+					count is : 2;<br/>
+					count is : 3;<br/>
+					count is : 4;<br/>
+					count is : 5;<br/>
+					count is : 6;<br/>
+					count is : 7;<br/>
+					count is : 8;<br/>
+					count is : 9;<br/>
+					count is : 10;<br/>
+				</div>
+			</div>
+			<br/>
+			<hr/>
+			
+			<h3 class="m_3">Branching Statement</h3>
+			<p class="subCat">The <span class="keywordHightLight">break</span> Statement</p>
+			<p class="para">The break statement are of two types:</p>
+			<p class="para">1).Labelled</p>
+			<p class="para">2). UnLabelled</p>
+			<p class="para">We had seen the <span class="highVAL1">UnLabelled</span> form in the previous example of the switch statement. </p>
+			<p class="para">We can use Unlabelled break to terminate a <span class="italic">for</span>,<span class="italic">while</span> or <span class="italic">do-while</span> loop,as shown in the example below:</p>
+			<p class="para">The example of the <span class="keywordHightLight">Unlabelled</span> break statement is shown below </p>
+			<p class="para">This program search for the number 12 in the array. When it is found then the <span class="keywordHightLight">for</span> loop is been terminated using break statement. Control statement then transfer the statement after the <span class="keywordHightLight">for</span> loop </p>
+			<div class="example">
+				<h3 class="example">Example:</h3>
+				<div class="example_code_1">
+				<span class="keywordHightLight">class</span> BreakDemo {<br/>
+					<span class="intend1"><span class="keywordHightLight">public static void main</span>(String[] args) {<br/><br/></span>
+
+						<span class="intend2"><span class="keywordHightLight">int[]</span> arrayOfInts = { 32, 87, 3, 589, 12, 1076, 2000, 8, 622, 127 };<br/></span>
+						<span class="intend2"><span class="keywordHightLight">int</span> searchfor = 12;<br/><br/></span>
+
+						<span class="intend2"><span class="keywordHightLight">int</span> i;<br/></span>
+						<span class="intend2"><span class="keywordHightLight">boolean</span> foundIt = false;<br/><br/></span>
+
+						<span class="intend2"><span class="keywordHightLight">for</span> (i = 0; i < arrayOfInts.length; i++) {<br/></span>
+							<span class="intend3"><span class="keywordHightLight">if</span> (arrayOfInts[i] == searchfor) {<br/></span>
+								<span class="intend4">foundIt = true;<br/></span>
+								<span class="intend4"><span class="keywordHightLight">break</span>;<br/></span>
+							<span class="intend3">}<br/></span>
+						<span class="intend2">}<br/><br/></span>
+
+						<span class="intend2">if (foundIt) {<br/></span>
+							<span class="intend3"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Found "</span> + searchfor + <span class="quotationHighLight">" at index "</span> + i);<br/></span>
+							<span class="intend2">} <span class="keywordHightLight">else</span> {<br/></span>
+								<span class="intend3"><span class="keywordHightLight">System.out.println</span>(searchfor + <span class="quotationHighLight">" not in the array"</span>);<br/></span>
+							<span class="intend2">}<br/></span>
+						<span class="intend1">}<br/></span>
+					<span>}<br/></span>
+				</div>
+			</div>
+			<div class="example">
+				<h3 class="example">The output of the above program</h3>
+				<div class="example_code_1">
+					Found 12 at 1,0
+				</div>
+			</div>
+			
+			<p class="subCat">The Continue Statement</p>
+			<p class="para">The <span class="keywordHightLight">continue</span> statement skips the current iteration of a <span class="keywordHightLight">for</span>,<span class="keywordHightLight">while</span>,<span class="keywordHightLight">do-while</span> loop. The program shown below shows the example of the <span class="keywordHightLight">continue</span> statement. In this program the character in the given string is been iterated and if the character <span class="highELE">"p"</span> is not found it skips the rest of the loop and proceed to the next character in the String.</p>	
+			<div class="example">
+				<h3 class="example">Example of "Continue" Statement</h3>
+				<div class="example_code_1">
+					class ContinueDemo {<br/>
+						<span><span class="keywordHightLight">public static void main</span>(String[] args) {<br/><br/></span>
+
+							<span class="intend1"><span class="keywordHightLight">String</span> searchMe = <span class="quotationHighLight">"peter piper picked a "</span> + <span class="quotationHighLight">"peck of pickled peppers"</span>;<br/></span>
+							<span class="intend1"><span class="keywordHightLight">int</span> max = searchMe.length();<br/></span>
+							<span class="intend1"><span class="keywordHightLight">int</span> numPs = 0;<br/><br/></span>
+
+							<span class="intend1"><span class="keywordHightLight">for</span> (<span class="keywordHightLight">int</span> i = 0; i < max; i++) {<br/></span>
+								<span class="intend2"><span class="commentHighLight">// interested only in p's</span><br/></span>
+								<span class="intend2"><span class="keywordHightLight">if</span> (searchMe.charAt(i) != 'p')<br/></span>
+								<span class="intend3"><span class="keywordHightLight">continue</span>;<br/><br/></span>
+
+								<span class="intend2"><span class="keywordHightLight">// process p's</span><br/></span>
+								<span class="intend2">numPs++;<br/></span>
+							<span class="intend1">}<br/></span>
+							<span class="intend1"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Found "</span> + numPs + <span class="quotationHighLight">" p's in the string."</span>);<br/></span>
+						<span class="intend1">}<br/></span>
+					}<br/>
+				</div>
+			</div>
+			<br/>
+			<p class="subCat"> The <span class="italic">return</span> Statement</p>
+			<p class="para">The last of the branching statement is the <span class="keywordHightLight">return</span> statement.</p>
+			<p class="para">The <span class="keywordHightLight">return</span> statement is been used to return the control from the invoked method to where method was invoked. There are two types of return statement. i.e; the return with some value and the return with void</p>
+			<div class="example_code_1">return ++count;</div>
+			<p class="para">To return a value from the <span class="keywordHightLight">return</span> simply put the value after it.The data type of the returned value must match the type of the method's declared return value. When a method is declared void, use the form of return that doesn't return a value.</p>
+			<div class="example_code_1">return;</div>
+			<hr/>
+			
+			<h3 class="m_3">Summary of Control Flow Statements</h3>
+			<p class="para">The <span class="keywordHightLight">if-then</span> statement is the most basic of all the control flow statements. It tells your program to execute a certain section of code <span class="keywordHightLight">only if</span> a particular test evaluates to <span class="keywordHightLight">true</span>. The <span class="keywordHightLight">if-then-else</span> statement provides a secondary path of execution when an <span class="keywordHightLight">"if"</span> clause evaluates to <span class="keywordHightLight">false</span>. Unlike <span class="keywordHightLight">if-then</span> and <span class="keywordHightLight">if-then-else</span>, the <span class="keywordHightLight">switch</span> statement allows for any number of possible execution paths. The <span class="keywordHightLight">while</span> and <span class="keywordHightLight">do-while</span> statements continually execute a block of statements while a particular condition is true. The difference between <span class="keywordHightLight">do-while</span> and <span class="keywordHightLight">while</span> is that <span class="keywordHightLight">do-while</span> evaluates its expression at the bottom of the loop instead of the top. Therefore, the statements within the do block are always executed at least once. The <span class="keywordHightLight">for</span> statement provides a compact way to iterate over a range of values. It has two forms, one of which was designed for looping through collections and arrays.</p>
+			<hr/>
+			
+			<div class="clear"></div>
+			
+	 <div class="toogle">
+     	<div class="float-left">
+		<i class="fa fa-fast-backward fa-2x"></i>
+		</div>
+		<div class="float-right">
+		<i class="fa fa-fast-forward fa-2x"></i>
+		</div>
+     </div>					
+	 </div>
+     <div class="clear"></div>
+	 </div>
+     </div>
+	  <div class="footer">
+       	 <div class="footer-top">
+       		<div class="wrap">
+       			   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	 <ul class="f_list">
+				  	 	<li>
+							<div class="margin-left">
+								<i class="fa fa-google-plus fa-inverse"></i>
+							</div>
+							<span class="delivery"><a href="https://plus.google.com/+RahulSahs/posts">Follow me</a></span></li>
+				  	 </ul>
+				   </div>
+				   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	<ul class="f_list">
+				  	 	<li>
+						<img src="images/f_icon1.png" alt=""/>
+							<span class="delivery">Ready to Help At:
+								<span class="orange"> (+91) 9035211426</span>
+							</span>
+						</li>
+				  	 </ul>
+				   </div>
+				   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	<ul class="f_list">
+				  	 	<li><i class="fa fa-thumbs-o-up fa-inverse"></i><span class="delivery">Like Us on <i class="fa fa-facebook-square fa-inverse"></i></span></li>
+				  	 </ul>
+				   </div>
+				  <div class="clear"></div>
+			 </div>
+       	    </div>
+       	    
+       	 
+       	 
+       </div>
+       <script type="text/javascript">
+			$(document).ready(function() {
+			
+				var defaults = {
+		  			containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+		 		};
+				
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+        <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Java Basis</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="the Java programming language also uses the term 'variable' as well. This section discusses this relationship, plus variable naming rules and conventions, basic data types (primitive types, character strings, and arrays), default values, and literals."/>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/table.css" rel="stylesheet" type="text/css" media="all"/>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+<link href="fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+<!-- start menu -->     
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<!-- end menu -->
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>
+<!----details-product-slider--->
+				<!-- Include the Etalage files -->
+					
+					<script src="js/jquery.etalage.min.js"></script>
+				<!-- Include the Etalage files -->
+				<script>
+						jQuery(document).ready(function($){
+			
+							$('#etalage').etalage({
+								
+								
+								
+								click_callback: function(image_anchor, instance_id){
+									alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+								}
+							});
+							
+
+					});
+				</script>
+				<!----//details-product-slider--->	
+<!-- top scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+		});
+	});
+</script>					
+<style>
+.example{
+	width : auto;
+	color : #000000;
+	background-color : #f1f1f1;
+	padding : 15px;
+	line-height : 1.15em;
+	word-wrap : break-word;
+	margin-bottom : 12px;
+	margin-top : 12px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+</style>	
+</head>
+<body>
+  <div class="header-top">
+	 <div class="wrap"> 
+		<div class="logo">
+			<a href="index.html"><img src="../images/javasages.png" style="width: 50px;" alt=""/></a>
+	    </div>
+	    <div class="cssmenu">
+		   <ul>
+			 <li class="active"><a href="register.html">Sign up & Save</a></li> 
+			 <li><a href="shop.html">Store Locator</a></li> 
+			 <li><a href="login.html">My Account</a></li> 
+			 <li><a href="checkout.html">CheckOut</a></li> 
+		   </ul>
+		</div>
+		<div class="clear"></div>
+ 	</div>
+   </div>
+   <div class="header-bottom">
+   	<div class="wrap">
+   		<!-- start header menu -->
+		<ul class="megamenu skyblue">
+		    
+				
+		</ul>
+		<div class="clear"></div>
+     	</div>
+       </div>
+       <div class="single">
+         <div class="wrap">
+     	    <div class="rsidebar span_1_of_left">
+				   <section  class="sky-form">
+                   	  <h4>Java Virtual Machine</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+								<span>
+									<p>
+										<i class="fa fa-pagelines">
+										<i></i><a href="#jvmIntro">JVM Introduction</a>
+										</i>
+									</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines">
+											<i></i><a href="#">Difference between JVM,JDK and JrE</a>
+										</i>
+									</p>
+								<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i></i>
+											<a href="#hbvm">Hardware Based Virtual Machine</a>
+										</i>
+									</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#sbvm">Software Based Virtual Machine</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#bad">Basic Architecture of JVM</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#classloader">Class Loader SubSystem</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#tcl">Type of Class Loader</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#memArea">Various Memory Area of JVM</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#executionEngine">Execution Engine</a></a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#cfs">Class File Structure</a></a></i>
+										</p>
+									<br/>
+								</span>
+							</div>
+						 </div>
+                   	</section>
+				</div>
+		<div class="cont span_2_of_3">
+				<!-- labout span_1_of_a1 div starts here -->
+			
+			<div id="">
+				<h3 class="m_3">How to Set Path In Java</h3>
+				<p class="para">
+					Once you had installed the JDK on the local system, it;s time to set up the path of it to compile and execute the Java Program,
+				</p>
+				<p class="para">If we are saving the Java Source Code in the <span class="para_bold">jdk/bin</span> directory then it is not required to set up the path because all the tool will be available in the current directory.</p>
+				<p class="para">However in most of the case we will not be saving the Java Source Code in the <span class="para_bold">jdk/bin</span> directory. So it is necessary to set path of the JDK. The <span class="para_bold">PATH</span> is the system variable that the operating system uses to locate needed executables from the command line or Terminal Window.</p>
+							
+				<p class="para">There are two ways to set up the Java Path</p>
+				<p class="para">1). Temporary</p>
+				<p class="para">2). Permanent</p>
+			
+				<p class="subCat">Setting up Temporary Path of JDK in WIndows</p>
+				<p class="para">1). Open the command prompt</p>
+				<p class="para">2). copy the path of jdk/bin directory</p>
+				<p class="para">3). Write in command prompt; set path = copied_path</p>
+				
+				<div class="example_code_1">
+					set path = C:\Program Files\Java\jdk1.6.0_23\bin;
+				</div>
+				<br/>
+				<p class="para">The figure below shows how to  set the Java Path</p>
+				<img src="images/setVariables.png"/>
+				<br/>
+				<p class="para">Initially we set up the Java Path then we check whether the Java Path is been set correctly or not using <span class="keywordHightLight">java-version</span> command line command</p>
+				
+				<p class="subCat">Setting up Java Path Permanently</p>
+				<p class="para">In order to set the Java Path Permanently we need to follow the following step</p>
+				<p class="para">1).Right Click on the <span class="para_bold">My Computer</span> and click <span class="para_bold">Properties</span></p>
+				<img src="images/setting1.png"/>
+				<p class="para">2).<span class="para_bold">"View Basis Information about computer"</span> pop up</p>
+				<p class="para">3). Click on the <span class="para_bold">"Advanced System Setting"</span> on the left hand side</p>
+				<img src="images/setting2.png"/>
+				<p class="para">4). <span class="para_bold">System properties</span> pop up opens up</p>
+				<img src="images/setting3.png"/>
+				<p class="para">5). Click on the <span class="para_bold">Environment Variables</span> button</p>
+				<img src="images/setting4.png"/>
+				<p class="para">6). <span class="para_bold">Environment Variables</span> sections opens up. Under <span class="para_bold">System Variable</span> search for the <span class="para_bold">variable name path.</p>
+				<img src="images/setting5.png"/>
+				<p class="para">7). Double Click on it and it click open <span class="para_bold">"Edit System Variable"</span></p>
+				<img src="images/setting6.png"/>
+				<p class="para">8). Add the <span class="para_bold">C:\Program Files\Java\jdk1.6.0_23\bin;</span> in <span class="para_bold">Variable Value</span>(Make Sure ; is been added)</p>
+				<img src="images/setting7.png"/>
+				<p class="para">9). Click <span class="para_bold">"OK"->"OK"->"OK"</span> to close all the open section</p>
+				<p class="para">10). The environment path is now set permanently</p>
+				
+				<p class="subCat">Setting JAVA Path in Linux OS</p>
+				<p class="para">Setting up the JAVA PATH is linux is same as setting the PATH in the WIndows OS. But here we use export tool rather than set. The export command is been shown below:</p>
+				<div class="example_code_1">export PATH=$PATH:/home/jdk1.6.01/bin/</div>
+				
+			</div>
+			<br/>
+			</div>
+			<div class="clear"></div>
+			
+	 <div class="toogle">
+     	<div class="float-left">
+		<i class="fa fa-fast-backward fa-2x"></i>
+		</div>
+		<div class="float-right">
+		<i class="fa fa-fast-forward fa-2x"></i>
+		</div>
+     </div>					
+	 </div>
+     <div class="clear"></div>
+	 </div>
+     </div>
+	  <div class="footer">
+       	 <div class="footer-top">
+       		<div class="wrap">
+       			   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	 <ul class="f_list">
+				  	 	<li>
+							<div class="margin-left">
+								<i class="fa fa-google-plus fa-inverse"></i>
+							</div>
+							<span class="delivery"><a href="https://plus.google.com/+RahulSahs/posts">Follow me</a></span></li>
+				  	 </ul>
+				   </div>
+				   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	<ul class="f_list">
+				  	 	<li>
+						<img src="images/f_icon1.png" alt=""/>
+							<span class="delivery">Ready to Help At:
+								<span class="orange"> (+91) 9035211426</span>
+							</span>
+						</li>
+				  	 </ul>
+				   </div>
+				   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	<ul class="f_list">
+				  	 	<li><i class="fa fa-thumbs-o-up fa-inverse"></i><span class="delivery">Like Us on <i class="fa fa-facebook-square fa-inverse"></i></span></li>
+				  	 </ul>
+				   </div>
+				  <div class="clear"></div>
+			 </div>
+       	    </div>
+       	    
+       	 
+       	 
+       </div>
+       <script type="text/javascript">
+			$(document).ready(function() {
+			
+				var defaults = {
+		  			containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+		 		};
+				
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+        <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+</body>
+</html>
