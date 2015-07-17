@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Object Oriented Programming</title>
+<title>Object and Classes in OOPs</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content=""/>
@@ -124,6 +124,7 @@
    	<div class="wrap">
    		<!-- start header menu -->
 		<ul class="megamenu skyblue">
+			<!--
 		    <li><a class="color1" href="#">Home</a></li>
 			<li class="grid"><a class="color2" href="#">Java-Homes</a>
 				<div class="megapanel">
@@ -256,6 +257,7 @@
     			</li>				
 				<li><a class="color5" href="#">Java String</a>
 				<div class="megapanel">
+
 					<div class="row">
 						<div class="col1">
 							<div class="h_nav">
@@ -435,6 +437,7 @@
 				<li><a class="color10" href="#">Collections in Java</a></li>
 				<li><a class="color11" href="#">Java I/O</a></li>
 				<li><a class="color12" href="#">Java JDBC</a></li>
+				-->
 		   </ul>
 		   <div class="clear"></div>
      	</div>
@@ -529,21 +532,150 @@
 				<!-- start product_slider -->
 				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
 							<li>
-								<img class="etalage_thumb_image" src="images/oops.jpg" />
+								<img class="etalage_thumb_image" src="images/Objects-in-Java-Programming.png" />
 							</li>
 					</ul>
 			    </div>
 				<!-- labout span_1_of_a1 div  ends here -->
 				<!-- cont1 span_2_of_a1 starts here-->
-				<div id="jvmIntro" class="cont1 span_2_of_a1">
-					<h3 class="m_3">OOPs Concept</h3>
-					<p class="para"><span class="highVAL">OOPs</span> means <span class="highVAL">Object Oriented Programming</span> and it is used in different languages and Java is one of them. What really distinguish Java from C is that Java supports <span class="highVAL">Object Oriented Programming</span>. It is the most powerful techniques and influential developments ever used in computer programming.Now a days it has gained widespread use. Like Java many other languages support OOPs like C++,PHP,VB.NET etc</p>
-					<p class="para">Basically there are two types of programming, namely procedural language, that is, program written in steps of code ex:C and second approach is OOPs which JAVA follows.</p>
-					<p class="para">1). The 1st OOP language was called <span class="para_bold italic">SIMULA</span>. This language was very popular in 1960s. It was the 1st language to introduce the concept of Object and Classes leading to the coining of the term <span class="italic para_bold">"Object Oriented Programming"</span></p>
-					<p class="para">2). <span class="para_bold italic">Smalltalk</span> is considered as the first truly object-oriented programming language.</p>
-					
+				<div id="" class="cont1 span_2_of_a1">
+					<h3 class="m_3">Object and Classes in OOPs</h3>
+					<p class="para">In this section we will learn about <span class="italic para_bold">Object</span> and <span class="italic para_bold">Classes</span>. <span class="italic para_bold">Object</span> is the building block in <span>Object Oriented Programming Language</span>. It is important to know the difference between the Classes and Object.</p>
+					<p class="para">With the basics knowledge of the Java programming Language, you can learn to write your own classes. In this section we will learn how to define our own classes, including member variables, methods ad constructors.</p>
+					<p class="para">Object is the physical as well as logical entity whereas class is the logical entity only.</p>
+					<br/>
 				</div>
 				
+				
+					<p class="subCat">What is an Object?</p>
+					<p class="para">An entity which is having state and behaviour is knows as Object like mobile phone, watch, laptop, pen, etc. It is the physical as well as logical entity. Physical means it can be exist in the scope of the program or in the memory location.An object consist of the these characteristics:</p>
+					<p class="para">1). <span class="italic para_bold">State</span>: It represent the data of an object. If we consider a dog, then it states are : name,breed etc</p>
+					<p class="para">2). <span class="italic para_bold">Behaviour</span>: It represent the functionality of and object. If we consider a dog, then ite behaviour are : barking,wagging and running</p>
+					<p class="para">3). <span class="italic para_bold">Identity</span>:Each object has it's own identity and the every object differs from one another. Object identity is implemented via a unique ID. THis value is not visible to the user but JVM uses it internally to distinguish an Object from another.</p>
+					<p class="para">Similarly objects also have state and behaviour. A 	software object's state is stored in fields and the behaviour is shown via method.</p>
+					<p class="para">It should be noted that Class is the <span class="para_bold">template/blueprint</span> of object using which the object is been created.So <span class="italic para_bold">object is an instance of the class</span>.</p>
+					
+					<p class="subCat">What is Classes In Java?</p>
+					<p class="para">A class is a blueprint using which the object is been created.</p>
+					<div class="example">
+						<h3 class="example">A sample of class is given below:</h3>
+						<div class="example_code_1">
+							<span class="highVAL2">public class</span> Dog{<br/>
+							    <span class="intend1"><span class="highVAL2">String</span> breed;<br/></span>
+								<span class="intend1"><span class="highVAL2">int</span> age;<br/></span>
+								<span class="intend1"><span class="highVAL2">String</span> color;<br/><br/></span>
+								
+								<span class="intend1"><span class="highVAL2">void</span> barking(){<br/></span>
+								<span class="intend1">}<br/><br/></span>
+								
+								<span class="intend1"><span class="highVAL2">void</span> hungry(){<br/></span>
+								<span class="intend1">}<br/><br/></span>
+								
+								<span class="intend1"><span class="highVAL2">void</span> sleeping(){<br/></span>
+								<span class="intend1">}<br/><br/></span>
+							}<br/>
+						</div>
+					</div>
+				
+				<p class="para">A class in Java can contain the following:</p>
+				<p class="para">1).Data Member</p>
+				<p class="para">2).Method</p>
+				<p class="para">3).Constructor</p>
+				<p class="para">4).Block</p>
+				<p class="para">5).Class And Interface</p>
+				
+				<p class="subCat">A class can contain any of the following variable types:</p>
+				<p class="para">1). <span class="italic para_bold">Local Variable</span>: Variable defined inside the constructor, method or blocka are called Local Variables. The variables will be declared and initialized within the method and it scope remains within it. Once the method returns the scope of the local variable is lost.</p>
+				<p class="para">2). <span class="italic para_bold">Instance Variables:</span>Instance variable are the variable declared inside the class but outside the method. This variable is the entity of class and new copy of them is created at every object creation. Instance Variable are accessable within the method, constructor or blocks of particular class.</p>
+				<p class="para">3). <span class="italic para_bold">Class Variables:</span>It is the variable defined inside the class but outside the method with the keyword <span class="para_bold">static</span> with it. The static variable concept it that there is exactly one copy of this variable existing in the memory and it is shared among all the instance of the class.</p>
+				
+				<p class="subCat">Syntax for declaring a Class</p>
+				<div class="example">
+					<h3 class="example">Syntax for declaring a Class</h3>
+					<div class="example_code_1">
+						<span class="highVAL2">class</span><span class="italic para_bold"> class_name </span> {<br/>
+						    <span class="intend1"><span class="highVAL">data variables</span>;<br/></span>
+							<span class="intend1"><span class="highVAL">methods</span>;<br/></span>
+						}<br/>
+					</div>
+				</div>
+				
+				<p class="subCat">Simple Example of Objects and Class</p>
+				<div class="example">
+					<h3 class="example">Sample Code</h3>
+					<div class="example_code_1">
+						<span class="highVAL2">class</span> <span class="highVAL">Student</span>{<br/>
+							<span class="intend1"><span class="highVAL2">int</span> id; <span class="commentHighLight">//instance variable</span><br/></span>
+							<span class="intend1"><span class="highVAL2">String</span> name;<span class="commentHighLight">//instance variable</span><br/><br/></span>
+									
+							<span class="intend1"><span class="highVAL2">public static void</span> <span class="highVAL">main</span>(String[] args){<br/></span>
+							    <span class="intend2"><span class="highVAL">Student</span> stud = <span class="highVAL2">new</span> Student();<span class="commentHighLight">//creating an object of Student</span><br/></span>
+								<span class="intend2"><span class="highVAL2">System.out.println</span>(stud.id);<br/></span>
+								<span class="intend2"><span class="highVAL2">System.out.println</span>(stud.name);<br/></span>
+							<span class="intend1">}<br/></span>
+						}<br/>
+					</div>
+				</div>
+				
+				<div class="example">
+					<h3 class="example">Output of Code</h3>
+					<div class="example_code_1">
+						<span class="highVAL2">0</span><br/>
+						<span class="highVAL2">null</span><br/>
+					</div>
+				</div>
+				
+				<p class="subCat">Explanation of the Code</p>
+				<p class="para">1).The class name is defined by giving it's name after the class keyword.</p>
+				<p class="para">2).Declare the variable inside the class. Here the variable are <span class="highVAL2">Instance Variable</span> since they declared inside class but outside the method declaration and without the keyword <span class="highVAL2">static</span> in it.</p>
+				<p class="para">3).The <span class="highVAL2">main method</span> declaration is been given. main Method is the 1st method from where the Java Program execution starts. It is been declared as static since it JVM don't have to create the object of the class explicitly.</p>
+				<p class="para">4).Inside the main method declaration we are creating the object of type <span class="highVAL2">Student</span>. It is created using the keyword <span class="highVAL2">new</span> operator which will allocates object memory at runtime. The object of the <span class="highVAL2">Student</span> class is referred using the reference variable <span class="highVAL2">stud</span>. This hold the address of the memory location where the Student object is stored.</p>
+
+				<p class="para">5). The instance variable of the object can be accessed using the <span class="highVAL2">reference variable</span> of it i.e; reference variable name followed by "."(dot) followed by instance variable name.</p>
+				
+				<p class="subCat">More Java Classes and Object Example</p>
+				<p class="para">The program below shows an example when we are creating two instance of the class, assigning values to it's instance variable and printing out the value of the instance variable of each object. We can find that the instance of one object is independent on the instance of the other class.</p>
+				<div class="example">
+					<h3 class="example">Sample Code</h3>
+					<div class="example_code_1">
+							<span class="highVAL2">class</span> StudentExample{<br/>
+								<span class="intend1"><span class="highVAL2">int</span> id;<br/></span>
+								<span class="intend1"><span class="highVAL2">String</span> name;<br/><br/></span>
+								
+								<span class="intend1"><span class="highVAL2">void</span> insertRecord(<span class="highVAL2">int</span> rollNo</span>,<span class="highVAL2">String</span> studName){<br/></span>
+									<span class="intend2">id = rollNo;<br/></span>
+									<span class="intend2">name = studName;<br/></span>
+								<span class="intend1">}<br/><br/></span>
+								
+								<span class="intend1"><span class="highVAL2">public static void</span> main(String[] args){<br/></span>
+									<span class="intend2"><span class="highVAL2">System.out.println</span>("Main Method Started");<br/></span>
+									<span class="intend2"><span class="highVAL2">//creating the two object of the Class StudentExample<br/></span></span>
+									<span class="intend2"><span class="highVAL2">StudentExample</span> stud1 = new StudentExample();<br/></span>
+									<span class="intend2"><span class="highVAL2">StudentExample</span> stud2 = new StudentExample();<br/></span>
+									<span class="intend2"><span class="commentHighLight">//intializing the value the reference's instance variable</span><br/></span>
+									<span class="intend2">stud1.insertRecord(1,<span class="commentHighLight">"Rahul"</span>);<br/></span>
+									<span class="intend2">stud2.insertRecord(2,<span class="commentHighLight">"Mohan"</span>);<br/></span>
+									<span class="intend2"><span class="highVAL2">System.out.println</span>(<span class="commentHighLight">"Info of the 1st student::"</span>+stud1.id+<span class="commentHighLight">" and "</span>+stud1.name);<br/></span>
+									<span class="intend2"><span class="highVAL2">System.out.println</span>("Info of the 2nd student::"+stud2.id+" and "+stud2.name);<br/></span>
+									<span class="intend2"><span class="highVAL2">System.out.println</span>(<spanc class="quotationHighLight">"Main Method Ended"</span>);<br/></span>
+								<span class="intend1">	}<br/></span>
+							}<br/>
+					</div>
+				</div>
+				
+				<div class="example">
+					<h3 class="example">Output</h3>
+					<div class="example_code_1">
+						Main Method Started<br/>
+						Info of the 1st student::1 and Rahul<br/>
+						Info of the 2nd student::2 and Mohan<br/>
+						Main Method Ended
+					</div>
+				</div>
+				
+				
+				
+				</div>
 				<div class="labout span_1_of_a1" style="height: 300px;">
 				<!-- start product_slider -->
 				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
