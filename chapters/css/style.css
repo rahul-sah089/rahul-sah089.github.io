@@ -770,8 +770,14 @@ div.example_code_2{
 	font-weight : bold;
 }
 
+.code-block{
+    padding : 1px 5px 1px 5px;
+	white-space : pre-wrap;
+	background-color : #eee;
+}
+
 .highVAL1{
-	color:rgb(242, 118, 142);
+	colo:rgb(242, 118, 142);
 	font-weight : bold;
 }
 
@@ -784,6 +790,8 @@ div.example_code_2{
     color : green;
 	font-weight : bold;
 }
+
+
 
 .commentHighLight{
 	color : gray !important ;
