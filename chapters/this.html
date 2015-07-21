@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Class File Components</title>
+<title>Constructor in Java</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="Magic number is used to uniquely identify the format and to distinguish it from other formats. The first four bytes of the Class file are 0xCAFEBABE."/>
+<meta name="description" content=""/>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
@@ -47,7 +47,6 @@
      </script>
 <!-- start menu -->     
 <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/table.css" rel="stylesheet" type="text/css" media="all"/>
 <script type="text/javascript" src="js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 <!-- end menu -->
@@ -82,14 +81,14 @@
 <!-- top scrolling -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
-   <script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-			});
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
 		});
-	</script>
+	});
+</script>					
 <style>
 .example{
 	width : auto;
@@ -103,6 +102,7 @@
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 </style>	
+</head>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -113,7 +113,6 @@
   ga('send', 'pageview');
 
 </script>
-</head>
 <body>
   <div class="header-top">
 	 <div class="wrap"> 
@@ -135,6 +134,7 @@
    	<div class="wrap">
    		<!-- start header menu -->
 		<ul class="megamenu skyblue">
+			<!--
 		    <li><a class="color1" href="#">Home</a></li>
 			<li class="grid"><a class="color2" href="#">Java-Homes</a>
 				<div class="megapanel">
@@ -143,10 +143,10 @@
 							<div class="h_nav">
 								<h4>Java Homes</h4>
 								<ul>
-									<li><a href="#javaIntro">Introduction To Java</a></li>
-									<li><a href="#whoCreatedIt">Who created Java?</a></li>
-									<li><a href="#features">Features of Java</a></li>
-									<li><a href="#usesOfJava">Uses of Java</a></li>
+									<li><a href="shop.html">Introduction To Java</a></li>
+									<li><a href="shop.html">Who created Java?</a></li>
+									<li><a href="shop.html">Features of Java</a></li>
+									<li><a href="shop.html">Uses of Java</a></li>
 								</ul>	
 							</div>
 						</div>
@@ -267,6 +267,7 @@
     			</li>				
 				<li><a class="color5" href="#">Java String</a>
 				<div class="megapanel">
+
 					<div class="row">
 						<div class="col1">
 							<div class="h_nav">
@@ -446,6 +447,7 @@
 				<li><a class="color10" href="#">Collections in Java</a></li>
 				<li><a class="color11" href="#">Java I/O</a></li>
 				<li><a class="color12" href="#">Java JDBC</a></li>
+				-->
 		   </ul>
 		   <div class="clear"></div>
      	</div>
@@ -454,13 +456,13 @@
          <div class="wrap">
      	    <div class="rsidebar span_1_of_left">
 				   <section  class="sky-form">
-                   	  <h4>Class File Components</h4>
+                   	  <h4>Java Virtual Machine</h4>
 						<div class="row row1 scroll-pane">
 							<div class="col col-4">
 								<span>
 									<p>
 										<i class="fa fa-pagelines">
-										<i></i><a href="#magicNumber">Magic Number</a>
+										<i></i><a href="#jvmIntro">JVM Introduction</a>
 										</i>
 									</p>
 									<br/>
@@ -468,7 +470,7 @@
 								<span>
 									<p>
 										<i class="fa fa-pagelines">
-											<i></i><a href="#constantPool">Constant Pool</a>
+											<i></i><a href="#">Difference between JVM,JDK and JrE</a>
 										</i>
 									</p>
 								<br/>
@@ -476,7 +478,7 @@
 								<span>
 									<p>
 										<i class="fa fa-pagelines"><i></i>
-											<a href="#accessFlags">Access Flags</a>
+											<a href="#hbvm">Hardware Based Virtual Machine</a>
 										</i>
 									</p>
 									<br/>
@@ -484,42 +486,49 @@
 								<span>
 									<p>
 										<i class="fa fa-pagelines"><i>
-										</i><a href="#thisClass">This Class</a></i>
+										</i><a href="#sbvm">Software Based Virtual Machine</a></i>
 										</p>
 									<br/>
 								</span>
 								<span>
 									<p>
 										<i class="fa fa-pagelines"><i>
-										</i><a href="#superClass">Super Class</a></i>
+										</i><a href="#bad">Basic Architecture of JVM</a></i>
 										</p>
 									<br/>
 								</span>
 								<span>
 									<p>
 										<i class="fa fa-pagelines"><i>
-										</i><a href="#interface">Interfaces</a></i>
+										</i><a href="#classloader">Class Loader SubSystem</a></i>
 										</p>
 									<br/>
 								</span>
 								<span>
 									<p>
 										<i class="fa fa-pagelines"><i>
-										</i><a href="#fields">Fields</a></i>
+										</i><a href="#tcl">Type of Class Loader</a></i>
 										</p>
 									<br/>
 								</span>
 								<span>
 									<p>
 										<i class="fa fa-pagelines"><i>
-										</i><a href="#methods">Methods</a></i>
+										</i><a href="#memArea">Various Memory Area of JVM</a></i>
 										</p>
 									<br/>
 								</span>
 								<span>
 									<p>
 										<i class="fa fa-pagelines"><i>
-										</i><a href="#attributes">Attributes</a></i>
+										</i><a href="#executionEngine">Execution Engine</a></a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#cfs">Class File Structure</a></a></i>
 										</p>
 									<br/>
 								</span>
@@ -528,246 +537,96 @@
                    	</section>
 				</div>
 		<div class="cont span_2_of_3">
-				<div id="magicNumber">
-					<h3 class="m_3">Magic Number</h3>
-						<p class="m_desc">Magic number is used to uniquely identify the format and to distinguish it from other formats. The first four bytes of the Class file are 0xCAFEBABE.</p>
-						<div class="labout span_1_of_a1" style="height: 300px;">
-							<ul id="etalage" style="display: block; width: 314px; height: 414px;">
-								<li>
-									<img class="etalage_thumb_image" src="images/java-class-file-magic-word-cafebabe.png">
-								</li>
-							</ul>
-						</div>
-						<p class="m_desc">The History of this magic number explained by "James Gosling"</p>
-						<p class="italic_wu">“We used to go to lunch at a place called St Michael’s Alley. According to local legend, in the deep dark past, the Grateful Dead used to perform there before they made it big. It was a pretty funky place that was definitely a Grateful Dead Kinda Place. When Jerry died, they even put up a little Buddhist-esque shrine. When we used to go there, we referred to the place as Cafe Dead. Somewhere along the line it was noticed that this was a HEX number. I was re-vamping some file format code and needed a couple of magic numbers: one for the persistent object file, and one for classes. I used CAFEDEAD for the object file format, and in grepping for 4 character hex words that fit after “CAFE” (it seemed to be a good theme) I hit on BABE and decided to use it. At that time, it didn’t seem terribly important or destined to go anywhere but the trash-can of history. So CAFEBABE became the class file format, and CAFEDEAD was the persistent object format. But the persistent object facility went away, and along with it went the use of CAFEDEAD – it was eventually replaced by RMI.”</p>
-						<br/><br/><br/>
-				</div>
-				<!-- cont1 span_2_of_a1 ends here-->
-			<div class="clear"></div>
-			<hr/>
-			<!-- 2nd cont1 span_2_of_a1 ends here-->
-			<div id="versionOfClass">
-				<h3 class="m_3">Version of Class File</h3>
-				<p class="m_desc">The next four byte of the class file contains major and minor "version numbers". This number allows the JVM to verify and identify the class file. If the number is greater than what JVM can load, the class file will be rejected with error <span class="highlighter">java.lang.UnsupportedClassVersionError</span></p>
-				<div class="example">
-					<h2 class="example">Computer Code</h2>
-					<div class="example_code_1">
-						<span class="highELE">public class</span>
-							Main{
-							<br/>
-							<span class="intend1">
-								<span class="highELE">public static void</span> main(String[] args){
-							</span>
-							<br/><br/>
-							<span class="intend2">int intVal = <span class="highVAL">0xFEEDED</span>;</span>
-							<br/>
-							}
-							<br/>
-							}
-					</div>
-				</div>
-				<p class="para">When we compile this class using <span class="highlighter">javac Main.java</span> command and create class file. Now execute the following command to see the major and minor version of the class file.</p>
-				<div class="example">
-					<div class="example">Computer Code</div>
-					<div class="example_code_2">
-						C:\>javap -verbose Main<br/><br/>
-						Compiled from <span class="highVAL1">"Main.java"</span><br/><br/>
-						<span class="highVAL2">public class </span>  Main <span class="highVAL2">extends</span> java.lang.Object<br/><br/>
-						Source : "Main.java" <br/><br/>
-						minor version :<span class="highVAL1">0</span><br/><br/>
-						major version : <span class="highVAL1">50</span><br/><br/>
-					</div>		
-				</div>
-				
-				<p class="m_desc">Below is shown the list of the Major versions and corresponding JDK version of class file</p>
-				<table>
-					<tr>
-						<th>Major Version</th>
-						<th>Hex</th>
-						<th>JDK Version</th>
-					</tr>
-					<tr>
-						<td>51</td>
-						<td>0x33</td>
-						<td>I2SE7</td>
-					</tr>
-					<tr>
-						<td>50</td>
-						<td>0x32</td>
-						<td>I2SE 6.0</td>
-					</tr>
-					<tr>
-						<td>49</td>
-						<td>0x31</td>
-						<td>I2SE 5.0</td>
-					</tr>
-					<tr>
-						<td>48</td>
-						<td>0x30</td>
-						<td>JDK 1.4</td>
-					</tr>
-					<tr>
-						<td>47</td>
-						<td>0x2F</td>
-						<td>JDK 1.3</td>
-					</tr>
-					<tr>
-						<td>46</td>
-						<td>0x2E</td>
-						<td>JDK 1.2</td>
-					</tr>
-					<tr>
-						<td>45</td>
-						<td>0x2D</td>
-						<td>JDK 1.1</td>
-					</tr>
-				</table>		
-				
-			</div>
-			<!-- 2nd cont1 span_2_of_a1 ends here-->
-			<div class="clear"></div>
-			<br/>
-			<hr/>
-			<!-- 3rd labout span_1_of_a1 starts here-->
-			 <div class="labout span_1_of_a1" style="height: 300px;">
+				<!-- labout span_1_of_a1 div starts here -->
+			    <div class="labout span_1_of_a1" style="height: 300px;">
 				<!-- start product_slider -->
 				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
 							<li>
-								<img class="etalage_thumb_image" src="images/java-class-file-constant-pool-structure.png">
+								<img class="etalage_thumb_image" src="images/this.png"/>
 							</li>
-						</ul>
-			</div>
-			<!-- 3rd labout span_1_of_a1 ends here-->
-			
-			<!-- 4th cont1 span_2_of_a1 ends here-->
-			<div id="constantPool"  class="cont1 span_2_of_a1">
-				<h3 class="m_3">Constant Pool</h3>
-				<p class="m_desc">
-					All the constants related to the Class or an Interface will get stored in the Constant Pool.The constants includes class names, variable names, interface names, method names and signature, final variable values, string literals etc.
+					</ul>
+			    </div>
+				<!-- labout span_1_of_a1 div  ends here -->
+				<!-- cont1 span_2_of_a1 starts here-->
+				<div id="" class="cont1 span_2_of_a1">
+					<h3 class="m_3">This keyword In Java</h3>
+					<p class="para"><span class="highVAL">this</span> is the special keyword which can be used to <span class="para_bold">represent current object or instance of the class</span>.</p>
+					<p class="para"><span class="highVAL">This</span> keyword contain the current class object address.</p>
+					<p class="para">It can also be used to differentiate between the instance variable and local variable.</p>
+					
+				</div>
+				<br/>
+				<p class="subCat">Important point about this keyword in Java</p>	
+				<p class="para">The following are few important point related to <span class="para_bold">"this"</span> keyword in Java:</p>
+				<p class="para">1). <span class="para_bold">this keyword</span> represent current instance of class.</p>
+				<p class="para">2). <span class="para_bold">this keyword</span> can be used to call <span class="para_bold">overload constructor in java</span>. If used it must be the 1st statement in constructor. this() can call one argument constuctor with approriate parameter. here is an example of using this() for constructor chaining:</p>
+				<div class="example">
+					<h3 class="example">Example of this keyword to call constructor in Java</h3>
+					<div class="example_code_1">
+					<span class="highVAL">class</span> Loan{<br/>
+						<span class="intend1"><span class="highVAL">private double</span> interest;<br/></span>
+						<span class="intend1"><span class="highVAL">private String</span> type;<br/><br/></span>
+  
+						<span class="intend1"><span class="highVAL">public</span> Loan(){<br/></span>
+							<span class="intend2"><span class="highVAL">this</span>(<span class="quotationHighLight">“personal loan”</span>);<br/></span>
+						<span class="intend1">}<br/><br/></span>
+  
+						<span class="intend1"><span class="highVAL">public</span> Loan(<span class="highVAL">String</span> type){<br/></span>
+							<span class="intend2"><span class="highVAL">this</span>.type = type;<br/></span>
+							<span class="intend2"><span class="highVAL">this</span>.interest = 0.0;<br/></span>
+						<span class="intend1">}<br/></span>
+					}<br/></span>
+					</div>
+				</div>
+				<p class="para">3). If member variable and local variable name conflict than this can be used to refer member variable.	Here is an example of this with member variable:
 				</p>
-				<p class="para">The constants are stored as a variable length array element in the Constant pool. The arrays of constants are preceded by its array size, hence JVM knows how many constants it will expect while loading the class file. In above diagram, the portion represented in <span class="highVAL3">green</span> contains the size of the array.</p>
-				<p class="para">Within each array elements first byte represents a tag specifying the type of constant at that position in the array. In above diagram the portion in <span class="highVAL4">orange</span> represent the one-byte tag. JVM identifies the type of the constant by reading one-byte tag. Hence if one-byte tag represents a String literal then JVM knows that next 2 bytes represents length of the String literal and rest of the entry is string literal itself.</p>
-				<p class="para">You can analyse the Constant Pool of any class file using javap command. Executing javap on above Main class, we get following symbol table.</p>
-			</div>
-			<div class="">
-				<div class="">Computer Code</div>
-				<div class="example_code_2">
-					C:\>javap -verbose Main<br/><br/>
-					Compiled from <span class="highVAL1">"Main.java"</span><br/><br/>
-					<span class="highVAL2">public class </span>  Main <span class="highVAL2">extends</span> java.lang.Object<br/><br/>
-					Source : "Main.java" <br/><br/>
-					minor version :<span class="highVAL1">0</span><br/><br/>
-					major version : <span class="highVAL1">50</span><br/><br/>
-					Constant Pool :<br/><br/>
-					<span class="highVAL2">const</span> #<span class="highVAL2">1</span> = Method  <span class="highVAL2">#4.#13;</span>  <span class="highVAL3">//  java/lang/Object."<init>":()V</span><br/>
-					<span class="highVAL2">const</span> #<span class="highVAL2">2</span> = int  <span class="highVAL2">16707053</span>;<br/>
-					<span class="highVAL2">const</span> #<span class="highVAL2">3</span> = class        #<span class="highVAL2">14</span>;    <span class="highVAL3">//  Main</span><br/>
-					<span class="highVAL2">const</span> #<span class="highVAL2">4</span> = class        #<span class="highVAL2">15</span>;    <span class="highVAL3">//  java/lang/Object</span><br/>
-					<span class="highVAL2">const</span> #<span class="highVAL2">5</span> = Asciz        <span class="highVAL3"><init>;</span><br/>
-					<span class="highVAL2">const</span> #<span class="highVAL2">6</span> = Asciz        <span class="highVAL3">()V;</span><br/>
-					<span class="highVAL2">const</span> #<span class="highVAL2">7</span> = Asciz        <span class="highVAL3">Code;</span><br/>
-					<span class="highVAL2">const</span> #<span class="highVAL2">8</span> = Asciz        <span class="highVAL3">LineNumberTable</span>;<br/>
-					<span class="highVAL2">const</span> #<span class="highVAL2">9</span> = Asciz       <span class="highVAL3">main;</span><br/>
-					<span class="highVAL2">const</span> #<span class="highVAL2">10</span> = Asciz       <span class="highVAL3">([Ljava/lang/String;)V;</span><br/>
-					<span class="highVAL2">const</span> #<span class="highVAL2">11</span> = Asciz       <span class="highVAL3">SourceFile;</span><br/>
-					<span class="highVAL2">const</span> #<span class="highVAL2">12</span> = Asciz       <span class="highVAL3">Main.java;</span><br/>
-					<span class="highVAL2">const</span> #<span class="highVAL2">13</span> = NameAndType #<span class="highVAL2">5</span>:#<span class="highVAL2">6</span>;<span class="highVAL3">//  "<init>":()V</span><br/>
-					<span class="highVAL2">const</span> #<span class="highVAL2">14</span> = Asciz       <span class="highVAL3">Main;</span><br/>
-					<span class="highVAL2">const</span> #<span class="highVAL2">15</span> = Asciz       <span class="highVAL3">java/lang/Object;</span><br/>
-				</div>		
-				<p class="para">The constant pool has 15 entries in total. Entry #1 is Method public static void main; #2 is for integer value 0xFEEDED (decimal 16707053). Also we have two entries #3 and #4 which corresponds to this class and super class. Rest is the symbol table storing string literals.</p>
-			</div>
-			<div class="clear"></div>
-			<hr/>
-			
-			<h3 id="accessFlags" class="m_3">Access flags</h3>
-			<p class="para">Access flags follows the Constant Pool. It is a two byte entry that indicates whether the file defines a class or an interface, whether it is public or abstract or final in case it is a class. Below is a list of some of the access flags and their interpretation.</p>
-			
-			<table>
-					<tr>
-						<th>Flag Name</th>
-						<th>Value</th>
-						<th>interpretation</th>
-					</tr>
-					<tr>
-						<td><span class="highVAL1">ACC_PUBLIC</span></td>
-						<td>0x0001</td>
-						<td>Declared public; may be accessed from outside its package.</td>
-					</tr>
-					<tr>
-						<td><span class="highVAL1">ACC_FINAL</span></td>
-						<td>0x0010</td>
-						<td>Declared final; no subclasses allowed.</td>
-					</tr>
-					<tr>
-						<td><span class="highVAL1">ACC_SUPER</span></td>
-						<td>0x0020</td>
-						<td>Treat superclass methods specially when invoked by the invokespecial instruction.</td>
-					</tr>
-					<tr>
-						<td><span class="highVAL1">ACC_INTERFACE</span></td>
-						<td>0x0200</td>
-						<td>Is an interface, not a class.</td>
-					</tr>
-					<tr>
-						<td><span class="highVAL1">ACC_ABSTRACT</span></td>
-						<td>0x0400</td>
-						<td>Declared abstract; may not be instantiated.</td>
-					</tr>
-				</table>		
-			<br/>
-			<hr/>
-			<div class="labout span_1_of_a1" style="height: 300px;">
-				<!-- start product_slider -->
-				<ul id="etalage" style="display: block; width: 314px; height: 414px;">
-					<li>
-						<img class="etalage_thumb_image" src="images/java-class-this-class-constant-pool-mapping.png">
-					</li>
-				</ul>
-			</div>
-	 <div  id="thisClass"class="toogle">
-     	<h3 class="m_3">this Class</h3>
-     	<p class="m_text">This Class is a two byte entry that points to an index in Constant Pool. In above diagram, this class has a value 0x0007 which is an index in Constant Pool. The corresponding entry that is pointed by this class Constant_pool[this_class] in Constant pool has two parts, first part is the one-byte tag that represents the type of entry in constant pool, in this case it is Class or Interface. In above diagram this is shown in <span class="highVAL4">orange</span> color. And second entry is two-byte having index again in Constant pool. This above diagram, two byte contain value 0x0004. Thus it points to Constant_poo [0x0004] which is the String literal having name of the interface or class.</p>
-		
-		<div id="superClass">
-			<h3 class="m_3">super Class</h3>
-			<p class="m_text">Next 2 bytes after This Class is of Super Class. Similar to this class, value of two bytes is a pointer that points to Constant pool which has entry for super class of the class.</p>
+				<div class="example">
+					<h3 class="example">Sample Code</h3><br/>
+					<div class="example_code_1"><br/>
+						public Loan(<span class="highVAL">String</span> type, <span class="highVAL">double</span> interest){<br/>
+							<span class="intend1"><span class="highVAL">this</span>.type = type;</span><br/>
+							<span class="intend1"><span class="highVAL">this</span>.interest = interest;</span><br/>
+						}<br/>
+					</div>
+				</div>
+				<p class="para">Here local variable interest and member variable interest conflict which is easily resolve by referring member variable as <span class="para_bold">this.interest</span></p>
+				
+				<p class="para">4).<span class="para_bold">this</span> is a final variable in Java and you can not assign value to this. this will result in compilation error:</p>
+				<div class="example">
+					<h3 class="example"></h3>
+					<div class="example_code_1">
+						this = new Loan(); //cannot assign value to final variable
+					</div>
+				</div>
+				<p class="para">5) We can call the method of the same class using <span class="highVAL">this keyword</span>.</p>
+				<div class="example">
+					<h3 class="example">Sample Code</h3>
+					<div class="example_code_1">
+					    <span>public String getName(){<br/></span>
+						    <span>return this.toString();<br/></span>
+						}<br/>
+					</div>
+				</div>
+				<p class="para">6). <span class="highVAL">this</span> can be used to return object. <span class="highVAL">this</span> is a valid return value. here is an example of using as return value.</p>
+				<div class="example">
+					<h3 class="example">Sample Code</h3>
+					<div class="example_code_1">
+					    <span class="highVAL">public</span> Loan getLoan(){<br/>
+							<span class="highVAL">return</span> this;<br/>
+						}<br/>
+					</div>
+				</div>
+				
+				<p class="para">7). <span class="para_bold">this</span> can be used to refer to static member in Java as well but it is discouraged to do so. As per the best practices it should be used to refer to the non-static member of the class.</p>
+				<p class="para">8). <span class="para_bold">this</span> can also be passed as method parameter since it represent current object of class.</p>
+				</div>	
+	 <div class="toogle">
+     	<div class="float-left">
+		<i class="fa fa-fast-backward fa-2x"></i>
 		</div>
-		
-		<div id="interface">
-			<h3 class="m_3">Interfaces</h3>
-			<p class="m_text">All the interfaces that are implemented by the class (or interface) defined in the file goes in Interface section of a class file. Starting two byte of the Interface section is the count that provides information about total number of interfaces being implemented. Immediately following is an array that contains one index into the constant pool for each interface implemented by class.</p>
-		</div>
-		
-		<div id="fields">
-			<h3 class="m_3">Fields</h3>
-			<p class="m_text">A field is an instance or a class level variable (property) of the class or interface. Fields section contains only those fields that are defined by the class or an interface of the file and not those fields which are inherited from the super class or super interface.
-			First two bytes in Fields section represents count: that is the total number of fields in Fields Section. Following the count is an array of variable length structure one for each field. Each element in this array represent one field. Some information is stored in this structure where as some information like name of the fields are stored in Constant pool.</p>
-		</div>
-		
-		<div id="methods">
-		<h3 class="m_3">Methods</h3>
-		<p class="m_text">The Methods component host the methods that are explicitly defined by this class, not any other methods that may be inherited from super class.</p>
-     	<p class="m_text">First two byte is the count of the number of methods in the class or interface. The rest is again a variable length array which holds each method structure. Method structure contains several pieces of information about the method like method argument list, its return type, the number of stack words required for the method’s local variables, stack words required for method’s operand stack, a table for exceptions, byte code sequence etc.</p>
-		</div>
-		
-		<div id="attributes">
-		<h3 class="m_3">Attributes</h3>
-		<p class="m_text">Attribute section contains several attribute about the class file, e.g. one of the attribute is the source code attribute which reveals the name of the source file from which this class file was compiled.</p>
-     	<p class="m_text">First two bytes in Attribute section is count of the number of attributes, followed by the attributes themselves. The JVMs will ignore any attributes they don’t understand.</p>
-		</div>
-		
-		<div class="float-left">
-			<i class="fa fa-fast-backward fa-2x"></i>
-		</div>
-		
-		<a href="JVM.html">
 		<div class="float-right">
-			<i class="fa fa-fast-forward fa-2x"></i>
+		<a href="this.html"><i class="fa fa-fast-forward fa-2x"></i></a>
 		</div>
-		</a>
-		
-		
      </div>					
 	 </div>
      <div class="clear"></div>
