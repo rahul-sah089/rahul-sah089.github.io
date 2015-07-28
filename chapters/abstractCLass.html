@@ -1,0 +1,833 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Abstract Class In Java</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content=""/>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href="css/table.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+<!-- start menu -->     
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<!-- end menu -->
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>
+<!----details-product-slider--->
+				<!-- Include the Etalage files -->
+					
+					<script src="js/jquery.etalage.min.js"></script>
+				<!-- Include the Etalage files -->
+				<script>
+						jQuery(document).ready(function($){
+			
+							$('#etalage').etalage({
+								
+								
+								
+								click_callback: function(image_anchor, instance_id){
+									alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+								}
+							});
+							
+
+					});
+				</script>
+				<!----//details-product-slider--->	
+<!-- top scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+		});
+	});
+</script>					
+<style>
+.example{
+	width : auto;
+	color : #000000;
+	background-color : #f1f1f1;
+	padding : 15px;
+	line-height : 1.15em;
+	word-wrap : break-word;
+	margin-bottom : 12px;
+	margin-top : 12px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+</style>	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64821947-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+  <div class="header-top">
+	 <div class="wrap"> 
+		<div class="logo">
+			<a href="index.html"><img src="../images/javasages.png" style="width: 50px;" alt=""/></a>
+	    </div>
+	    <div class="cssmenu">
+		   <ul>
+			 <li class="active"><a href="register.html">Sign up & Save</a></li> 
+			 <li><a href="shop.html">Store Locator</a></li> 
+			 <li><a href="login.html">My Account</a></li> 
+			 <li><a href="checkout.html">CheckOut</a></li> 
+		   </ul>
+		</div>
+		<div class="clear"></div>
+ 	</div>
+   </div>
+   <div class="header-bottom">
+   	<div class="wrap">
+   		<!-- start header menu -->
+		<ul class="megamenu skyblue">
+			<!--
+		    <li><a class="color1" href="#">Home</a></li>
+			<li class="grid"><a class="color2" href="#">Java-Homes</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java Homes</h4>
+								<ul>
+									<li><a href="shop.html">Introduction To Java</a></li>
+									<li><a href="shop.html">Who created Java?</a></li>
+									<li><a href="shop.html">Features of Java</a></li>
+									<li><a href="shop.html">Uses of Java</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java Virtual Machine</h4>
+								<ul>
+									<li><a href="shop.html">Difference between JVM,JDK and JrE</a></li>
+									<li><a href="shop.html">Internal details of JVM</a></li>
+									<li><a href="shop.html">How JVM works internally?</a></li>
+									<li><a href="shop.html">Concept of Stack and Heap</a></li>
+									<li><a href="shop.html">Concept of Java Garabage Collection</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java Basis Syntax</h4>
+								<ul>
+									<li><a>Variable and datatype in Java</a></li>
+									<li><a>Unicode System</a></li>
+									<li><a>First Java Program</a></li>
+									<li><a>Basis Syntax</a></li>
+									<li><a>Naming convention</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4 class="top">Java Overview</h4>
+								<ul>
+									<li><a href="shop.html">What is Java?</a></li>
+									<li><a href="shop.html">History of Java</a></li>
+									<li><a href="shop.html">Features of Java</a></li>
+									<li><a href="shop.html">Getting Hand Dirty</a></li>
+									<li><a href="shop.html">How Java Works?</a></li>
+									<li><a href="shop.html">Local env setup</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1"></div>
+						<img src="images/nav_img_mod1.png" alt=""/>
+					</div>
+				</div>
+				</li>
+  			   <li class="active grid"><a class="color4" href="#">Java OOPs</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java OOPs 1</h4>
+								<ul>
+									<li><a href="shop.html">Why OOPs  concept is so popular?</a></li>
+									<li><a href="shop.html">Java Object and Classes</a></li>
+									<li><a href="shop.html">Method OverLoading</a></li>
+									<li><a href="shop.html">Constructor</a></li>
+									<li><a href="shop.html">Static Keyword</a></li>
+									<li><a href="shop.html">"This" is OOPs</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java OOPs 2</h4>
+								<ul>
+									<li><a href="shop.html">Inheritance</a></li>
+									<li><a href="shop.html">Aggregation</a></li>
+									<li><a href="shop.html">Method OverLoading</a></li>
+									<li><a href="shop.html">Convarient return type</a></li>
+									<li><a href="shop.html">Super Keyword</a></li>
+									<li><a href="shop.html">Instance Initializer Block</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java OOPs 3</h4>
+								<ul>
+									<li><a href="shop.html">Abstract vs Interface</a></li>
+									<li><a href="shop.html">Package</a></li>
+									<li><a href="shop.html">Access Modifier</a></li>
+									<li><a href="shop.html">Encapsulation</a></li>
+									<li><a href="shop.html">Object Classes</a></li>
+									<li><a href="shop.html">Java Array</a></li>
+									<li><a href="shop.html">Array Interview Questions</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java OOPs 4</h4>
+								<ul>
+									<li><a href="shop.html">Wrapper Classes</a></li>
+									<li><a href="shop.html">Call By Value</a></li>
+									<li><a href="shop.html">Call By reference</a></li>
+									<li><a href="shop.html">API documentation</a></li>
+									<li><a href="shop.html">Command line Args</a></li>
+									<li><a href="shop.html">Object Vs Classes</a></li>
+									<li><a href="">Overloading Vs Overriding</a></li>
+									<li><a href="">OOPs interview question</a></li>
+								</ul>	
+							</div>						
+						</div>
+						<div class="col1">
+						 <div class="h_nav">
+						   <img src="images/nav_img_oops.png" alt=""/>
+						 </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+					</div>
+    			</li>				
+				<li><a class="color5" href="#">Java String</a>
+				<div class="megapanel">
+
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java String Introduction</h4>
+								<ul>
+									<li><a href="shop.html">What is String?</a></li>
+									<li><a href="shop.html">Immutable String</a></li>
+									<li><a href="shop.html">String Buffer</a></li>
+									<li><a href="shop.html">String Builder</a></li>
+									<li><a href="shop.html">String Buffer vs String Builder</a></li>
+									<li><a href="shop.html">Creating immutable Class</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>String Method and Misallenous</h4>
+								<ul>
+									<li><a href="shop.html">StringTokiner Class</a></li>
+									<li><a href="shop.html">Creating String</a></li>
+									<li><a href="shop.html">TO be added</a></li>
+									<li><a href="shop.html">To be added</a></li>
+									<li><a href="shop.html">To be added</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<img src="images/String.jpg" alt=""/>
+					</div>
+				</div>
+				</li>
+				<li><a class="color6" href="#">Java Regular Expression</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>RegEx Introduction</h4>
+								<ul>
+									<li><a href="shop.html">What is regular expression?</a></li>
+									<li><a href="shop.html">Why regular expression is used for?</a></li>
+									<li><a href="shop.html">Java Regex Introduction</a></li>
+									<li><a href="shop.html">Pattern Classes</a></li>
+									<li><a href="shop.html">Example of Regular Expression</a></li>
+									<li><a href="shop.html">Regular Character Classes</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Miscellaneous</h4>
+								<ul>
+									<li><a href="shop.html">Regex Quantifier</a></li>
+									<li><a href="shop.html">Regex Metacharacter</a></li>
+									<li><a href="shop.html">Example of MetaCharacter</a></li>
+									<li><a href="shop.html">Interview Questions</a></li>
+								</ul>	
+							</div>
+						</div>
+						<img src="images/regular_expressions.png" alt=""/>
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+				</div>
+				</li>
+				<li><a class="color7" href="#">Exceptional Handling</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>What is Exceptional Handling?</h4>
+								<ul>
+									<li><a href="shop.html">Exceptional Handling used for?</a></li>
+									<li><a href="shop.html">Categories of exception</a></li>
+									<li><a href="shop.html">How exception come?</a></li>
+									<li><a href="shop.html">How Java Handles Exception?</a></li>
+									<li><a href="shop.html">Advantages of Exceptional Handling</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Block in Exception</h4>
+								<ul>
+									<li><a href="shop.html">Different types of Exception Block</a></li>
+									<li><a href="shop.html">Try and catch block</a></li>
+									<li><a href="shop.html">Internal handling of try catch block</a></li>
+									<li><a href="shop.html">Catching Multiple Exceptions</a></li>
+									<li><a href="shop.html">Exception Hierarchies</a></li>
+									<li><a href="shop.html">Checked or Unchecked Exceptions?</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Advanced</h4>
+								<ul>
+									<li><a href="shop.html">Exception Wrapping</a></li>
+									<li><a href="shop.html">Fail Safe Exception Handling</a></li>
+									<li><a href="shop.html">Plugable Exception handlers</a></li>
+									<li><a href="shop.html">Logging Exception: Where to log Exception?</a></li>
+									<li><a href="shop.html">Validation- Throw Exception Early</a></li>
+									<li><a href="shop.html">Exception Handling Templates in Java</a></li>
+									<li><a href="shop.html">Exception Interview Question</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<img src="images/exception_example.png" alt=""/>
+					</div>
+					
+    				</div>
+				</li>
+				<li><a class="color8" href="#">Inner Classes in Java</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Inner Classes</h4>
+								<ul>
+									<li><a href="shop.html">What is inner class?</a></li>
+									<li><a href="shop.html">Member inner class</a></li>
+									<li><a href="shop.html">Anonymous Inner class</a></li>
+									<li><a href="shop.html">Local Inner class</a></li>
+									<li><a href="shop.html">static nested class</a></li>
+									<li><a href="shop.html">Nested Interface</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<img src="images/nested_classes.png" alt=""/>
+				</div>
+				</li>
+				<li><a class="color9" href="#">Java MultiThreading</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Basis</h4>
+								<ul>
+									<li><a href="shop.html">What is multi-threading?</a></li>
+									<li><a href="shop.html">Life Cycle of Thread</a></li>
+									<li><a href="shop.html">Thread Priorities</a></li>
+									<li><a href="shop.html">Creating thread by implementing Runnable interface</a></li>
+									<li><a href="shop.html">Creating thread by extending Thread Class</a></li>
+									<li><a href="shop.html">Thread Methods</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Advanced Topic</h4>
+								<ul>
+									<li><a href="shop.html">What is thread synchronization?</a></li>
+									<li><a href="shop.html">Handling threads inter communication</a></li>
+									<li><a href="shop.html">Handling thread deadlock</a></li>
+									<li><a href="shop.html">Major thread operations</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<img src="images/Multithread.png" alt=""/>
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+    				</div>
+				</li>
+				<li><a class="color10" href="#">Collections in Java</a></li>
+				<li><a class="color11" href="#">Java I/O</a></li>
+				<li><a class="color12" href="#">Java JDBC</a></li>
+				-->
+		   </ul>
+		   <div class="clear"></div>
+     	</div>
+       </div>
+       <div class="single">
+         <div class="wrap">
+     	    <div class="rsidebar span_1_of_left">
+				   <section  class="sky-form">
+                   	  <h4>Java Virtual Machine</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+								<span>
+									<p>
+										<i class="fa fa-pagelines">
+										<i></i><a href="#jvmIntro">JVM Introduction</a>
+										</i>
+									</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines">
+											<i></i><a href="#">Difference between JVM,JDK and JrE</a>
+										</i>
+									</p>
+								<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i></i>
+											<a href="#hbvm">Hardware Based Virtual Machine</a>
+										</i>
+									</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#sbvm">Software Based Virtual Machine</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#bad">Basic Architecture of JVM</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#classloader">Class Loader SubSystem</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#tcl">Type of Class Loader</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#memArea">Various Memory Area of JVM</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#executionEngine">Execution Engine</a></a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#cfs">Class File Structure</a></a></i>
+										</p>
+									<br/>
+								</span>
+							</div>
+						 </div>
+                   	</section>
+					<section  class="sky-form">
+                   	  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<!-- Sample -->
+						<ins class="adsbygoogle"
+							 style="display:block"
+							 data-ad-client="ca-pub-7436727334142919"
+							 data-ad-slot="2826663581"
+							 data-ad-format="auto"></ins>
+						<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</section>
+					<section  class="sky-form">
+                   	  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					  <!-- Sample -->
+					  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7436727334142919" data-ad-slot="2826663581" data-ad-format="auto"></ins>
+					 <script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					 </script>
+					</section>
+					<section  class="sky-form">
+                   	  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<!-- Sample -->
+						<ins class="adsbygoogle"
+							 style="display:block"
+							 data-ad-client="ca-pub-7436727334142919"
+							 data-ad-slot="2826663581"
+							 data-ad-format="auto"></ins>
+						<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</section>
+					<section  class="sky-form">
+                   	  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<!-- Sample -->
+						<ins class="adsbygoogle"
+							 style="display:block"
+							 data-ad-client="ca-pub-7436727334142919"
+							 data-ad-slot="2826663581"
+							 data-ad-format="auto"></ins>
+						<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</section>
+					<section  class="sky-form">
+                   	  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<!-- Sample -->
+						<ins class="adsbygoogle"
+							 style="display:block"
+							 data-ad-client="ca-pub-7436727334142919"
+							 data-ad-slot="2826663581"
+							 data-ad-format="auto"></ins>
+						<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</section>
+					<section  class="sky-form">
+                   	  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<!-- Sample -->
+						<ins class="adsbygoogle"
+							 style="display:block"
+							 data-ad-client="ca-pub-7436727334142919"
+							 data-ad-slot="2826663581"
+							 data-ad-format="auto"></ins>
+						<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</section>
+					<section  class="sky-form">
+                   	  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<!-- Sample -->
+						<ins class="adsbygoogle"
+							 style="display:block"
+							 data-ad-client="ca-pub-7436727334142919"
+							 data-ad-slot="2826663581"
+							 data-ad-format="auto"></ins>
+						<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</section>
+				</div>
+				
+		<div class="cont span_2_of_3">
+				<!-- labout span_1_of_a1 div starts here -->
+			    <div class="labout span_1_of_a1" style="height: 200px;">
+				<!-- start product_slider -->
+				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
+							<li>
+								<img class="etalage_thumb_image" src="images/final.jpg"/>
+							</li>
+					</ul>
+			    </div>
+				
+				<!-- labout span_1_of_a1 div  ends here -->
+				<!-- cont1 span_2_of_a1 starts here-->
+				<div id="" class="cont1 span_2_of_a1">
+					<h3 class="m_3">Abstract In Java</h3>
+					<p class="subCat">What is Abstraction?</p>
+					<p class="para">Once we had made a variable,method or class as final we cannot change the that reference and the compiler will raise an exception if we try to do so.</p>
+					<p>We will discuss the following topics in this tutorial:</p>
+					<p class="para">1). final variable</p>
+					<p class="para">2). final method</p>
+					<p class="para">3). final class</p>
+					<p class="subCat">1). Final Variable</p>
+					<p class="para">Any variable either local variable or member variable declared with the keyword <span class="italic_wu">final</span> is know as<span class="italic_wu">final variable</span>.Final variable nothing but a constant variable. We cannot change the value of it once it is been initialized.</p>
+					<p class="para_bold">Below shows an example of final variable been initialized again:</p>
+				</div>
+				<div class="clear"></div>
+					<div class="example">
+							<h3 class="example">Sample Code</h3>
+						<div class="example_code_1 para_bold">
+							<span class="keywordHightLight">public class</span> FinalExample {<br/>
+								<span class="intend1"><span class="keywordHightLight">final int</span> MAX_VAL = 12;<br/></span>
+								<span class="intend1"><span class="keywordHightLight">void</span> method1(){<br/></span>
+									<span class="intend2">MAX_VAL = 123;<br/></span>
+								<span class="intend1">}<br/><br/></span>
+								
+								<span class="intend1"><span class="keywordHightLight">public static void</span> main(<span class="keywordHightLight">String</span>[] args){<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Started"</span>);<br/></span>
+									<span class="intend2">FinalExample ref1 = <span class="keywordHightLight">new</span> FinalExample();<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Ended"</span>);<br/></span>
+								<span class="intend1">}<br/></span>
+							}<br/>
+						</div>
+					</div>
+					<div class="clear"></div>	
+					<p class="para">The above program will give a compile time error as follows:</p>
+					<div class="example">
+						<h3 class="example">Output</h3>
+						<div class="example_code_2">
+							Exception in thread "main" java.lang.Error: Unresolved compilation problem: <br/>
+							<span class="intend1">The final field Demo.MAX_VALUE cannot be assigned</span>
+						</div>
+					</div>
+					<p class="para">We got compilation error in the above pogram because we tried to re-intialize variable "MAX_VAL".</p>
+					<p class="para_bold">It is good practice to have the constant name in Upper Case.</p>
+					<div class="clear"></div>
+					<br/>
+					<p class="subCat">Blank or Uninitialized Final Variable</p>
+					<p class="para">A final variable that is not initialized at the time of declaration is known as blank final variable.</p>
+					<p class="para">If we want to create a variable that is to be initialized at the time of creating an object and once initialized can never be changed then Blank Final Variable should be used.</p>
+					<p class="para_bold">We must initialize the value of the Blank final variable in constructor of the class otherwise JVM will throw compilation error.</p>
+					<p class="para">Example of the Blank Final Variable been initialized in the constructor is shown below:</p>
+					<div class="example">
+						<h3 class="example">Sample Code</h3>
+						<div class="example_code_1 para_bold">
+							<span>public class</span> BlankFinalVariable {<br/><br/>
+								<span class="intend1"><span class="quotationHighLight">//Blank Final Variable</span><br/></span>
+								<span class="intend1"><span class="keywordHightLight">final int</span> MAX_VALUE;<br/><br/></span>
+								<span class="intend1"><span class="quotationHighLight">//Constructor declaration</span> <br/></span>
+								<span class="intend1"><span class="keywordHightLight">public</span> BlankFinalVariable() {<br/></span>
+									<span class="intend2">MAX_VALUE = 12;<br/></span>
+								<span class="intend1">}<br/><br/></span>
+								<span class="intend1"><span class="keywordHightLight">void</span> myMethod(){<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"MAX_VALUE::"</span>+MAX_VALUE);<br/></span>
+								<span class="intend1">}<br/><br/></span>
+								<span class="intend1"><span class="keywordHightLight">public static void</span> main(<span class="keywordHightLight">String</span>[] args){<br/></span>
+									<span class="intend2"><span>System.out.println</span>(<span class="quotationHighLight">"Main Method Started"</span>);<br/></span>
+									<span class="intend2">BlankFinalVariable ref = <span>new</span> BlankFinalVariable();<br/></span>
+									<span class="intend2">ref.myMethod();<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Ended"</span>);<br/></span>
+								<span class="intend1">}<br/></span>
+							}
+						</div>
+					</div>
+					
+					<div class="example">
+						<h3 class="example">Output</h3>
+						<div class="example_code_2">
+							Main Method Started<br/>
+							MAX_VALUE::12<br/>
+							Main Method Ended<br/>
+						</div>
+					</div>
+					
+					<p class="subCat">Static Blank Final Variable</p>
+					<p class="para">A <span class="italic para_bold">Static Blank Final Variable</span> is the variable declared in the class with the keyword <span class="italic para_bold">static and final</span>. It is not declared and it's value intialization is done in static block only.</p>
+					<div class="example">
+						<h3 class="example">Sample Code</h3>
+						<div class="example_code_1 para_bold">
+							<span class="keywordHightLight">public class</span> StaticFinal {<br/>
+								<span class="intend1"><span class="keywordHightLight">static final int</span> value;<br/><br/></span>
+                                
+								<span class="intend1"><span class="quotationHighLight">//Static Blank Variable Initialization</span> <br/></span>
+								<span class="intend1"><span class="keywordHightLight">static</span>{<br/></span>
+									<span class="intend2">value = 12;<br/></span>
+								<span class="intend1">}<br/><br/></span>
+								
+								<span class="intend1"><span class="keywordHightLight">public</span> StaticFinal() {<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"The Value is "</span>+value);<br/></span>
+								<span class="intend1">}<br/></span>
+								<span class="intend1"><span class="keywordHightLight">public static void</span> main(<span class="keywordHightLight">String</span>[] args){<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Started"</span>);<br/></span>
+									<span class="intend2">StaticFinal ref = <span class="keywordHightLight">new</span> StaticFinal();<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Ended"</span>);<br/></span>
+								<span class="intend1">}<br/></span>
+							}<br/>
+						</div>
+					</div>
+					
+					<div class="example">
+						<h3 class="example">Sample Output</h3>
+						<div class="example_code_2">
+							Main Method Started<br/>
+							The Value is 12<br/>
+							Main Method Ended<br/>
+						</div>
+					</div>
+					<p class="subCat">2).Final Method</p>
+					<p class="para_bold italic">"Final Method are the method which can be inherited in the subclass but cannot be overriden".</p>
+					<p class="">Example code of it is shown below:</p>
+					<div class="example">
+						<h3 class="example">Sample Code</h3>
+						<div class="example_code_1 para_bold">
+							<span class="keywordHightLight">class</span> Demo {<br/>
+								<span class="intend1"><span class="keywordHightLight">int</span> val = 5;<br/></span>
+								<span class="intend1"><span class="keywordHightLight">String</span> name = <span class="quotationHighLight">"rahul"</span>;<br/><br/></span>
+
+								<span class="intend1"><span class="keywordHightLight">final void</span> getDataMember() {<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"The name is "</span> + name + <span class="quotationHighLight">" and the value is "</span> + val);<br/></span>
+								<span class="intend1">}<br/></span>
+								<span class="intend1">}<br/><br/></span>
+
+							<span class="keywordHightLight">public class</span> FinalMethod <span class="keywordHightLight">extends</span> Demo {<br/>
+								<span class="intend1"><span class="keywordHightLight">void</span> getDataMember() {<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"The name is "</span> + name + <span class="quotationHighLight">" and the value is "</span> + val);<br/></span>
+							}<br/><br/>
+
+								<span class="intend1"><span class="keywordHightLight">public static void</span> main(<span class="keywordHightLight">String</span>[] args) {<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span>"Main Method Started"</span>);<br/></span>
+									<span class="intend2">FinalMethod ref = <span class="keywordHightLight">new</span> FinalMethod();<br/></span>
+									<span class="intend2">ref.getDataMember();<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Ended"</span>);<br/></span>
+								<span class="intend1">}<br/></span>
+							}<br/>
+						</div>
+					</div>
+					<p class="para">The above example will throw compilation error. <span class="para_bold">"Cannot override the final method from Demo"</span>. Because the final method can be inherited but cannot be overriden.</p>
+					
+					<p class="subCat">3). Final Class</p>
+					<p class="para"><span class="para_bold italic">"Final class"</span> is the class that cannot be extended.</p>
+					<p class="para">Example of the final class when it is extended is shown below:</p>
+					<div class="example">
+						<h3 class="example">Sample Code</h3>
+						<div class="example_code_1 para_bold">
+							<span class="keywordHightLight">final class</span> FinalClass{<br/>
+								<span class="intend1"><span class="keywordHightLight">int</span> val = 12;<br/></span>
+								<span class="intend1"><span class="keywordHightLight">void</span> method(){<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"The value is"</span>+val);<br/></span>
+								<span class="intend1">}<br/></span>
+							}<br/>
+							<span class="keywordHightLight">public class</span> Sample  <span class="keywordHightLight">extends</span> FinalClass{<br/>
+								<span class="intend1"><span class="keywordHightLight">public static void</span> main(<span class="keywordHightLight">String</span>[] args){<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Started"</span>);<br/></span>
+									<span class="intend2">Sample ref = <span class="keywordHightLight">new</span> Sample();<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Ended"</span>);<br/></span>
+								<span class="intend1">}<br/></span>
+							}<br/>
+						</div>
+					</div>
+					<p class="para">The above example will throw compilation error because we are trying to extend an <span class="para_bold italic">final class</span>. The error thrown by JVM is as follows <span class="italic para_bold">"The type Sample cannot subclass the final class FinalClass"</span>.</p>
+					
+					
+			
+			
+			</div>
+			
+			
+				
+			</div>
+				
+				
+					
+				
+				
+				
+       	 
+       </div>
+       <script type="text/javascript">
+			$(document).ready(function() {
+			
+				var defaults = {
+		  			containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+		 		};
+				
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+        <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+</body>
+</html>
