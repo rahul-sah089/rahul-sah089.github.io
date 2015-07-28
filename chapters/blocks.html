@@ -1,0 +1,825 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Inheritance In Java</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content=""/>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href="css/table.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+<!-- start menu -->     
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<!-- end menu -->
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>
+<!----details-product-slider--->
+				<!-- Include the Etalage files -->
+					
+					<script src="js/jquery.etalage.min.js"></script>
+				<!-- Include the Etalage files -->
+				<script>
+						jQuery(document).ready(function($){
+			
+							$('#etalage').etalage({
+								
+								
+								
+								click_callback: function(image_anchor, instance_id){
+									alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+								}
+							});
+							
+
+					});
+				</script>
+				<!----//details-product-slider--->	
+<!-- top scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+		});
+	});
+</script>					
+<style>
+.example{
+	width : auto;
+	color : #000000;
+	background-color : #f1f1f1;
+	padding : 15px;
+	line-height : 1.15em;
+	word-wrap : break-word;
+	margin-bottom : 12px;
+	margin-top : 12px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+</style>	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64821947-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+  <div class="header-top">
+	 <div class="wrap"> 
+		<div class="logo">
+			<a href="index.html"><img src="../images/javasages.png" style="width: 50px;" alt=""/></a>
+	    </div>
+	    <div class="cssmenu">
+		   <ul>
+			 <li class="active"><a href="register.html">Sign up & Save</a></li> 
+			 <li><a href="shop.html">Store Locator</a></li> 
+			 <li><a href="login.html">My Account</a></li> 
+			 <li><a href="checkout.html">CheckOut</a></li> 
+		   </ul>
+		</div>
+		<div class="clear"></div>
+ 	</div>
+   </div>
+   <div class="header-bottom">
+   	<div class="wrap">
+   		<!-- start header menu -->
+		<ul class="megamenu skyblue">
+			<!--
+		    <li><a class="color1" href="#">Home</a></li>
+			<li class="grid"><a class="color2" href="#">Java-Homes</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java Homes</h4>
+								<ul>
+									<li><a href="shop.html">Introduction To Java</a></li>
+									<li><a href="shop.html">Who created Java?</a></li>
+									<li><a href="shop.html">Features of Java</a></li>
+									<li><a href="shop.html">Uses of Java</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java Virtual Machine</h4>
+								<ul>
+									<li><a href="shop.html">Difference between JVM,JDK and JrE</a></li>
+									<li><a href="shop.html">Internal details of JVM</a></li>
+									<li><a href="shop.html">How JVM works internally?</a></li>
+									<li><a href="shop.html">Concept of Stack and Heap</a></li>
+									<li><a href="shop.html">Concept of Java Garabage Collection</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java Basis Syntax</h4>
+								<ul>
+									<li><a>Variable and datatype in Java</a></li>
+									<li><a>Unicode System</a></li>
+									<li><a>First Java Program</a></li>
+									<li><a>Basis Syntax</a></li>
+									<li><a>Naming convention</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4 class="top">Java Overview</h4>
+								<ul>
+									<li><a href="shop.html">What is Java?</a></li>
+									<li><a href="shop.html">History of Java</a></li>
+									<li><a href="shop.html">Features of Java</a></li>
+									<li><a href="shop.html">Getting Hand Dirty</a></li>
+									<li><a href="shop.html">How Java Works?</a></li>
+									<li><a href="shop.html">Local env setup</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1"></div>
+						<img src="images/nav_img_mod1.png" alt=""/>
+					</div>
+				</div>
+				</li>
+  			   <li class="active grid"><a class="color4" href="#">Java OOPs</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java OOPs 1</h4>
+								<ul>
+									<li><a href="shop.html">Why OOPs  concept is so popular?</a></li>
+									<li><a href="shop.html">Java Object and Classes</a></li>
+									<li><a href="shop.html">Method OverLoading</a></li>
+									<li><a href="shop.html">Constructor</a></li>
+									<li><a href="shop.html">Static Keyword</a></li>
+									<li><a href="shop.html">"This" is OOPs</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java OOPs 2</h4>
+								<ul>
+									<li><a href="shop.html">Inheritance</a></li>
+									<li><a href="shop.html">Aggregation</a></li>
+									<li><a href="shop.html">Method OverLoading</a></li>
+									<li><a href="shop.html">Convarient return type</a></li>
+									<li><a href="shop.html">Super Keyword</a></li>
+									<li><a href="shop.html">Instance Initializer Block</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java OOPs 3</h4>
+								<ul>
+									<li><a href="shop.html">Abstract vs Interface</a></li>
+									<li><a href="shop.html">Package</a></li>
+									<li><a href="shop.html">Access Modifier</a></li>
+									<li><a href="shop.html">Encapsulation</a></li>
+									<li><a href="shop.html">Object Classes</a></li>
+									<li><a href="shop.html">Java Array</a></li>
+									<li><a href="shop.html">Array Interview Questions</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java OOPs 4</h4>
+								<ul>
+									<li><a href="shop.html">Wrapper Classes</a></li>
+									<li><a href="shop.html">Call By Value</a></li>
+									<li><a href="shop.html">Call By reference</a></li>
+									<li><a href="shop.html">API documentation</a></li>
+									<li><a href="shop.html">Command line Args</a></li>
+									<li><a href="shop.html">Object Vs Classes</a></li>
+									<li><a href="">Overloading Vs Overriding</a></li>
+									<li><a href="">OOPs interview question</a></li>
+								</ul>	
+							</div>						
+						</div>
+						<div class="col1">
+						 <div class="h_nav">
+						   <img src="images/nav_img_oops.png" alt=""/>
+						 </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+					</div>
+    			</li>				
+				<li><a class="color5" href="#">Java String</a>
+				<div class="megapanel">
+
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Java String Introduction</h4>
+								<ul>
+									<li><a href="shop.html">What is String?</a></li>
+									<li><a href="shop.html">Immutable String</a></li>
+									<li><a href="shop.html">String Buffer</a></li>
+									<li><a href="shop.html">String Builder</a></li>
+									<li><a href="shop.html">String Buffer vs String Builder</a></li>
+									<li><a href="shop.html">Creating immutable Class</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>String Method and Misallenous</h4>
+								<ul>
+									<li><a href="shop.html">StringTokiner Class</a></li>
+									<li><a href="shop.html">Creating String</a></li>
+									<li><a href="shop.html">TO be added</a></li>
+									<li><a href="shop.html">To be added</a></li>
+									<li><a href="shop.html">To be added</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<img src="images/String.jpg" alt=""/>
+					</div>
+				</div>
+				</li>
+				<li><a class="color6" href="#">Java Regular Expression</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>RegEx Introduction</h4>
+								<ul>
+									<li><a href="shop.html">What is regular expression?</a></li>
+									<li><a href="shop.html">Why regular expression is used for?</a></li>
+									<li><a href="shop.html">Java Regex Introduction</a></li>
+									<li><a href="shop.html">Pattern Classes</a></li>
+									<li><a href="shop.html">Example of Regular Expression</a></li>
+									<li><a href="shop.html">Regular Character Classes</a></li>
+								</ul>	
+							</div>
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Miscellaneous</h4>
+								<ul>
+									<li><a href="shop.html">Regex Quantifier</a></li>
+									<li><a href="shop.html">Regex Metacharacter</a></li>
+									<li><a href="shop.html">Example of MetaCharacter</a></li>
+									<li><a href="shop.html">Interview Questions</a></li>
+								</ul>	
+							</div>
+						</div>
+						<img src="images/regular_expressions.png" alt=""/>
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+				</div>
+				</li>
+				<li><a class="color7" href="#">Exceptional Handling</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>What is Exceptional Handling?</h4>
+								<ul>
+									<li><a href="shop.html">Exceptional Handling used for?</a></li>
+									<li><a href="shop.html">Categories of exception</a></li>
+									<li><a href="shop.html">How exception come?</a></li>
+									<li><a href="shop.html">How Java Handles Exception?</a></li>
+									<li><a href="shop.html">Advantages of Exceptional Handling</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Block in Exception</h4>
+								<ul>
+									<li><a href="shop.html">Different types of Exception Block</a></li>
+									<li><a href="shop.html">Try and catch block</a></li>
+									<li><a href="shop.html">Internal handling of try catch block</a></li>
+									<li><a href="shop.html">Catching Multiple Exceptions</a></li>
+									<li><a href="shop.html">Exception Hierarchies</a></li>
+									<li><a href="shop.html">Checked or Unchecked Exceptions?</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Advanced</h4>
+								<ul>
+									<li><a href="shop.html">Exception Wrapping</a></li>
+									<li><a href="shop.html">Fail Safe Exception Handling</a></li>
+									<li><a href="shop.html">Plugable Exception handlers</a></li>
+									<li><a href="shop.html">Logging Exception: Where to log Exception?</a></li>
+									<li><a href="shop.html">Validation- Throw Exception Early</a></li>
+									<li><a href="shop.html">Exception Handling Templates in Java</a></li>
+									<li><a href="shop.html">Exception Interview Question</a></li>
+								</ul>	
+							</div>												
+						</div>
+						<img src="images/exception_example.png" alt=""/>
+					</div>
+					
+    				</div>
+				</li>
+				<li><a class="color8" href="#">Inner Classes in Java</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Inner Classes</h4>
+								<ul>
+									<li><a href="shop.html">What is inner class?</a></li>
+									<li><a href="shop.html">Member inner class</a></li>
+									<li><a href="shop.html">Anonymous Inner class</a></li>
+									<li><a href="shop.html">Local Inner class</a></li>
+									<li><a href="shop.html">static nested class</a></li>
+									<li><a href="shop.html">Nested Interface</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<img src="images/nested_classes.png" alt=""/>
+				</div>
+				</li>
+				<li><a class="color9" href="#">Java MultiThreading</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Basis</h4>
+								<ul>
+									<li><a href="shop.html">What is multi-threading?</a></li>
+									<li><a href="shop.html">Life Cycle of Thread</a></li>
+									<li><a href="shop.html">Thread Priorities</a></li>
+									<li><a href="shop.html">Creating thread by implementing Runnable interface</a></li>
+									<li><a href="shop.html">Creating thread by extending Thread Class</a></li>
+									<li><a href="shop.html">Thread Methods</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Advanced Topic</h4>
+								<ul>
+									<li><a href="shop.html">What is thread synchronization?</a></li>
+									<li><a href="shop.html">Handling threads inter communication</a></li>
+									<li><a href="shop.html">Handling thread deadlock</a></li>
+									<li><a href="shop.html">Major thread operations</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<img src="images/Multithread.png" alt=""/>
+					</div>
+					<div class="row">
+						<div class="col2"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+						<div class="col1"></div>
+					</div>
+    				</div>
+				</li>
+				<li><a class="color10" href="#">Collections in Java</a></li>
+				<li><a class="color11" href="#">Java I/O</a></li>
+				<li><a class="color12" href="#">Java JDBC</a></li>
+				-->
+		   </ul>
+		   <div class="clear"></div>
+     	</div>
+       </div>
+       <div class="single">
+         <div class="wrap">
+     	    <div class="rsidebar span_1_of_left">
+				   <section  class="sky-form">
+                   	  <h4>Java Virtual Machine</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+								<span>
+									<p>
+										<i class="fa fa-pagelines">
+										<i></i><a href="#jvmIntro">JVM Introduction</a>
+										</i>
+									</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines">
+											<i></i><a href="#">Difference between JVM,JDK and JrE</a>
+										</i>
+									</p>
+								<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i></i>
+											<a href="#hbvm">Hardware Based Virtual Machine</a>
+										</i>
+									</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#sbvm">Software Based Virtual Machine</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#bad">Basic Architecture of JVM</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#classloader">Class Loader SubSystem</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#tcl">Type of Class Loader</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#memArea">Various Memory Area of JVM</a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#executionEngine">Execution Engine</a></a></i>
+										</p>
+									<br/>
+								</span>
+								<span>
+									<p>
+										<i class="fa fa-pagelines"><i>
+										</i><a href="#cfs">Class File Structure</a></a></i>
+										</p>
+									<br/>
+								</span>
+							</div>
+						 </div>
+                   	</section>
+				</div>
+		<div class="cont span_2_of_3">
+				<!-- labout span_1_of_a1 div starts here -->
+			    <div class="labout span_1_of_a1" style="height: 200px;">
+				<!-- start product_slider -->
+				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
+							<li>
+								<img class="etalage_thumb_image" src="images/aggregation.jpg"/>
+							</li>
+					</ul>
+			    </div>
+				<!-- labout span_1_of_a1 div  ends here -->
+				<!-- cont1 span_2_of_a1 starts here-->
+				<div id="" class="cont1 span_2_of_a1">
+					<h3 class="m_3">Block In Java</h3>
+					<p class="para">Java provides two types of blocks:</p>
+					<p class="para">1). Static Block</p>
+					<p class="para">2). Instance Block</p>
+					<p class="subCat">1).Static Block</p>
+					<p class="para"><span class="italic_wu">Static block</span> is also called as <span class="italic_wu">Static Initilization Block</span>. A static initialization blocks. is a normal block of code enclosed in braces, {} , and preceded by the keyword static keyword. Here is the example</p>
+				</div>
+				<div class="clear"></div>
+				<div class="example">
+					<h3 class="example">Sample Code for Static Block</h3>
+					<div class="example_code_2">
+					    static{<br/>
+						    <span class="intend1"><span class="keywordHightLight">//whatever code is needed for the initialization block goes here</span><br/></span>
+						}<br/>
+					</div>
+				</div>
+				<p class="para"> A class can have number of static intialization bocks, and they can appear anywhere in the class body. The runtime system guarantees that static intialization block runs in the order then appear in the source code. It is important to know the static initialization block will be executed when the JVm loads the class. JVM combines all the static block into a single block and then executes it. </p>	
+				<p class="para">Static block can be used to intialize the static variable of the class.</p>
+				<p class="para">If the class is having both the static block and main method then static block will be executed prior to the main method invovation.</p>
+				<p class="para">The example below shows how the static block is executed prior to the main method invocation:</p>
+				<div class="example">
+					<h3 class="example">Sample Code</h3>
+					<div class="example_code_1 para_bold">
+						<span class="keywordHightLight">class</span> Demo1{<br/>
+							<span class="intend1"><span class="quotationHighLight">//1st static block</span><br/></span>
+						    <span class="intend1"><span class="keywordHightLight">static</span>{<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Running 1st static block"</span>);<br/></span>
+							<span class="intend1">}<br/></span>
+							<span class="intend1"><span class="keywordHightLight">public static void</span> main(<span class="keywordHightLight">String</span>[] args){<br/></span>
+							    <span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Started"</span>);<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Ended"</span>);<br/></span>
+							<span class="intend1">}<br/></span>
+							<span class="intend1"><span class="quotationHighLight">//2nd static block</span><br/></span>
+							<span class="intend1"><span class="keywordHightLight">static</span>{<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Running 2nd static block"</span>);<br/></span>
+							<span class="intend1">}<br/></span>
+						}<br/>
+					</div>
+				</div>
+				<div class="example">
+					<h3 class="example para_bold">Output</h3>
+					<div class="example_code_2">
+						<span class="keywordHightLight">Running 1st static block<br/></span>
+						<span class="keywordHightLight">Running 2nd static block<br/></span>
+						<span class="keywordHightLight">Main Method Started<br/></span>
+						<span class="keywordHightLight">Main Method Ended<br/></span>
+					</div>
+				</div>
+				<p class="subCat">Another example of static block</p>
+				<div class="example">
+					<h3 class="example">Sample Code</h3>
+					<div class="example_code_2">
+						public class StaticExample{<br/>
+							<span class="intend1">static {<br/></span>
+								<span class="intend2">System.out.println("This is first static block");<br/></span>
+							<span class="intend1">}<br/><br/></span>
+
+							<span class="intend1">public StaticExample(){<br/></span>
+								<span class="intend2">System.out.println("This is constructor");<br/></span>
+							<span class="intend1">}<br/><br/></span>
+
+							<span class="intend1">public static String staticString = "Static Variable";<br/><br/></span>
+
+							<span class="intend1">static {<br/></span>
+								<span class="intend2">System.out.println("This is second static block and " + staticString);<br/></span>
+							<span class="intend1">}<br/><br/></span>
+
+							<span class="intend1">public static void main(String[] args){<br/></span>
+								<span class="intend2">StaticExample statEx = new StaticExample();<br/></span>
+								<span class="intend2">StaticExample.staticMethod2();<br/></span>
+							<span class="intend1">}<br/><br/></span>
+
+							<span class="intend1">static {<br/></span>
+								<span class="intend2">staticMethod();<br/></span>
+								<span class="intend2">System.out.println("This is third static block");<br/></span>
+							<span class="intend1">}<br/><br/></span>
+
+							<span class="intend1">public static void staticMethod() {<br/></span>
+								<span class="intend2">System.out.println("This is static method");<br/></span>
+							<span class="intend1">}<br/><br/></span>
+
+							<span class="intend1">public static void staticMethod2() {<br/></span>
+								<span class="intend2">System.out.println("This is static method2");<br/></span>
+							<span class="intend1">}<br/></span>
+						}<br/>
+					</div>	
+				</div>
+				<p class="para_bold">What will happen when you execute the above code? You will see below output.</p>
+				<div class="example">
+					<h3 class="example para_bold">Output</h3>
+					<div class="example_code_2">
+						<span class="keywordHightLight">Running 1st static block<br/></span>
+						<span class="keywordHightLight">This is second static block and Static Variable<br/></span>
+						<span class="keywordHightLight">This is static method<br/></span>
+						<span class="keywordHightLight">This is third static block<br/></span>
+						<span class="keywordHightLight">This is constructor<br/></span>
+						<span class="keywordHightLight">This is static method2<br/></span>
+					</div>
+				</div>
+				<p class="para">Now lets the output. First all static blocks are positioned in the code and they are executed when the class is loaded into JVM. Since the static method staticMethod() is called inside third static block, its executed before calling the main method. But the staticMethod2() static method is executed after the class is instantiated because it is being called after the instantiation of the class.</p>
+			
+				
+			<div class="clear"></div>
+			<p class="subCat">2).Instance Block</p>
+			<p class="para">Instance Initilization Block is been used to intialize the instance data member of a class. It will run each time when the object is created.</p>
+			<p class="para">Instance member is used to initialize instance member of the class.</p>
+			<p class="para">Instance member executuion depends on the how many times the object is been created. It get executed each time the object is created.</p>
+			<p class="para_bold">Below shows the example how the instance block is been executed:</p>
+			<div class="example">
+				<h3 class="example">Sample Code</h3>
+				<div class="example_code_1 para_bold">
+					<span class="keywordHightLight">public class</span> InstanceBlock {<br/>
+						<span class="intend1 quotationHighLight">//1st instance block<br/></span>
+						<span class="intend1">{<br/></span>
+							<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"runing 1st instance block"</span>);<br/></span>
+						<span class="intend1">}<br/></span>
+						<span class="intend1"><span class="quotationHighLight">//Main Method implementation</span><br/></span>
+						<span class="intend1"><span class="keywordHightLight">public static void</span> main(<span class="keywordHightLight">String</span>[] args){<br/></span>
+							<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Started"</span>);<br/></span>
+							<span class="intend2">InstanceBlock obj1 = <span class="keywordHightLight">new</span> InstanceBlock();<br/></span>
+							<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"-------------------------"</span>);<br/></span>
+							<span class="intend2">InstanceBlock obj2 = <span class="keywordHightLight">new</span> InstanceBlock();<br/></span>
+							<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Ended"</span>);<br/></span>
+						<span class="intend1">}<br/></span>
+						<span class="intend1"><span class="quotationHighLight">//2nd instance block</span><br/></span>
+						<span class="intend1">{<br/></span>
+							<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"running 2nd instance block"</span>);<br/></span>
+						<span class="intend1">}<br/></span>
+					}<br/>
+				</div>
+			</div>
+			<div class="example">
+				<h3 class="example">Output</h3>
+				<div class="example_code_2">
+					Main Method Started<br/>
+					runing 1st instance block<br/>
+					running 2nd instance block<br/>
+					-------------------------<br/>
+					runing 1st instance block<br/>
+					running 2nd instance block<br/>
+					Main Method Ended<br/>
+				</div>
+			</div>
+			
+			
+			<p class="subCat">Which is invoked first? Constructor or instance block?</p>
+			<p class="para">The answer for this question is <span class="para_bold">instance block</span>.Lets have a look in the example below:</p>
+			<div class="example">
+				<h3 class="example">Sample Code</h3>
+				<div class="example_code_1 para_bold">
+					<span class="keywordHightLight">public class</span> Invoked1st {<br/><br/>
+						<span class="intend1"><span class="quotationHighLight">//Constructor method</span></span><br/>
+						<span class="intend1">Invoked1st(){<br/></span>
+							<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Constructor invoked 1st"</span>);<br/></span>
+						<span class="intend1">}<br/></span>
+						<span class="intend1 quotationHighLight">//Instance Block</span><br/>
+						<span class="intend1">{<br/></span>
+							<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Instance block invoked 1st"</span>);<br/></span>
+						<span class="intend1">}<br/></span>
+						<span class="intend1"><span class="keywordHightLight">public static void</span> main(<span class="keywordHightLight">String</span>[] args){<br/></span>
+							<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Started"</span>);<br/></span>
+							<span class="intend2">Invoked1st obj = new Invoked1st();<br/></span>
+							<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Ended"</span>);<br/></span>
+						<span class="intend1">}<br/></span>
+					}<br/>
+				</div>
+			</div>
+			<p class="para">The output of the above example is as follows:</p>
+			<div class="example">
+				<h3 class="example para_bold">Output</h3>
+				<div class="example_code_2">
+					Main Method Started<br/>
+					Instance block invoked 1st<br/>
+					Constructor invoked 1st<br/>
+					Main Method Ended<br/>
+				</div>
+			</div>
+			
+			<p class="subCat">Which block will get executed first? Static Block or Instance Block?</p>
+			<p class="para">Below show a example to proof which block get executed first:</p>
+			<div class="example_code_1 para_bold">
+				<span class="keywordHightLight">public class</span> Executed1st {<br/><br/>
+	
+					<span class="intend1">Executed1st(){<br/></span>
+						<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Object Created"</span>);<br/></span>
+					<span class="intend1">}<br/><br/></span>
+					
+					<span class="intend1"><span class="keywordHightLight">static</span>{<br/></span>
+						<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Static bock gets executed"</span>);<br/></span>
+					<span class="intend1">}<br/><br/></span>
+					
+					<span class="intend1">{<br/></span>
+						<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Instance block gets executed"</span>);<br/></span>
+					<span class="intend1">}<br/><br/></span>
+					
+					<span class="intend1"><span class="keywordHightLight">public static void</span> main(<span class="keywordHightLight">String</span>[] args){<br/></span>
+						<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Started"</span>);<br/></span>
+						<span class="intend2">Executed1st ref = <span class="keywordHightLight">new</span> Executed1st();<br/></span>
+						<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Ended"</span>);<br/></span>
+					<span class="intend1">}<br/></span>
+				}<br/>
+			</div>
+			
+			<p class="para">The output of the above program is as follows:</p>
+			<div class="example">
+				<h3 class="example">Output</h3>
+				<div class="example_code_2">
+					Static bock gets executed<br/>
+					Main Method Started<br/>
+					Instance block gets executed<br/>
+					Object Created<br/>
+					Main Method Ended<br/>
+				</div>
+			</div>
+			<p class="para">From the above program and it's output we can draw the following conclusion:</p>
+			<p class="para">1). Static block is the block to get executed first.</p>
+			<p class="para">2). Instance block gets executed once the object is created.</p>
+			<p class="para">3). Instance block gets executed before the constructor method invocation.</p>
+			
+			<p class="para">So, let us summaries the blocks with the difference between the static block and instance block.</p>
+			<table>
+				<tr>
+					<th>Static Block</th>
+					<th>Instance Block</th>
+				</tr>
+				<tr>
+					<td>It gets executed at the time of class loading by class loader.</td>
+					<td>It gets executed at the time of object creation.</td>
+				</tr>
+				<tr>
+					<td>It is used to initialize the static member of the class</td>
+					<td>It is used to initialize the instance member of the class</td>
+				</tr>
+				<tr>
+					<td>Static block is executed only once.</td>
+					<td>Instance block gets executed every time the object is created.</td>
+				</tr>
+				<tr>
+					<td>In a class static block gets executed first.</td>
+					<td>In a class instance block gets executed after the static block execution.</td>
+				</tr>
+			</table>
+			
+			</div>
+			
+			
+				
+			</div>
+				
+				
+					
+				
+				
+				
+       	 
+       </div>
+       <script type="text/javascript">
+			$(document).ready(function() {
+			
+				var defaults = {
+		  			containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+		 		};
+				
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+        <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+</body>
+</html>

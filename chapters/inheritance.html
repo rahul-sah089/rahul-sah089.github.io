@@ -549,7 +549,7 @@
 				<!-- labout span_1_of_a1 div  ends here -->
 				<!-- cont1 span_2_of_a1 starts here-->
 				<div id="" class="cont1 span_2_of_a1">
-					<h3 class="m_3">Inheritance In Java</h3>
+					<h3 class="m_3">Inheritance In Java(IS-A)</h3>
 					<p class="para">Inheritance is one of the feature of the <span class="para_bold">Object Oriented Programming</span> that allows a class to use the properties and methods of another class.</p>
 					<p class="para">In other words the <span class="para_bold">derieved class</span> inherits the <span class="para_bold">states and behaviours</span> from the <span class="para_bold">base class</span>. The <span class="para_bold">derived class</span> is also know as <span class="para_bold">subclass</span> and the <span class="para_bold">base class</span> is also know <span class="para_bold">super-class</span>. The derieved class can add it's own additional variable and methods. These addition variable and methods differentiates the <span class="para_bold">derieved class</span> from the <span class="para_bold">base class</span>.</p>
 					
@@ -558,6 +558,7 @@
 					<p class="para">The superclass and subclass have "is-a"relationship between them. Let's look a look in the example below:</p>
 				</div>
 				<br/>
+				
 				<p class="subCat">Inheritance Example</p>
 				<p class="para">Consider a class called <span class="para_bold">Shape</span>. Here <span class="para_bold">Shape</span> is the base class from which other sub classes can be derieved. The base class in this case can be rectangle, circle,square etc</p>
 				<div class="example">
@@ -596,55 +597,242 @@
 					<div class="example_code_1">
 						<span>//A class to display the attribute of the vehicles<br/></span>
 						<span class="highVAL">class</span> Vehicles{<br/>
-						    <span class="intend1">String color;<br/></span>
-							<span class="intend1">int speed;<br/></span>
-							<span class="intend1">int size;<br/></span>
-							<span class="intend1">void attributes(){<br/></span>
-							    <span class="intend2">System.out.println("Color : " + color);<br/></span>
-								<span class="intend2">System.out.println("Speed : " + speed);<br/></span>
-								<span class="intend2">System.out.println("Size : " + size);<br/></span>
+						    <span class="intend1"><span class="keywordHightLight">String</span> color;<br/></span>
+							<span class="intend1"><span class="keywordHightLight">int</span> speed;<br/></span>
+							<span class="intend1"><span class="keywordHightLight">int</span> size;<br/></span>
+							<span class="intend1"><span class="keywordHightLight">void</span> <span class="para_bold">attributes</span>(){<br/></span>
+							    <span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Color : "</span> + color);<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Speed : "</span> + speed);<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Size : "</span> + size);<br/></span>
 							<span class="intend1">}<br/></span>
 						<span>}<br/></span>
-						<span>//A subClass that extends for Vehicles<br/></span>
-						<span>class Car extends Vehicles{<br/></span>
-						    <span class="intend1">int CC;<br/></span>
-							<span class="intend1">int gears;<br/></span>
-							<span class="intend1">void attributesCar(){<br/></span>
-							    <span class="intend2">System.out.println("Color of Car : " + color);<br/></span>
-								<span class="intend2">System.out.println("Speed of Car : " + speed);<br/></span>
-								<span class="intend2">System.out.println("Size of Car: " + size);<br/></span>
-								<span class="intend2">System.out.println("CC of Car : " + speed);<br/></span>
-								<span class="intend2">System.out.println("No of Gears of Car:" + size);<br/></span>
+						<span><span class="commentHighLight">//A subClass that extends for Vehicles</span><br/></span>
+						<span><span class="keywordHightLight">class</span> <span class="para_bold">Car</span> <span class="keywordHightLight">extends</span> <span class="para_bold">Vehicles</span>{<br/></span>
+						    <span class="intend1"><span class="keywordHightLight">int</span> CC;<br/></span>
+							<span class="intend1"><span class="keywordHightLight">int</span> gears;<br/></span>
+							<span class="intend1"><span class="keywordHightLight">void</span> <span class="para_bold">attributesCar</span>(){<br/></span>
+							    <span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Color of Car : "</span> + color);<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Speed of Car : "</span> + speed);<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Size of Car: "</span> + size);<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"CC of Car : "</span> + speed);<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"No of Gears in Car:"</span> + size);<br/></span>
 							<span class="intend1">}<br/></span>
 						}<br/><br/>
 						
-						<span>public class</span> Test{<br/>
-						    <span class="intend1"><span>public static void</span> main(<span>String[]</span> args){<br/></span>
-								<span class="intend2">Car ref1 = new Car();<br/></span>
-								<span class="intend2">ref1.color = "Blue";<br/></span>
+						<span class="keywordHightLight">public class</span> <span class="para_bold">Test</span>{<br/>
+						    <span class="intend1"><span class="keywordHightLight">public static void</span> <span class="keywordHightLight">main</span>(<span>String[]</span> args){<br/></span>
+								<span class="intend2"><span class="para_bold">Car</span> ref1 = <span class="keywordHightLight">new</span> <span class="para_bold">Car()</span>;<br/></span>
+								<span class="intend2">ref1.color = <span class="para_bold">"Blue"</span>;<br/></span>
 								<span class="intend2">ref1.speed = 200;<br/></span>
 								<span class="intend2">ref1.size = 22;<br/></span>
 								<span class="intend2">ref1.CC = 250;<br/></span>
 								<span class="intend2">ref1.gears = 6;<br/></span>
-								<span class="intend2">b1.attributesCar();<br/></span>
+								<span class="intend2">ref1.attributesCar();<br/></span>
 							<span class="intend1">}<br/><span>
 						}<br/>
 					</div>
 				</div>
 				
-				</div>	
+				<div class="example">
+					<h3 class="example">The Output Of the Code</h3>
+					<div class="example_code_1">
+						<span class="para_bold">Color of Car : Blue<br/></span>
+						<span class="para_bold">Speed of Car : 200<br/></span>
+						<span class="para_bold">Size of Car : 22<br/></span>
+						<span class="para_bold">CC of Car : 250<br/></span>
+						<span class="para_bold">No of Gears	in Car : 6 <br/></span>
+					</div>
+				</div>
+		
+				<p class="subCat">Type of Inheritance</p>
+				<p class="para">The types of inheritance in Java in as follows:</p>
+				<p class="para">1). Single Inheritance</p>
+				<p class="para">2). Multiple Inheritance</p>
+				<p class="para">3). Multilevel Inheritance</p>
+				<p class="para">4). Hierarchial Inheritance</p>
+				<p class="para">5). Hybrid Inheritance</p>
+				
+				<p class="subCat">1) Single Inheritance</p>
+				<!-- labout span_1_of_a1 div starts here -->
+			    <div class="labout span_1_of_a1" style="height: 300px;">
+				<!-- start product_slider -->
+				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
+							<li>
+								<img class="etalage_thumb_image" src="images/singleInheritance.jpg"/>
+							</li>
+					</ul>
+			    </div>
+				<p class="para">It is the simplest form of the inheritance to understand. When a single class inherits from about base class then it is known as Single Inheritance.</p>
+				<p class="para">The diagram alongside shows the simple example of <span class="para_bold">Single Level Inheritance</span>.</p>	
+				<p class="para">Here a <span class="para_bold">class</span> B inherits from <span class="para_bold">class A</span>  and <span class="para_bold">class C</span>  inherits from <span class="para_bold">class B</span>.</p>
+				<p>Here A is the <span class="para_bold">parent class</span>. B is the <span class="para_bold">child class</span> of A and C is the <span class="para_bold">child class</span> of B.</p>
+				<br/><br/><br/>
+				<div class="example">
+					<h3 class="example">Sample Code</h3>
+					<div class="example_code_1">
+						<span class="keywordHightLight">Class</span> A{<br/>
+						   <span class="intend1"><span class="keywordHightLight">public void</span> <span class="para_bold">methodA()</span>{<br/></span>
+							 <span class="intend2"><span class="keywordHightLight">System.out.println</span>("Base class method");<br/></span>
+						   <span class="intend1">}<br/></span>
+						}<br/><br/>
+
+						<span class="keywordHightLight">Class</span> B <span class="keywordHightLight">extends</span> A{<br/>
+							<span class="intend1"><span class="keywordHightLight">public void</span> <span class="para_bold">methodB()</span>{<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Child class method"</span>);<br/></span>
+							<span class="intend1">}<br/></span>
+							<span class="intend1"><span class="keywordHightLight">public static void</span> <span class="para_bold">main</span>(<span class="keywordHightLight">String</span> args[]){<br/></span>
+								<span class="intend2">B obj = <span class="keywordHightLight">new</span> B();<br/></span>
+								<span class="intend2">obj.<span class="para_bold">methodA()</span>; <span class="commentHighLight">//calling super class method</span><br/></span>
+								<span class="intend2">obj.<span class="para_bold">methodB();</span> <span class="commentHighLight">//calling local method</span><br/></span>
+							<span>}<br/></span>
+						}<br/>
+					</div>
+				</div>
+				
+				<p class="subCat">2) Multiple Inheritance</p>
+				
+				
+				<!-- labout span_1_of_a1 div starts here -->
+			    <div class="labout span_1_of_a1" style="height: 300px;">
+				<!-- start product_slider -->
+				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
+							<li>
+								<img class="etalage_thumb_image" src="images/Multiple-Inheritance.png"/>
+							</li>
+					</ul>
+			    </div>
+				<p class="para">In multiple inhertance concept one class can extends from more than one base class. Though Java doesn't support multiple inheritance, the multiple inheritance can be achieved using interface.  Java doesn't support multiple inheritance because it leads to the "Diamond problem" which will be discussed in further sections. In multiple inheritance the derived class has to manage the dependencies on two base class.</p>
+				<p class="para">Most of the OOPs language like <span class="para_bold">Small talk</span>, <span class="para_bold">Java</span> , <span class="para_bold">C#</span> do not support Multiple inheritance. Multiple inheritance is supported in <span class="para_bold">C++</span>.</p>
+				<p span="para">The diagram alongside shows <span class="para_bold">class D</span> extending from both <span class="para_bold">class B</span> and <span class="para_bold">class C</span>.</p>
+				<br/><br/>
+				
+				<!-- labout span_1_of_a1 div starts here -->
+			    <div class="labout span_1_of_a1" style="height: 300px;">
+				<!-- start product_slider -->
+				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
+							<li>
+								<img class="etalage_thumb_image" src="images/mutliple.png"/>
+							</li>
+					</ul>
+			    </div>
+				<p class="subCat">3).MultiLevel Inheritance</p>
+				<p class="para">In multiLevel iheritance a class inherits from the <span class="para_bold">derived class</span> such that <span class="para_bold">derived class</span> act as the <span class="para_bold">base class</span> of the new class.</p>
+				<p class="para">In the digram shown alongside <span class="para_bold">class Manager</span> extends from <span class="para_bold">class Employee</span> and <span class="para_bold">Employee class</span> acts as the base class for <span class="para_bold">class Director</span>.</p>
+				<br/><br/>
+				<p class="para">Example of the MultiLevel Inheritance is shown below:</p>
+				<div class="example">
+					<h3 class="example">Sample Code</h3>
+					<div class="example_code_1 para_bold">
+						<span class="keywordHightLight">class</span class="para_bold"> <span class="para_bold">FirstLevelCategory</span>{<br/>
+						    <span class="intend1"><span class="keywordHightLight">public void</span> <span class="para_bold">addItemToCart1()</span>{<br/></span>
+							    <span class="intend2"><span class="keywordHightLight">System.out.println	</span>(<span class="quotationHighLight">"addItemToCart1() method been called"</span>);<br/><span>
+							<span class="intend1">}<br/></span>
+						}<br/>
+						<span class="keywordHightLight">class</span> <span class="para_bold">SecondLevelCategory</span> <span class="keywordHightLight">extends</span> <span class="para_bold">FirstLevelCategory</span>{<br/>
+						    <span class="intend1"><span class="keywordHightLight">public void</span> <span class="para_bold">addItemToCart2()</span>{<br/></span>
+							    <span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"addItemToCart2() method been called"</span>);<br/></span>
+							<span class="intend1">}<br/></span>
+						}<br/><br/>
+						
+						<span class="keywordHightLight">class</span> <span class="para_bold">ThirdLevelCategory</span> <span class="keywordHightLight">extends</span> <span class="para_bold">SecondLevelCategory</span>{<br/>
+						    <span class="intend1"><span class="keywordHightLight">public void</span class="para_bold"> <span class="para_bold">addItemToCart3</span>{<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"addItemToCart3() method been called"</span>);<br/></span>
+							<span class="intend1">}<br/></span>
+						}<br/><br/>
+						<span class="keywordHightLight">class</span> <span class="para_bold">Test</span>{<br/>
+						    <span class="intend1"><span class="keywordHightLight">public static void</span> <span>main</span>(<span class="keywordHightLight">String</span>[] args){<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Started"</span>);<br/></span>
+								<span class="intend2"><span>ThirdLevelCategory</span> obj = <span>new</span> <span>ThirdLevelCategory()</span>;<br/></span>
+								<span class="intend2">obj.addItemToCart1(); <span class="quotationHighLight">//calling grand parent class method</span><br/></span>
+								<span class="intend2">obj.addItemToCart2(); <span class="quotationHighLight">//calling parent class method</span><br/></span>
+								<span class="intend2">obj.addItemToCart3(); <span class="quotationHighLight">//calling local method</span><br/></span>
+								<span class="intend2"><span>System.out.println</span>(<span class="quotationHighLight">"Main Method Ended"</span>);<br/></span>
+							<span class="intend1">}<br/></span>
+						}<br/>
+					</div>
+				</div>
+				<br/><br/>
+				
+				<div class="labout span_1_of_a1" style="height: 300px;">
+				<!-- start product_slider -->
+				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
+							<li>
+								<img class="etalage_thumb_image" src="images/hierarichal.jpg"/>
+							</li>
+					</ul>
+			    </div>
+				<p class="subCat">4).Hierarchial Inheritance</p>
+				<p class="para">In such type of inheritance one class is inherited by many <span class="para_bold">subclasses</span>.</p>
+				<p class="para">In the diagram alongside Class C and Class D inherits from the same class Class B. This is an example of the hiecarichal inheritance.</p>
+				<p class="para">The sample code for the Hierarchial Inheritance is shown below:</p>
+				<div class="example">
+					<h3 class="example">Sample Code</h3>
+					<div class="example_code_1 para_bold">
+						<span>Class</span> A{<br/>
+							<span class="intend1"><span>public void</span> methodA() {<br/></span>
+								<span class="intend2"><span>System.out.println</span>("method of Class A");<br/></span>
+							 <span class="intend1">}<br/></span>
+						}<br/>
+						<span>Class</span> B <span>extends</span> A{<br/>
+							<span class="intend1">public void methodB(){<br/></span>
+								<span class="intend2">System.out.println("method of Class B");<br/></span>
+							<span class="intend1">}<br/></span>
+						}<br/>
+						Class C extends A{<br/>
+							<span class="intend1">public void methodC(){<br/></span>
+								<span class="intend2">System.out.println("method of Class C");<br/></span>
+							<span class="intend1">}<br/></span>
+						}<br/>
+						Class D extends A{<br/>
+							<span>public void methodD() {<br/></span>
+								<span>System.out.println("method of Class D");<br/></span>
+							<span>}<br/></span>
+						}<br/>
+						Class MyClass{<br/>
+							<span class="intend1">public void methodB(){<br/></span>
+								<span class="intend2">System.out.println("method of Class B");<br/></span>
+							<span class="intend1">}<br/></span>
+							<span class="intend1">public static void main(String args[]){<br/></span>
+								<span class="intend2">B obj1 = new B();<br/></span>
+								<span class="intend2">C obj2 = new C();<br/></span>
+								<span class="intend2">D obj3 = new D();<br/></span>
+								<span class="intend2">obj1.methodA();<br/></span>
+								<span class="intend2">obj2.methodA();<br/></span>
+								<span class="intend2">obj3.methodA();<br/></span>
+							<span class="intend1">}<br/></span>
+						}<br/>
+					</div>
+				</div>
+				
+				<div class="labout span_1_of_a1" style="height: 300px;">
+				<!-- start product_slider -->
+				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
+						<li>
+							<img class="etalage_thumb_image" src="images/hbIn.png"/>
+						</li>
+					</ul>
+			    </div
+				<br/>
+				
+				<p class="subCat">5). Hybrid Inheritance</p>
+				<p class="para"><span class="para_bold">Hybrid Inheritance</span> is the combination of the <span class=para_bold">Single</span> and <span class="para_bold">Multiple Inheritance</span>. The diagram alongside shows the example of the <span class="para_bold">Hybrid Inheritance</span>. In the above example <span class="para_bold">class B</span> and <span class="para_bold">class C</span> in the <span class="para_bold">derived class</span> of the A, which itself acts as the <span class="para_bold">parent class</span> for the <span class="para_bold">class D</span>.  It is possible to acheive  <span>Hybrid Inheritance</span> in Java using <span>Interfaces</span>. Using <span>Interface</span> we can have <span class="para_bold">multiple</span> as well as <span class="para_bold">hybrid interface</span>.</p>
+				
+				
+	 
+	 </div>
+     <div class="clear"></div>
+	 </div>
+	 
 	 <div class="toogle">
      	<div class="float-left">
 		<i class="fa fa-fast-backward fa-2x"></i>
 		</div>
 		<div class="float-right">
-		<a href="this.html"><i class="fa fa-fast-forward fa-2x"></i></a>
+		<i class="fa fa-fast-forward fa-2x"></i>
 		</div>
      </div>					
+			
 	 </div>
-     <div class="clear"></div>
-	 </div>
-     </div>
 	  <div class="footer">
        	 <div class="footer-top">
        		<div class="wrap">
