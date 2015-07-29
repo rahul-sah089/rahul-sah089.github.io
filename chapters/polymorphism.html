@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Abstract Class In Java</title>
+<title>Polymorphism  In Java</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content=""/>
@@ -644,7 +644,7 @@
 				<!-- start product_slider -->
 				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
 							<li>
-								<img class="etalage_thumb_image" src="images/interface.png"/>
+								<img class="etalage_thumb_image" src="images/polymorphism.jpg"/>
 							</li>
 					</ul>
 			    </div>
@@ -652,98 +652,165 @@
 				<!-- labout span_1_of_a1 div  ends here -->
 				<!-- cont1 span_2_of_a1 starts here-->
 				<div id="" class="cont1 span_2_of_a1">
-					<h3 class="m_3">Interface In Java</h3>
-					<p class="para">Earlier we had discuss about <span class="para_bold">Abstract Class</span> that is used to achieve <span class="">partial abstraction</span> i.e; it can consist of both abstract as well as concerete method. In this section we are going to discuss about interface which is used to achieve 100% abstraction.</p>
-					<p class="subCat">Brief Introduction about Interface In Java</p>
-					<p class="para">Interface is a Java type which looks same as the class. It has methods and variable just like class but the method declared are of abstract in nature(only method signature and no body). Also the variable declared in an interface are <span class="para_bold">public,static & final</span> by default and interface cannot be initialized.</p>
-					
-					<p class="para para_bold">The interface variable has to be initialize at the time of declaration.</p>
-					
+					<h3 class="m_3">Polymorphism In Java</h3>
+					<p class="para">Object showing different behaviour at the different stages of it's lifecycle is knows as <span class="para_bold italic">Polymorphism</span>. It is the concept by which we can perform a <span class="para_bold italic">single action in different ways</span>.</p>
+					<p class="para">There are two types of polymorphism:</p>
+					<p class="para">1).Compile Time Polymorphism</p>
+					<p class="para">1).Run Time Polymorphism</p>
+					<p class="para">We can perform polymorphism in java using method overloading and method overriding.</p>
+					<p class="para">In compile time polymorphism the method declaration is binded to the method declaration at the time of compilation. This type of binding is static binding which cannot be changed later Ex: <span class="para_bold">static method</span>,<span class="para_bold">final method</span> and <span class="para_bold">private method</span>. Here we will discuss about run time polymorphism is detail.</p>
 					<div class="clear"></div>
-					<p class="para">Before discussing about abstract class lets have a brief introduction about Abstraction.</p>
 				</div>		
 					
-					<p class="subCat">Advantages of Interface</p>
-					<p class="para">1). Using Interface we can achieve 100% abstraction which means we can achieve generalization across the sub-class. By generalization we can segregate the functionality with the implementation part of the code. Interface provides pure abstraction as compared to abstraction class.</p>
-					<p class="para">2). Interface is used to acheive run-time polymorphism.</p>
-					<p class="para">3). Java programming language doesn't support multiple inheritance, using interface we can achieve multiple inheritance.</p>
-					<p class="para"><span class="highVAL1">Program 1</span>) Below shows the Declaration of interface</p>
+					<p class="subCat">Run Time Polymorphism</p>
+					<p class="para">In runtime polymorphism the method declaration is binded to it's definition by JVM at the time of execution. It is also know as Dynamic Method Dispatch in which a call to overriden method is resolved at the runtime rather than compile-time.</p>
+					<p class="para">In this process, an overriden method is called through the reference variable of a superclass. The determination of the method behaviour is based on the object being referred by the reference variable.</p>
+					<p class="para">To achieve run time polymorphism we need to have the following:</p>
+					<p class="para">1) Interface</p>
+					<p class="para">2) Method Overriding</p>
+					<p class="para">3) Type Casting</p>
+					
+					<p class="subCat">Example of Java Polymorphism</p>
+					<p class="para">In the example shown below we are having two class. <span class="keywordHightLight">Class Car</span> and <span class="keywordHightLight">Car Bugati</span>. <span class="keywordHightLight">Class Car</span> is the parent class of the <span class="keywordHightLight">Car Bugati</span>. Both the class have the method called <span class="keywordHightLight">run()</span> but this method is been overriden in the base <span class="keywordHightLight">Class Bugati</span>.  We are now calling the run method with the reference variable of the Parent class.Since the reference variable now point to the object of it's base class, subclass method is invoked at the runtme.</p>
 					<div class="example">
-						<h3 class="example para_bold">Declaration</h3>
+						<h3 class="example">Example of run time polymorphism</h3>
 						<div class="example_code_1 para_bold">
-							<span class="keywordHightLight">interface</span> MyInterface{<br/>
-							   <span class="intend1"><span class="quotationHighLight">/* All the methods are public abstract by default</span><br/></span>
-								<span class="intend1"><span class="quotationHighLight">* Note down that these methods are not having body</span><br/></span>
-								<span class="intend1"><span class="quotationHighLight">*/</span><br/></span>
-								<span class="intend1"><span class="quotationHighLight">/* All the variable are public,static & final by default*/</span><br/></span>
-								<span class="intend1"><span class="quotationHighLight">int</span> k = 0;<br/></span>
-							   <span class="intend1"><span class="quotationHighLight">public void</span> method1();<br/></span>
-							   <span class="intend1"><span class="quotationHighLight">public void</span> method2();<br/></span>
-							}<br/>
+							<span class="keywordHightLight">class</span> Car{ <br/> 
+							  <span class="intend1"><span class="keywordHightLight">void</span> run(){<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"running"</span>);<br/></span>
+								<span class="intend1">}  <br/></span>
+							}  <br/>
+							<span class="keywordHightLight">class</span> Bugati <span class="keywordHightLight">extends</span> Car{  <br/>
+							  <span class="intend1"><span class="keywordHightLight">void</span> run(){<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"running really fast!!!"</span>);<br/></span>
+							  <span class="intend1">}  <br/><br/></span>
+							  
+							  <span class="intend1"><span class="keywordHightLight">public static void</span> main(<span class="keywordHightLight">String</span> args[]){  <br/></span>
+								<span class="intend2">Bike b = <span class="keywordHightLight">new</span> Splender();//upcasting  <br/></span>
+								<span class="intend2">b.run();  <br/></span>
+							  <span class="intend1">}  <br/></span>
+							}  <br/>
 						</div>
 					</div>
-					<p class="para">In the above example we can see that there is variable and methods in the interface. The variable type is <span class="para_bold italic">public,static & final</span>  and method is <span class="para_bold italic">public and abstract</span> by default.</p>
-					
-					<p class="subCat">Interface Implementation</p>
-					<p class="para">A class can inherit from an interface using <span class="para_bold">"implements"</span> keyword. Whenever a class <span class="para_bold">implements</span> an <span class="para_bold">interface</span> it <span class="para_bold">must define all the inherited abstract method</span> otherwise class should be declares as abstract.</p>
-					<p class="para para_bold">NB: <span class="highVAL">A Class extends from another Class</span>. <span class="highVAL">A Class implements from an Interface</span>. <span class="highVAL">Interface extends from another interface</span>.</p>
+					<p class="para">The output of the above program is as follows:</p>
 					<div class="example">
-						<h3 class="example">Implementing Interface</h3>
-						<div class="example_code_1 para_bold">
-							<span class="keywordHightLight">interface</span> Demo1{<br/>
-								<span><span class="keywordHightLight">void</span> test1();<br/></span>
-								<span><span class="keywordHightLight">void</span> test2();<br/></span>
-							}<br/><br/>
-							
-							<span class="keywordHightLight">class</span> Demo2 <span class="keywordHightLight">implements</span> Demo1 {<br/>
-								<span class="intend1"><span class="keywordHightLight">public void</span> test1(){<br/></span>
-									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"test1() implemented in Sample"</span>);<br/></span>
-								<span class="intend1">}<br/></span>
-								<span class="intend1"><span class="keywordHightLight">public void</span> test2(){<br/></span>
-									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"test2() implemented in Sample"</span>);<br/></span>
-								<span class="intend1">}<br/></span>
-							}<br/><br/>
+						<h3 class="example">Output</h3>
+						<div class="example_code_2">
+							Output:running really fast!!!
+						</div>
+					</div>
+					
+					<p class="subCat">Real example of Java Runtime Polymorphism</p><br/>
+				<p class="para">Consider a scenario, Car is the parent class that provides functionality to get the Top Speed of the Car. But, Top Speed varies from car to car so it's implementation will be overrided in the overriding method in the base class as shown below.</p>
+				<img class="etalage_thumb_image" src="images/methodOverriding.png"/>
+				<p class="para">The source code for this implementation is shown below:</p>
+				<div class="example">
+				    <h3 class="example">Source Code</h3>
+					<div class="example_code_1 para_bold">
+						<span class="keywordHightLight">class</span> Car{<br/>
+							<span class="intend1"><span class="keywordHightLight">int</span> cc;<br/></span>
+							<span class="intend1"><span class="keywordHightLight">public double</span> getTopSpeed(){<br/></span>
+								<span class="intend2"><span class="keywordHightLight">return</span> 0.0; <br/></span>
+							<span class="intend1">} <br/></span>
+						}<br/><br/>
 
-							<span class="keywordHightLight">public class</span> Sample{<br/>
-								<span class="intend1"><span class="keywordHightLight">public static void</span> main(<span class="keywordHightLight">String</span>[] args){<br/></span>
-									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Started"</span>);<br/></span>
-									<span class="intend2">Demo2 ref = <span class="keywordHightLight">new</span> Demo2();<br/></span>
-									<span class="intend2">ref.test1();<br/></span>
-									<span class="intend2">ref.test2();<br/></span>
-									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Ended"</span>);<br/></span>
-								<span class="intend1">}<br/></span>
-							}<br/>
-						</div>
-					</div>
-					<p class="para">In the above example we can see that <span class="para_bold">Class Demo2</span> inherits from the interface <span class="para_bold">Demo1</span>.  Since it implements the interface it had deined all the abstract method of the <span class="para_bold">Abstract Class Demo1</span>.</p>
-					
-					<p class="subCat">Multiple Inheritance In Java</p>
-					<p class="para"><span class="para_bold">Multiple Inheritance</span> is not suported in Java. However we can achieve <span class="para_bold">multiple inheritance</span> using <span>interface</span>.</p>
-					<p class="subCat">Why Java doesn't support Multiple Inheritance?</p>
-					<p class="para">C++ and few other progamming languages support multiple inheritance while java doesn't support it. This is been done to <span class="para_bold">remove ambiguity</span>, because <span class="para_bold">multiple inheritance</span> can cause ambiguity in few scenario. One of the most common scenario is <span class="para_bold">Diamond problem</span>.</p>
-					<img src="images/diamondproblem.png"/>
-					<p class="para">In the diagram shown above there are two class , <span class="para_bold">Class A</span> and <span class="para_bold">Class B</span> inheriting from the <span class="para_bold">superClass</span>. Suppose both A and B are overriding metho by providing implementation of the overriden method. Now <span class="para_bold">class C</span> inherits from both the <span class="para_bold">Class A and Class B</span>  using multiple inheritance. Which overriden method Class C will use? Will it be from Class A or Class B? Here is the <span class="para_bold">ambiguity</span>. To remove this ambiguity multiple inheritance is supported by Java.</p>
-					
-					<p class="subCat">How this ambiguity is removed by the usage of Interface?</p>	
-					<p class="para">Consider an Java Program below:</p>
-					<div class="example">
-						<h3 class="example">Sample Code</h3>
-						<div class="example_code_1 para_bold">
-						<span class="keywordHightLight">interface</span> Sample1{<br/>
-						   <span class="intend1"><span class="keywordHightLight">public void</span> myMethod();<br/></span>
+						<span class="keywordHightLight">class</span> Bugati <span class="keywordHightLight">extends</span> Car{<br/>
+							<span class="intend1"><span class="keywordHightLight">public double</span> getTopSpeed(){<br/></span>
+								<span class="intend2"><span class="keywordHightLight">return</span> 408.84;<br/></span>
+							<span class="intend1">}<br/></span>
 						}<br/><br/>
-						<span class="keywordHightLight">interface</span> Sample2{<br/>
-						   <span class="intend1"><span class="keywordHightLight">public void</span> myMethod();<br/></span>
+
+						<span class="keywordHightLight">class</span> Ferrari <span class="keywordHightLight">extends</span> Car{<br/>
+							<span class="intend1"><span class="keywordHightLight">public double</span> getTopSpeed(){<br/></span>
+								<span class="intend2"><span class="keywordHightLight">return</span> 363;<br/></span>
+							<span class="intend1">}<br/></span>
 						}<br/><br/>
-						<span>class</span> Demo <span class="keywordHightLight">implements</span> Sample1, Sample2{<br/>
-						   <span class="intend1"><span class="keywordHightLight">public void</span> myMethod(){<br/></span>
-							   <span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">" Multiple inheritance example using interfaces"</span>);<br/></span>
-						   <span class="intend1">}<br/></span>
+
+						<span class="keywordHightLight">class</span> Pagani <span class="keywordHightLight">extends</span> Car{<br/>
+							<span class="intend1"><span class="keywordHightLight">public double</span> getTopSpeed(){<br/></span>
+								<span class="intend2"><span class="keywordHightLight">return</span> 335;<br/></span>
+							<span class="intend1">}<br/></span>
+						}<br/><br/>
+
+						<span class="keywordHightLight">class</span> Porshe <span class="keywordHightLight">extends</span> Car{<br/>
+							<span class="intend1"><span class="keywordHightLight">public double</span> getTopSpeed(){<br/></span>
+								<span class="intend2"><span class="keywordHightLight">return</span> 310;<br/></span>
+							<span class="intend1">}<br/></span>
+						}<br/><br/>
+
+						<span class="keywordHightLight">public class</span> TestVehicles {<br/>
+							<span class="intend1"><span class="keywordHightLight">public static void</span> main(<span class="keywordHightLight">String</span>[] args){<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Started"</span>);<br/></span>
+								<span class="intend2">Car obj1 = <span class="keywordHightLight">new</span> Bugati();<br/></span>
+								<span class="intend2">Car obj2 = <span class="keywordHightLight">new</span> Ferrari();<br/></span>
+								<span class="intend2">Car obj3 = <span class="keywordHightLight">new</span> Pagani();<br/></span>
+								<span class="intend2">Car obj4 = <span class="keywordHightLight">new</span> Porshe();<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Top speed of Bugati::"</span>+obj1.getTopSpeed());<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Top speed of Ferrari::"</span>+obj2.getTopSpeed());<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Top speed of Pagani::"</span>+obj3.getTopSpeed());<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Top speed of Porshe::"</span>+obj4.getTopSpeed());<br/></span>
+								<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Ended"<span>);<br/></span>
+							<span class="intend1">}<br/></span>
 						}<br/>
-						</div>
+
 					</div>
-					<p class="para">As you can see that the class implemented two interfaces. A class can implement any number of interfaces. In this case there is no ambiguity even though both the interfaces are having same method. Why? Because methods in an interface are always abstract by default, which doesn’t let them to give their implementation (or method definition ) in interface itself.</p>
+				</div>
+				<div class="example">
+					<h3 class="example">Output of the above program in given below::</h3>
+					<div class="example_code_1">
+						Main Method Started<br/>
+						Top speed of Bugati::408.84<br/>
+						Top speed of Ferrari::363.0<br/>
+						Top speed of Pagani::335.0<br/>
+						Top speed of Porshe::310.0<br/>
+						Main Method Ended<br/>
+					</div>
+				</div>
+			
+			<p class="subCat">Java Runtime Polymorphism with Multilevel Inheritance</p>
+			<p class="para">Let's see the simple example of Runtime Polymorphism with multilevel inheritance.</p>
+			<div class="example">
+				<div class="example_code_1">
+				<span class="keywordHightLight">class</span> Animal{<br/>  
+					<span class="intend1"><span class="keywordHightLight">void</span> eat(){<br/></span>
+						<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"eating"</span>);<br/></span>
+					<span class="intend1">}  <br/></span>
+				}  <br/><br/>
+				  
+				<span class="keywordHightLight">class</span> Dog <span class="keywordHightLight">extends</span> Animal{  <br/>
+					<span class="intend1"><span class="keywordHightLight">void</span> eat(){<br/></span>
+						<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"eating fruits"</span>);<br/></span>
+					<span class="intend1">}  <br/></span>
+				}  <br/><br/>
+				  
+				<span class="keywordHightLight">class</span> BabyDog <span class="keywordHightLight">extends</span> Dog{  <br/>
+					<span class="intend1"><span class="keywordHightLight">void</span> eat(){<br/></span>
+						<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"drinking milk"</span>);<br/></span>
+					<span class="intend1">}  <br/><br/></span>
+				  
+					<span class="intend1"><span class="keywordHightLight">public static void</span> main(<span class="keywordHightLight">String</span> args[]){  <br/></span>
+						<span class="intend2">Animal a1,a2,a3;  <br/></span>
+						<span class="intend2">a1=<span class="keywordHightLight">new</span> Animal();  <br/></span>
+						<span class="intend2">a2=<span class="keywordHightLight">new</span> Dog();  <br/></span>
+						<span class="intend2">a3=<span class="keywordHightLight">new</span> BabyDog();  <br/><br/></span>
+						  
+						<span class="intend2">a1.eat();  <br/></span>
+						<span class="intend2">a2.eat();  <br/></span>
+						<span class="intend2">a3.eat();  <br/></span>
+					}  <br/>
+				}  <br/>
+				</div>
 			</div>
+			<div class="example">
+				<h3 class="example">Output</h3>
+				<div class="example_code_2">
+				Output: eating<br/>
+				eating fruits<br/>
+				drinking Milk<br/>
+				</div>
+			</div>
+			</div>
+			
        </div>
        <script type="text/javascript">
 			$(document).ready(function() {
