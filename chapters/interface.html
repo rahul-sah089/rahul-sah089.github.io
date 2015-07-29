@@ -9,6 +9,7 @@
 <link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet" type="text/css">
 <link href="css/table.css" rel="stylesheet" type="text/css" media="all"/>
 <link href="fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
 
@@ -128,6 +129,7 @@
   ga('send', 'pageview');
 
 </script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
   <div class="header-top">
@@ -140,7 +142,7 @@
 			 <li class="active"><a href="register.html">Sign up & Save</a></li> 
 			 <li><a href="shop.html">Store Locator</a></li> 
 			 <li><a href="login.html">My Account</a></li> 
-			 <li><a href="checkout.html">CheckOut</a></li> 
+			 <li><a href="checkout.html">ChecadsadkOut</a></li> 
 		   </ul>
 		</div>
 		<div class="clear"></div>
@@ -551,6 +553,9 @@
 							</div>
 						 </div>
                    	</section>
+					<section class="sky-form">
+						<div class="g-person" data-width="269" data-href="//plus.google.com/u/0/102475655242576085525" data-rel="author"></div>
+					</section>
 					<section  class="sky-form">
                    	  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 						<!-- Sample -->
@@ -639,7 +644,7 @@
 				<!-- start product_slider -->
 				     <ul id="etalage" style="display: block; width: 314px; height: 414px;">
 							<li>
-								<img class="etalage_thumb_image" src="images/abstraction.png"/>
+								<img class="etalage_thumb_image" src="images/interface.png"/>
 							</li>
 					</ul>
 			    </div>
@@ -647,23 +652,77 @@
 				<!-- labout span_1_of_a1 div  ends here -->
 				<!-- cont1 span_2_of_a1 starts here-->
 				<div id="" class="cont1 span_2_of_a1">
-					<h3 class="m_3">Abstract In Java</h3>
+					<h3 class="m_3">Interface In Java</h3>
+					<p class="para">Earlier we had discuss about <span class="para_bold">Abstract Class</span> that is used to achieve <span class="">partial abstraction</span> i.e; it can consist of both abstract as well as concerete method. In this section we are going to discuss about interface which is used to achieve 100% abstraction.</p>
+					<p class="subCat">Brief Introduction about Interface In Java</p>
+					<p class="para">Interface is a Java type which looks same as the class. It has methods and variable just like class but the method declared are of abstract in nature(only method signature and no body). Also the variable declared in an interface are <span class="para_bold">public,static & final</span> by default and interface cannot be initialized.</p>
 					
-					<p class="para">A class declared with the keyword <span class="para_bold italic">Abstract</span> is known as "Abstract Class".</p>
-					<p class="para">The abstract class can contain both the abstract and non-abstract methods(method with implementation in it).Non-abstract method is also knows as <span class="para_bold italic">concerete method</span>.</p>
+					<p class="para para_bold">The interface variable has to be initialize at the time of declaration.</p>
+					
 					<div class="clear"></div>
 					<p class="para">Before discussing about abstract class lets have a brief introduction about Abstraction.</p>
-				
-				
-					<p class="subCat">What is Abstraction?</p>
-					<p class="para">Abstraction is the process of hiding the class implementation from the usage part of the code.</p>
-					<p class="para">In abstraction the implementation of the object never shows the usage part of the code and only the functionalities is been exposed.</p>
-					<p class="para">In simple words, it means showing only important things to the user and hiding the internal details from the user. Ex: The driver should be concerned with the how the car works and not with it's internal details.At sending sms, we just type the text and send the message. You don't know the internal processing about the message delivery.</p>
-					<p class="para">In Java we can acheive abstraction by:</p>
-					<p class="para">1). Abstract Class (0 to 100% Abstraction can be achieved)</p>
-					<p class="para">2). Interface (100% Abstraction can be achieved)</p>
 				</div>		
 					
+					<p class="subCat">Advantages of Interface</p>
+					<p class="para">1). Using Interface we can achieve 100% abstraction which means we can achieve generalization across the sub-class. By generalization we can segregate the functionality with the implementation part of the code. Interface provides pure abstraction as compared to abstraction class.</p>
+					<p class="para">2). Interface is used to acheive run-time polymorphism.</p>
+					<p class="para">3). Java programming language doesn't support multiple inheritance, using interface we can achieve multiple inheritance.</p>
+					<p class="para"><span class="highVAL1">Program 1</span>) Below shows the Declaration of interface</p>
+					<div class="example">
+						<h3 class="example para_bold">Declaration</h3>
+						<div class="example_code_1 para_bold">
+							<span class="keywordHightLight">interface</span> MyInterface{<br/>
+							   <span class="intend1"><span class="quotationHighLight">/* All the methods are public abstract by default</span><br/></span>
+								<span class="intend1"><span class="quotationHighLight">* Note down that these methods are not having body</span><br/></span>
+								<span class="intend1"><span class="quotationHighLight">*/</span><br/></span>
+								<span class="intend1"><span class="quotationHighLight">/* All the variable are public,static & final by default*/</span><br/></span>
+								<span class="intend1"><span class="quotationHighLight">int</span> k = 0;<br/></span>
+							   <span class="intend1"><span class="quotationHighLight">public void</span> method1();<br/></span>
+							   <span class="intend1"><span class="quotationHighLight">public void</span> method2();<br/></span>
+							}<br/>
+						</div>
+					</div>
+					<p class="para">In the above example we can see that there is variable and methods in the interface. The variable type is <span class="para_bold italic">public,static & final</span>  and method is <span class="para_bold italic">public and abstract</span> by default.</p>
+					
+					<p class="subCat">Interface Implementation</p>
+					<p class="para">A class can inherit from an interface using <span class="para_bold">"implements"</span> keyword. Whenever a class <span class="para_bold">implements</span> an <span class="para_bold">interface</span> it <span class="para_bold">must define all the inherited abstract method</span> otherwise class should be declares as abstract.</p>
+					<p class="para para_bold">NB: <span class="highVAL">A Class extends from another Class</span>. <span class="highVAL">A Class implements from an Interface</span>. <span class="highVAL">Interface extends from another interface</span>.</p>
+					<div class="example">
+						<h3 class="example">Implementing Interface</h3>
+						<div class="example_code_1 para_bold">
+							<span class="keywordHightLight">interface</span> Demo1{<br/>
+								<span><span class="keywordHightLight">void</span> test1();<br/></span>
+								<span><span class="keywordHightLight">void</span> test2();<br/></span>
+							}<br/><br/>
+							
+							<span class="keywordHightLight">class</span> Demo2 <span class="keywordHightLight">implements</span> Demo1 {<br/>
+								<span class="intend1"><span class="keywordHightLight">public void</span> test1(){<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"test1() implemented in Sample"</span>);<br/></span>
+								<span class="intend1">}<br/></span>
+								<span class="intend1"><span class="keywordHightLight">public void</span> test2(){<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"test2() implemented in Sample"</span>);<br/></span>
+								<span class="intend1">}<br/></span>
+							}<br/><br/>
+
+							<span class="keywordHightLight">public class</span> Sample{<br/>
+								<span class="intend1"><span class="keywordHightLight">public static void</span> main(<span class="keywordHightLight">String</span>[] args){<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Started"</span>);<br/></span>
+									<span class="intend2">Demo2 ref = <span class="keywordHightLight">new</span> Demo2();<br/></span>
+									<span class="intend2">ref.test1();<br/></span>
+									<span class="intend2">ref.test2();<br/></span>
+									<span class="intend2"><span class="keywordHightLight">System.out.println</span>(<span class="quotationHighLight">"Main Method Ended"</span>);<br/></span>
+								<span class="intend1">}<br/></span>
+							}<br/>
+						</div>
+					</div>
+					<p class="para">In the above example we can see that <span class="para_bold">Class Demo2</span> inherits from the interface <span class="para_bold">Demo1</span>.  Since it implements the interface it had deined all the abstract method of the <span class="para_bold">Abstract Class Demo1</span>.</p>
+					
+					<p class="subCat">Multiple Inheritance In Java</p>
+					<p class="para"><span class="para_bold">Multiple Inheritance</span> is not suported in Java. However we can achieve <span class="para_bold">multiple inheritance</span> using <span>interface</span>.</p>
+					<p class="subCat">Why Java doesn't support Multiple Inheritance?</p>
+					<p class="para">C++ and few other progamming languages support multiple inheritance while java doesn't support it. This is been done to remove ambiguity, beacuase multiple inheritance can cause ambiguity in few scenario. One of the most common scenar </p>
+					<img src="images/diamondproblem.png"/>
+					<p class="para"></p>
 				<div class="clear"></div>
 				
 				<p class="subCat">The Abstract class can have:</p>	
